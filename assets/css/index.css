@@ -48,6 +48,11 @@
     height: 454px;
 }
 
+.card{
+    margin-bottom: 2;
+    margin-top: 5;
+}
+
 #menu-navbar{
     color: rgb(71, 225, 12);
 }
