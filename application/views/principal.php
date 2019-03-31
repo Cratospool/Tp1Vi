@@ -32,6 +32,7 @@
             </a>
         </div>
         <!-- /carousel -->
+        <!-- _____________________________________________________________________________________________________________ -->
         <!-- cards -->
         <div class="container">
             <!-- row -->
@@ -106,8 +107,43 @@
                     </div>
                 </div>
                 <!-- /Devil May Cry 5  -->
+                <!-- Metro Exodus  -->
+                <div class="col mt-5 mb-2">
+                    <div class="card" style="width: 18rem;">
+                        <img href="#" src="assets/img/card-7.jpg" class="card-img-top" alt="Devil May Cry 5 ">
+                        <div class="card-body">
+                            <h5 class="card-title">Metro Exodus </h5>
+                            <p class="card-text">Metro Exodus <br>Género: Acción, Aventura , terror <br>Fecha de lanzamiento: 15 de Febrero del 2019 <br>Idioma Voces y textos: Español, Ingles, Francés, Alemán, Japones e Italiano. <br>Tamaño: 40.5 Gigas</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Metro Exodus  -->
+                <!-- Assassin's Creed Origins -->
+                <div class="col mt-5 mb-2">
+                    <div class="card" style="width: 18rem;">
+                        <img href="#" src="assets/img/card-8.png" class="card-img-top" alt="Assassin’s Creed IV Black Flag">
+                        <div class="card-body">
+                            <h5 class="card-title">Assassin’s Creed Origins</h5>
+                            <p class="card-text">Acerca de Assassin’s Creed Origins <br>Título: Assassin’s Creed Origins <br>Género: Acción, Aventura <br>Plataforma: PC <br>Idioma: Francés | Ingles | Español | Alemán | Muchos Mas. <br>Fecha de lanzamiento: 26 de Octubre de 2017</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /Assassin's Creed Origins -->
+                <!-- Resident Evil 2 -->
+                <div class="col mt-5 mb-2">
+                    <div class="card" style="width: 18rem;">
+                        <img href="#" src="assets/img/card-9.jpg" class="card-img-top" alt="Resident Evil 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Resident Evil 2</h5>
+                            <p class="card-text">Acerca de Resident Evil 2 <br>Título: Resident Evil 2 <br>Género: Acción, Survival Horror <br>Plataforma: PC <br>Idioma: Francés | Ingles | Español | Alemán | Muchos Mas. <br>Fecha de lanzamiento: 25 de Enero de 2019</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /Resident Evil 2 -->
             </div>
             <!-- row -->
-        </div>
+        </div>1111
         <!-- /cards -->
     </main>
