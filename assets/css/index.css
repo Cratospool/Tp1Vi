@@ -1,0 +1,46 @@
+#footer{
+    background: rgb(52, 49, 218);
+    padding: 20px 0px;
+}
+
+#footer a {
+    color: white;
+}
+
+#main{
+    background-color: black;
+}
+
+#main .carousel-inner img{
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+#main .carousel-inner{
+    background-color: black;
+}
+
+#logo{
+    height: 40px;
+}
+
+#navbar {
+    background: black;
+}
+
+#navbar a {
+    font-weight: bold;
+    color: rgb(61, 225, 12);
+}
+
+#body {
+    background-color:black;
+}
+
+.card img{
+    height: 454px;
+}
+
+#menu-navbar{
+    color: rgb(71, 225, 12);
+}
