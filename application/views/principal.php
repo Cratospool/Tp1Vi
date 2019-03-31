@@ -32,20 +32,20 @@
         <div class="container">
             <!-- row -->
             <div class="row">
-                <div class="col">
-                    <!-- Darksiders -->
+                <!-- Darksiders -->
+                <div class="col mt-5 mb-2">
                     <div class="card" style="width: 18rem;">
                         <img href="#" src="assets/img/card-1.jpg" class="card-img-top" alt="Darksiders">
                         <div class="card-body">
-                            <h5 class="card-title">Darksiders PC Full Español</h5>
+                            <h5 class="card-title">Darksiders I PC Full Español</h5>
                             <p class="card-text">Acerca de Darksiders PC <br>Título: Darksiders PC Full Español <br>Género: Acción, Aventura <br>Plataforma: PC <br>Idioma: Francés | Ingles | Español | Alemán | Muchos Mas. <br>Fecha de lanzamiento: 22 de Septiembre de </p>
 
                         </div>
                     </div>
-                    <!-- /Darksiders -->
                 </div>
-                <div class="col">
-                    <!-- Darksiders2 -->
+                <!-- /Darksiders -->
+                <!-- Darksiders2 -->
+                <div class="col mt-5 mb-2">
                     <div class="card" style="width: 18rem;">
                         <img href="#" src="assets/img/card-2.jpg" class="card-img-top" alt="DarksidersII">
                         <div class="card-body">
@@ -57,7 +57,7 @@
                 </div>
                 <!-- /Darksiders2 -->
                 <!-- Darksiders3 -->
-                <div class="col">
+                <div class="col mt-5 mb-2">
                     <div class="card" style="width: 18rem;">
                         <img href="#" src="assets/img/card-3.jpg" class="card-img-top" alt="DarksidersIII">
                         <div class="card-body">

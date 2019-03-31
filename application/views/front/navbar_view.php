@@ -1,5 +1,5 @@
 <header>
-    <nav id="navbar" class="navbar navbar-expand-lg">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand ">
             <span class="navbar-logo">
                 <a href="<?php echo base_url('principal');?>">
@@ -7,7 +7,7 @@
                 </a>
             </span>
         </a>
-        <button class="navbar-toggler" id="menu-navbar" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 

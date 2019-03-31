@@ -1,10 +1,10 @@
 #footer{
-    background: rgb(52, 49, 218);
+    background:#323232;
     padding: 20px 0px;
 }
 
 #footer a {
-    color: white;
+    color: rgb(71, 225, 12);
 }
 
 #main{
@@ -21,16 +21,23 @@
 }
 
 #logo{
-    height: 40px;
+    height: 80px;
+}
+
+#header{
+    background: black;
+}
+#body{
+    background: black;
 }
 
 #navbar {
-    background: black;
+    background: #323232;
 }
 
 #navbar a {
     font-weight: bold;
-    color: rgb(61, 225, 12);
+    color: rgb(71, 225, 12);
 }
 
 #body {
