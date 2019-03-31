@@ -2,16 +2,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-3 col-xl">
-                    <a href="">Quienes Somos</a>
+                    <a href="#">Quienes Somos</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">
-                    <a href="">Preguntas frecuentes</a>
+                    <a href="#">Preguntas frecuentes</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">
-                    <a href="">contactanos</a>
+                    <a href="#">Contactanos</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">
-                    <a href="">terminos y condiciones</a>
+                    <a href="#">terminos y condiciones</a>
                 </div>
             </div>
         </div>

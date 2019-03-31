@@ -4,7 +4,7 @@
 }
 
 #footer a {
-    color: rgb(71, 225, 12);
+    color: white;
 }
 
 #main{
@@ -37,19 +37,22 @@
 
 #navbar a {
     font-weight: bold;
-    color: rgb(71, 225, 12);
+    color: white;
 }
 
 #body {
     background-color:black;
 }
 
-.card img{
-    height: 454px;
-}
-
-
 
 #menu-navbar{
     color: rgb(71, 225, 12);
+}
+
+.card-body{
+  background:#323232;
+}
+
+.card-body{
+  color:white;
 }

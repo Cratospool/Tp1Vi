@@ -1,5 +1,5 @@
 <header>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark ">
         <a class="navbar-brand ">
             <span class="navbar-logo">
                 <a href="<?php echo base_url('principal');?>">
@@ -16,9 +16,7 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Productos<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Carro</a>
-                </li>
+
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
@@ -32,6 +30,9 @@
                 </li> -->
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Carro</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">

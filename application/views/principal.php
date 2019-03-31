@@ -38,8 +38,8 @@
             <!-- row -->
             <div class="row">
                 <!-- Darksiders -->
-                <div class="col mt-5 mb-2">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 mb-4">
+                    <div class="card">
                         <img href="#" src="assets/img/card-1.jpg" class="card-img-top" alt="Darksiders">
                         <div class="card-body">
                             <h5 class="card-title">Darksiders I PC Full Español</h5>
@@ -50,8 +50,8 @@
                 </div>
                 <!-- /Darksiders -->
                 <!-- Darksiders2 -->
-                <div class="col mt-5 mb-2">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 mb-4">
+                    <div class="card">
                         <img href="#" src="assets/img/card-2.jpg" class="card-img-top" alt="DarksidersII">
                         <div class="card-body">
                             <h5 class="card-title">Darksiders II PC Full Español</h5>
@@ -62,8 +62,8 @@
                 </div>
                 <!-- /Darksiders2 -->
                 <!-- Darksiders3 -->
-                <div class="col mt-5 mb-2">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 mb-4">
+                    <div class="card">
                         <img href="#" src="assets/img/card-3.jpg" class="card-img-top" alt="DarksidersIII">
                         <div class="card-body">
                             <h5 class="card-title">Darksiders III PC Full Español</h5>
@@ -74,8 +74,8 @@
                 </div>
                 <!-- /Darksiders3 -->
                 <!-- Assassin's Creed IV: Black Flag -->
-                <div class="col mt-5 mb-2">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 mb-4">
+                    <div class="card">
                         <img href="#" src="assets/img/card-4.jpg" class="card-img-top" alt="Assassin’s Creed IV Black Flag">
                         <div class="card-body">
                             <h5 class="card-title">Assassin’s Creed IV Black Flag</h5>
@@ -86,8 +86,8 @@
                 </div>
                 <!-- /Assassin's Creed IV: Black Flag -->
                 <!-- Sekiro: Shadows Die Twice -->
-                <div class="col mt-5 mb-2">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 mb-4">
+                    <div class="card">
                         <img href="#" src="assets/img/card-5.jpg" class="card-img-top" alt="Sekiro: Shadows Die Twice">
                         <div class="card-body">
                             <h5 class="card-title">Sekiro: Shadows Die Twice</h5>
@@ -97,8 +97,8 @@
                 </div>
                 <!-- /Sekiro: Shadows Die Twice -->
                 <!-- Devil May Cry 5  -->
-                <div class="col mt-5 mb-2">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 mb-4">
+                    <div class="card">
                         <img href="#" src="assets/img/card-6.jpg" class="card-img-top" alt="Devil May Cry 5 ">
                         <div class="card-body">
                             <h5 class="card-title">Devil May Cry 5 </h5>
@@ -108,8 +108,8 @@
                 </div>
                 <!-- /Devil May Cry 5  -->
                 <!-- Metro Exodus  -->
-                <div class="col mt-5 mb-2">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 mb-4">
+                    <div class="card">
                         <img href="#" src="assets/img/card-7.jpg" class="card-img-top" alt="Devil May Cry 5 ">
                         <div class="card-body">
                             <h5 class="card-title">Metro Exodus </h5>
@@ -119,8 +119,8 @@
                 </div>
                 <!-- /Metro Exodus  -->
                 <!-- Assassin's Creed Origins -->
-                <div class="col mt-5 mb-2">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 mb-4">
+                    <div class="card">
                         <img href="#" src="assets/img/card-8.png" class="card-img-top" alt="Assassin’s Creed IV Black Flag">
                         <div class="card-body">
                             <h5 class="card-title">Assassin’s Creed Origins</h5>
@@ -131,8 +131,8 @@
                 </div>
                 <!-- /Assassin's Creed Origins -->
                 <!-- Resident Evil 2 -->
-                <div class="col mt-5 mb-2">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 mb-4">
+                    <div class="card">
                         <img href="#" src="assets/img/card-9.jpg" class="card-img-top" alt="Resident Evil 2">
                         <div class="card-body">
                             <h5 class="card-title">Resident Evil 2</h5>
@@ -144,6 +144,6 @@
                 <!-- /Resident Evil 2 -->
             </div>
             <!-- row -->
-        </div>1111
+        </div>
         <!-- /cards -->
     </main>
