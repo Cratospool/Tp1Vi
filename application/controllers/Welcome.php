@@ -30,4 +30,27 @@ class Welcome extends CI_Controller {
 
 	}
 
+	public function quienes_somos()
+	{
+		//$this->load->view('principal.php');
+		$data = array('titulo' => 'Quienes Somos');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('quienes_somos');
+		$this->load->view('front/footer_view');
+
+	}
+	public function politicas_de_privacidad()
+	{
+		//$this->load->view('principal.php');
+		$data = array('titulo' => 'Poiticas de Privacidad');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('politicas_de_privacidad');
+		$this->load->view('front/footer_view');
+
+	}
+
 }

@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-3 col-xl">
-                    <a href="#">Quienes Somos</a>
+                    <a href="<?php echo base_url('quienes_somos');?>">Quienes Somos</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">
                     <a href="#">Preguntas frecuentes</a>
@@ -11,7 +11,7 @@
                     <a href="#">Contactanos</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">
-                    <a href="#">terminos y condiciones</a>
+                    <a href="<?php echo base_url('politicas_de_privacidad');?>">terminos y condiciones</a>
                 </div>
             </div>
         </div>
