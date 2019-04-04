@@ -19,17 +19,21 @@
 
                  <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        Categorias
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #323232;">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Acción</a>
+                        <a class="dropdown-item" href="#">Aventura</a>
+                        <a class="dropdown-item" href="#">Conducción</a>
+                        <a class="dropdown-item" href="#">Deportes</a>
+                        <a class="dropdown-item" href="#">Estrategia</a>
+                        <a class="dropdown-item" href="#">Lucha</a>
+                        <a class="dropdown-item" href="#">Simulacion</a>
+                        <a class="dropdown-item" href="#">Rol</a>
+                        <a class="dropdown-item" href="#">Terror</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Todos</a>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Carro</a>

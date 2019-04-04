@@ -61,6 +61,10 @@
   color:white;
 }
 
-#politicas_de_privacidad p{
-    color: white;
+#main-politicas{
+    background: black;
+}
+
+#main-politicas{
+  color: white;
 }
