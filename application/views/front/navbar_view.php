@@ -1,5 +1,5 @@
 <header>
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark ">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <a class="navbar-brand ">
             <span class="navbar-logo">
                 <a href="<?php echo base_url('principal');?>">
