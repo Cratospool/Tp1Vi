@@ -8,7 +8,7 @@
                     <a href="#">Preguntas frecuentes</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">
-                    <a href="#">Contactanos</a>
+                    <a href="<?php echo base_url('contactanos');?>">Contactanos</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">
                     <a href="<?php echo base_url('politicas_de_privacidad');?>">terminos y condiciones</a>

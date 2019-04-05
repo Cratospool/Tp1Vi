@@ -54,6 +54,7 @@ $route['default_controller'] = 'Welcome';
 $route['principal'] = 'Welcome/index';
 $route['quienes_somos'] = 'Welcome/quienes_somos';
 $route['politicas_de_privacidad'] = 'Welcome/politicas_de_privacidad';
+$route['contactanos'] = 'Welcome/contactanos';
 
 $route['404_override'] = '';
 

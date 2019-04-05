@@ -52,5 +52,16 @@ class Welcome extends CI_Controller {
 		$this->load->view('front/footer_view');
 
 	}
+	public function contactanos()
+	{
+		//$this->load->view('principal.php');
+		$data = array('titulo' => 'Contactanos');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('contactanos');
+		$this->load->view('front/footer_view');
+
+	}
 
 }
