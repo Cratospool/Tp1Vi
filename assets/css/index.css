@@ -7,6 +7,10 @@
     color: white;
 }
 
+#row-politicas{
+  text-align: right;
+}
+
 #main{
     background-color: black;
 }
@@ -20,9 +24,7 @@
     background-color: black;
 }
 
-.dropdown-menu{
-    background-color: black;
-}
+
 
 #logo{
     height: 40px;
@@ -64,6 +66,7 @@
 #main-politicas{
     background: black;
 }
+
 
 #main-politicas{
   color: white;
