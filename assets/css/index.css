@@ -1,77 +1,75 @@
-#footer{
-    background:#323232;
-    padding: 20px 0px;
+#footer {
+	background: #323232;
+	padding: 20px 0px;
 }
 
 #footer a {
-    color: white;
+	color: white;
 }
 
-#row-politicas{
-  text-align: right;
+#row-politicas {
+	text-align: right;
 }
 
-#main{
-    background-color: black;
+#main {
+	background-color: black;
 }
 
-#main .carousel-inner img{
-    max-height: 80vh;
-    object-fit: contain;
+#main .carousel-inner img {
+	max-height: 80vh;
+	object-fit: contain;
 }
 
-#main .carousel-inner{
-    background-color: black;
+#main .carousel-inner {
+	background-color: black;
 }
 
-
-
-#logo{
-    height: 40px;
+#logo {
+	height: 40px;
 }
 
-#header{
-    background: black;
-}
-#body{
-    background: black;
-}
-
-#navbar {
-    background: #323232;
-}
-
-#navbar a {
-    font-weight: bold;
-    color: white;
+#header {
+	background: black;
 }
 
 #body {
-    background-color:black;
+	padding-top:
+		background: black;
 }
 
-
-#menu-navbar{
-    color: rgb(71, 225, 12);
+#navbar {
+	background: #323232;
 }
 
-.card-body{
-  background:#323232;
+#navbar a {
+	font-weight: bold;
+	color: white;
 }
 
-.card-body{
-  color:white;
+#body {
+	background-color: black;
 }
 
-#main-politicas{
-    background: black;
+#menu-navbar {
+	color: rgb(71, 225, 12);
 }
 
-
-#main-politicas{
-  color: white;
+.card-body {
+	background: #323232;
 }
 
-#main-contactanos{
-    background: black;
+.card-body {
+	color: white;
+}
+
+#main-politicas {
+	background: black;
+}
+
+#main-politicas {
+	color: white;
+}
+
+#main-contactanos {
+	background: black;
 }
