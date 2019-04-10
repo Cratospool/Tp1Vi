@@ -16,10 +16,6 @@
 	background-image: url("../img/fondo.jpg");
 }
 
-#body {
-	padding-top:60px;
-}
-
 #navbar {
 	background: #323232;
 }
@@ -30,22 +26,13 @@
 }
 
 .card-body {
-	background: #323232;
-}
-
-.card-body {
+	background: black;
 	color: white;
 }
 
-/* .col-md-6 {
-  width: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 #main {
-	background-image: url("../img/fondo.jpg");
+	background: black;
+	/* background-image: url("../img/fondo.jpg"); */
 }
 #main-politicas {
 	background: black;
@@ -56,11 +43,23 @@
 	padding: 20px;
 	background:black;
 }
-#main {
-	background-color: black;
-}
 
 #main .carousel-inner img {
 	max-height: 80vh;
 	object-fit: contain;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo{
+	display:flex;
+  	margin:0 auto;
+}
+
+#carouselExampleIndicators{
+	padding-top: 20px;
 }

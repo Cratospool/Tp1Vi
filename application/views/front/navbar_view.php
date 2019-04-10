@@ -1,15 +1,15 @@
 <header id="header">
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-3">
 
             </div>
-            <div  class="col-md">
+            <div  class="col-md-6">
                 <a href="<?php echo base_url('principal');?>">
-                    <img id="logo " src="assets/img/logo.png" alt="Logo" style="height: 200px;">
+                    <img id="logo " src="assets/img/logo.png" class="img-responsive center-block" alt="Logo" style="height: 200px;">
                 </a>
             </div>
-            <div class="col-4">
+            <div class="col-3">
 
             </div>
         </div>
