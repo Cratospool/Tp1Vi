@@ -7,34 +7,17 @@
 	color: white;
 }
 
-#row-politicas {
+#row-politicas {footer
 	text-align: right;
 }
 
-#main {
-	background-color: black;
-}
-
-#main .carousel-inner img {
-	max-height: 80vh;
-	object-fit: contain;
-}
-
-#main .carousel-inner {
-	background-color: black;
-}
-
-#logo {
-	height: 40px;
-}
-
 #header {
-	background: black;
+	padding: 20px;
+	background-image: url("../img/fondo.jpg");
 }
 
 #body {
-	padding-top:
-		background: black;
+	padding-top:60px;
 }
 
 #navbar {
@@ -46,14 +29,6 @@
 	color: white;
 }
 
-#body {
-	background-color: black;
-}
-
-#menu-navbar {
-	color: rgb(71, 225, 12);
-}
-
 .card-body {
 	background: #323232;
 }
@@ -62,14 +37,30 @@
 	color: white;
 }
 
+/* .col-md-6 {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+#main {
+	background-image: url("../img/fondo.jpg");
+}
 #main-politicas {
 	background: black;
-}
-
-#main-politicas {
 	color: white;
 }
 
 #main-contactanos {
-	background: black;
+	padding: 20px;
+	background:black;
+}
+#main {
+	background-color: black;
+}
+
+#main .carousel-inner img {
+	max-height: 80vh;
+	object-fit: contain;
 }
