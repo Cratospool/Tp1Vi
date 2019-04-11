@@ -55,7 +55,7 @@
                         <img href="#" src="assets/img/card-2.jpg" class="card-img-top" alt="DarksidersII">
                         <div class="card-body">
                             <h5 class="card-title">Darksiders II PC Full Español</h5>
-                            <p class="card-text">Acerca de Darksiders PC <br>Título: Darksiders PC Full Español <br>Género: Acción, Aventura <br>Plataforma: PC <br>Idioma: Francés | Ingles | Español | Alemán | Muchos Mas. <br>Fecha de lanzamiento: 5 de noviembre de 2015</p>
+                            <p class="card-text">Acerca de Darksiders PC <br>Título: Darksiders PC Full Español <br>Género: Acción, Aventura <br>Plataforma: PC <br>Idioma: Francés | Ingles | Español | Alemán | Muchos Mas. <br>Fecha de lanzamiento: 5 de Noviembre de 2015</p>
 
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                         <img href="#" src="assets/img/card-4.jpg" class="card-img-top" alt="Assassin’s Creed IV Black Flag">
                         <div class="card-body">
                             <h5 class="card-title">Assassin’s Creed IV Black Flag</h5>
-                            <p class="card-text">Acerca de Assassin’s Creed IV Black Flag PC <br>Título: Assassin’s Creed IV Black Flag <br>Género: Acción, Aventura <br>Plataforma: PC <br>Idioma: Francés | Ingles | Español | Alemán | Muchos Mas. <br>Fecha de lanzamiento: 29 de octubre de 2013</p>
+                            <p class="card-text">Acerca de Assassin’s Creed IV Black Flag PC <br>Título: Assassin’s Creed IV Black Flag <br>Género: Acción, Aventura <br>Plataforma: PC <br>Idioma: Francés | Ingles | Español | Alemán | Muchos Mas. <br>Fecha de lanzamiento: 29 de Octubre de 2013</p>
 
                         </div>
                     </div>

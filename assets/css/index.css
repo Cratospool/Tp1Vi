@@ -26,13 +26,12 @@
 }
 
 .card-body {
-	background: black;
+	background: #323232;
 	color: white;
 }
 
 #main {
 	background: black;
-	/* background-image: url("../img/fondo.jpg"); */
 }
 #main-politicas {
 	background: black;
