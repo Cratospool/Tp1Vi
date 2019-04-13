@@ -44,9 +44,18 @@
 	background-image: url("../img/fondo-contactanos.jpg");
 }
 
+#main-comercializacion button h3{
+	color: white;
+}
+
 #main .carousel-inner img {
 	max-height: 80vh;
 	object-fit: contain;
+}
+
+#main-comercializacion {
+	padding: 20px;
+	background-image: url("../img/como_pagar.jpg");
 }
 
 .center-block {

@@ -10,6 +10,9 @@
                 <div class="col-12 col-md-3 col-xl">
                     <a href="<?php echo base_url('politicas_de_privacidad');?>">terminos y condiciones</a>
                 </div>
+                <div class="col-12 col-md-3 col-xl">
+                    <a href="<?php echo base_url('comercializacion');?>">Comercialización</a>
+                </div>
             </div>
         </div>
     </footer>
