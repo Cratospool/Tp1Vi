@@ -7,13 +7,10 @@
 	color: white;
 }
 
-#row-politicas {footer
-	text-align: right;
-}
-
 #header {
 	padding: 20px;
 	background-image: url("../img/fondo.jpg");
+	background-attachment: fixed;
 }
 
 #navbar {
@@ -44,7 +41,7 @@
 
 #main-contactanos {
 	padding: 20px;
-	background:black;
+	background-image: url("../img/fondo-contactanos.jpg");
 }
 
 #main .carousel-inner img {
@@ -65,4 +62,8 @@
 
 #carouselExampleIndicators{
 	padding-top: 20px;
+}
+
+#accordionExample .card{
+	background-color: #323232;
 }

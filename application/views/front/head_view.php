@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
 
 <head>
+    <link rel="shorcut icon" type="image/x-icon"  href="assets/img/logo.png" whidth="100" height="100">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

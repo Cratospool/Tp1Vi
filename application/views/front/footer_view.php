@@ -5,9 +5,6 @@
                     <a href="<?php echo base_url('quienes_somos');?>">Quienes Somos</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">
-                    <a href="#">Preguntas frecuentes</a>
-                </div>
-                <div class="col-12 col-md-3 col-xl">
                     <a href="<?php echo base_url('contactanos');?>">Contactanos</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">

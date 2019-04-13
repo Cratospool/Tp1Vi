@@ -5,15 +5,14 @@
               <p> <h1><br><br>Politicas de Privacidad</h1> <br>
                   GameStore respeta la privacidad de sus visitantes en línea y de los clientes de sus productos y servicios, y cumple con las leyes aplicables para la protección de su privacidad, entre las que se incluyen el Reglamento general de protección de datos de la Unión Europea ("RGPD") y los marcos Escudo de Privacidad de la UE y Suiza.
               </p>
-            </div
-<!-- acordeon -->
+            </div>
             <section class="container text-justify pd-5 static-center">
                 <div class="row">
                     <div class="accordion" id="accordionExample">
                         <div class="card">
                             <div class="card-header" id="heading1">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
                                         1: Definiciones
                                     </button>
                                 </h2>
@@ -30,7 +29,7 @@
                         <div class="card">
                             <div class="card-header" id="heading2">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                         2. Por qué GameStore recopila y procesa datos
                                     </button>
                                 </h2>
@@ -54,7 +53,7 @@
                         <div class="card">
                             <div class="card-header" id="heading3">
                                 <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                         3. Qué datos recopilamos y procesamos
                                     </button>
                                 </h2>
@@ -110,7 +109,7 @@
                         <div class="card">
                           <div class="card-header" id="heading4">
                             <h2 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                              <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
                                 4. Cuánto tiempo almacenamos los datos
                               </button>
                             </h2>
@@ -134,7 +133,7 @@
                         <div class="card">
                           <div class="card-header" id="heading5">
                             <h2 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse56" aria-expanded="false" aria-controls="collapse56">
+                              <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapse56" aria-expanded="false" aria-controls="collapse56">
                                 5. Quién tiene acceso a los datos
                               </button>
                             </h2>
@@ -163,7 +162,7 @@
                         <div class="card">
                           <div class="card-header" id="heading6">
                             <h2 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                              <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
                                 6. Sus derechos y mecanismos de control
                               </button>
                             </h2>
@@ -211,7 +210,7 @@
                         <div class="card">
                           <div class="card-header card-darkc" id="heading7">
                             <h2 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                              <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
                                 7. Niños
                               </button>
                             </h2>
@@ -226,7 +225,7 @@
                         <div class="card">
                           <div class="card-header" id="heading8">
                             <h2 class="mb-0">
-                              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse89" aria-expanded="false" aria-controls="collapse89">
+                              <button class="btn btn-dark collapsed" type="button" data-toggle="collapse" data-target="#collapse89" aria-expanded="false" aria-controls="collapse89">
                                 8. Información de contacto
                               </button>
                             </h2>
@@ -256,7 +255,7 @@
                         <div class="card">
                           <div class="card-header" id="heading9">
                             <h2 class="mb-0">
-                              <button class="btn btn-link collapsed " type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                              <button class="btn btn-dark collapsed " type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
                                 9. Información adicional para usuarios del Espacio Económico Europeo
                               </button>
                             </h2>

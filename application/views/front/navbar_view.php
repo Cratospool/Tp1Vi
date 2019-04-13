@@ -51,17 +51,17 @@
         <a class="nav-link" href="#">Pataformas<span class="sr-only">(current)</span></a>
     </li>
     <li><a href="<?php echo base_url('principal');?>">
-            <img id="icono-pc" src="assets/img/pc.png" class="img-responsive center-block" alt="Logo" style="height: 50px;">
+            <img id="icono-pc" src="assets/img/pc.png" class="img-responsive" alt="Logo" style="height: 50px;">
         </a>
     </li>
     <li>
         <a id="icono-ps" href="<?php echo base_url('principal');?>">
-            <img  src="assets/img/ps.png" class="img-responsive center-block" alt="Logo" style="height: 50px;">
+            <img  src="assets/img/ps.png" class="img-responsive" alt="Logo" style="height: 55px;">
         </a>
     </li>
     <li>
         <a href="<?php echo base_url('principal');?>">
-            <img id="icono-xbox" src="assets/img/xbox.png" class="img-responsive center-block" alt="Logo" style="height: 50px;">
+            <img id="icono-xbox" src="assets/img/xbox.png" class="img-responsive" alt="Logo" style="height: 50px;">
         </a>
     </li>
 </ul>
