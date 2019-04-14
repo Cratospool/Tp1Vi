@@ -8,7 +8,7 @@
                     <a href="<?php echo base_url('contactanos');?>">Contactanos</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">
-                    <a href="<?php echo base_url('politicas_de_privacidad');?>">terminos y condiciones</a>
+                    <a href="<?php echo base_url('politicas_de_privacidad');?>">Terminos y Condiciones</a>
                 </div>
                 <div class="col-12 col-md-3 col-xl">
                     <a href="<?php echo base_url('comercializacion');?>">Comercialización</a>

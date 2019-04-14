@@ -3,8 +3,8 @@
         <div class="container">
             <div class="row text-justify" id=row-politicas>
               <p>
-                  <h1>
-                      Medios de PAgo
+                  <h1> 
+                  GameStore solo vende jugos en su formato digital y estarán disponibles en su biblioteca al momento de abonarlo!!! <br><br><br> Medios de Pago:
                   </h1>
               </p>
             </div>
@@ -304,6 +304,20 @@
                                     85,87%
                                     <hr>
                                     1. Costo financiero total – 2. Tasa efectiva anual
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-header" id="heading10">
+                                <h2 class="mb-0">
+                                  <button class="btn collapsed " type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                                      <h3><img src="assets/img/rapipago-logo.jpg" alt="naranja" style="height: 60px;"> Efectivo</h3>
+                                  </button>
+                                </h2>
+                              </div>
+                              <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Pagá al contado el cualquier Rapipago o PagoFacil
                                 </div>
                               </div>
                             </div>

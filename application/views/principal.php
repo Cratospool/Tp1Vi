@@ -52,7 +52,14 @@
                             </p>
                             <div class="collapse" id="Darksiders">
                                 <div class="card card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    <h3>---US$ 30---</h3> <br>
+                                    Requisitos Mínimos:
+                                    Sistema Operativo: Windows 7, Windows 8, Windows 10
+                                    Procesador: Intel o AMD Dual Core CPU
+                                    Memoria: 4 Gigas de RAM
+                                    Gráficos: DirectX 10 Feature Level AMD o NVIDIA con 1 Giga VRAM
+                                    DirectX: Versión 11
+                                    Almacenamiento: 36 Gigas de espacio disponible
                                 </div>
                             </div>
                         </div>
@@ -74,7 +81,14 @@
                             </p>
                             <div class="collapse" id="DarksidersII">
                                 <div class="card card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    <h3>---US$ 40---</h3> <br>
+                                    Requisitos Mínimos:
+                                    Sistemas Operativos: Windows XP | Vista SP1 | 7 | 8.1 | 10 (Sistemas Operativos de 64 bits)
+                                    Procesador: 2.0 Ghz Intel Core 2 Duo o AMD equivalente
+                                    Memoria: 4 Gigas de RAM
+                                    Gráficos: NVIDIA 9800 GT 512 MB o AMD equivalente
+                                    DirectX: Versión 9.0c
+                                    Disco Duro: 13 Gigas de Espacio Libre
                                 </div>
                             </div>
                         </div>
@@ -96,7 +110,12 @@
                             </p>
                             <div class="collapse" id="DarksidersIII">
                                 <div class="card card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    <h3>---US$ 60---</h3> <br>
+                                    Requisitos Mínimos:
+                                    Sistemas Operativos: Windows 7 | 8 | 10 – Solo funciona sobre 64 bits
+                                    Procesador: AMD FX-8320 (3,5 GHz) | Intel i5-4690K (3,5 GHz) o mejores
+                                    Memoria: 8 Gigas de RAM
+                                    Gráficos: GeForce GTX 660 | Radeon R7 370 con 2 Gigas de VRAM
                                 </div>
                             </div>
                         </div>
@@ -118,7 +137,12 @@
                             </p>
                             <div class="collapse" id="AssassinIV">
                                 <div class="card card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    <h3>---US$ 60---</h3> <br>
+                                    Requisitos mínimos:
+                                    Sistema operativo: Windows Vista SP / 7 SP1 / 8 (32/64bit versiones).
+                                    Procesador: Intel Core2Quad Q8400 @ 2.6 GHz o AMD Athlon II X4 620 @ 2.6 GHz
+                                    Memoria: 2GB RAM
+                                    Tarjeta gráfica: Nvidia GeForce GTX 260 o AMD Radeon HD 4870 (512MB VRAM con Shader Model 4.0 o superior)
                                 </div>
                             </div>
                         </div>
@@ -140,7 +164,14 @@
                             </p>
                             <div class="collapse" id="Sekiro">
                                 <div class="card card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    <h3>---US$ 60---</h3> <br>
+                                    Requisitos Mínimos:
+                                    Sistema Operativo: Windows 7, 8 y 10 de 64-bits
+                                    Procesador: Intel Core i3-2100 | AMD FX-6300
+                                    Memoria: 4 Gigas de RAM
+                                    Gráficos: NVIDIA GeForce GTX 760 | AMD Radeon HD 7950
+                                    DirectX: Versión 11
+                                    Almacenamiento: 25 Gigas de espacio disponible
                                 </div>
                             </div>
                         </div>
@@ -160,14 +191,21 @@
                                     Ver detalles
                                 </button>
                             </p>
-                            <div class="collapse" id="DevilMayCryV"
+                            <div class="collapse" id="DevilMayCryV">
                                 <div class="card card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    <h3>---US$ 60---</h3> <br>
+                                    Requisitos Minimos:
+                                    Sistemas Operativos: Windows 7, 8.1 y 10 (Solo funciona sobre 64 bits)
+                                    Procesador: Intel Core i5-4460, AMD FX-6300, o mejores
+                                    Memoria: 8 Gigas de RAM
+                                    Gráficos: NVIDIA GeForce GTX 760 o AMD Radeon R7 260x con 2GB Video RAM, or better
+                                    DirectX: Versión 11
+                                    Almacenamiento: 35 Gigas de espacio disponible
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                </div>
                 <!-- /Devil May Cry 5  -->
                 <!-- Metro Exodus  -->
                 <div class="col-md-6 col-lg-4 col-xl-3 mt-4 mb-4">
@@ -184,7 +222,14 @@
                             </p>
                             <div class="collapse" id="MetroExodus">
                                 <div class="card card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    <h3>---US$ 60---</h3> <br>
+                                    Requisitos Minimos:
+                                    Requiere un procesador y un sistema operativo de 64 bits
+                                    Sistema Operativo: Windows 7/8/10
+                                    Procesador: Intel Core i5-4440 o equivalente
+                                    Memoria: 8 Gigas de RAM
+                                    Gráficos: GeForce GTX 670 / GeForce GTX 1050 / AMD Radeon HD 7870
+                                    Almacenamiento: 59 Gigas de espacio disponible
                                 </div>
                             </div>
                         </div>
@@ -206,7 +251,12 @@
                             </p>
                             <div class="collapse" id="AssassinsOrigins">
                                 <div class="card card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    <h3>---US$ 60---</h3> <br>
+                                    Requisitos Minimos:
+                                    Sistema operativo - Windows 7 SP1, Windows 8.1, Windows 10 (solo versiones 64-bit)
+                                    Procesador - Intel Core i5-2400s 2.5 GHz o AMD FX-6350 3.9 GHz o equivalente
+                                    Gráficos - NVIDIA GeForce GTX 660 o AMD R9 270 (2048 MB VRAM Shader Model 5.0 o superior)
+                                    RAM - 6 GB
                                 </div>
                             </div>
                         </div>
@@ -228,7 +278,16 @@
                             </p>
                             <div class="collapse" id="ResidentEvilII">
                                 <div class="card card-body">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                    <h3>---US$ 60---</h3> <br>
+                                    Requisitos Minimos:
+                                    Requiere un procesador y un sistema operativo de 64 bits
+                                    Sistema Operativo: Windows 7, 8.1, 10 (64 bits Requerido)
+                                    Procesador: Intel Core i5-4460 or AMD FX-6300 o superior
+                                    Memoria: 8 Gigas de RAM
+                                    Gráficos: NVIDIA GeForce GTX 760 o AMD Radeon R7 260x con 2 Gigas Video RAM
+                                    DirectX: Versión 11
+                                    Almacenamiento: 26 Gigas de espacio disponible
+
                                 </div>
                             </div>
                         </div>

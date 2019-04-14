@@ -31,6 +31,12 @@
 	color: white;
 }
 
+.collapse .card-body {
+	background: #323232;
+	color: white;
+	text-align: justify;
+}
+
 #main {
 	background: black;
 }
@@ -75,4 +81,8 @@
 
 #accordionExample .card{
 	background-color: #323232;
+}
+
+.card-body{
+	text-align: justify;
 }
