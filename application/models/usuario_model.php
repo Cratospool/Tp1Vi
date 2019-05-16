@@ -1,64 +1,65 @@
 <?php
-if (!defined('BASEPATH')) exit('No direct script access allowed');
+if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+	
+class Usuario_model extends CI_Model{
 
-    class Usuario_model extends CI_Model
-    {
-        public function construct()
-        {
-            parent::construct();
+	/**
+    * Constructor de la clase
+    */
+    public function __construct() {
+        parent::__construct();
+    }
+
+		
+	function get_usuarios()
+	{
+		//$this->db->select('id, nombre, apellido, username');
+		$query = $this->db->get('usuarios');
+
+		if($query->num_rows()>0) {
+            return $query;
+        } else {
+            return FALSE;
         }
-    }
+	}
+	
 
-    function add_user($data)
-    {
-        $this->db->insert('usuarios', $data);
-        $insert_id = $this->db->insert_id();
-        return $insert_id;
-    }
+	function add_user($data)
+	{
+		$this->db->insert('usuarios', $data);
+		$insert_id = $this->db->insert_id();
+		return $insert_id;
+	}
+	
 
-    function update_user($id, $name, $last_name, $username, $password)
-    {
-        $data = array('name' => $name, 'last_name' => $last_name, 'username' => $username, 'password' => $password);
-        $this->db->where('id', $id);
-        return $this->db->update('users', $data);
-    }
+	function edit_usuario($id)
+	{
+		$query = $this->db->get_where('usuarios', array('id' => $id),1);
+                
+        if($query->num_rows() == 1) {
+            return $query;
+        } else {
+            return FALSE;
+        }
+	}
+	
+	function update_usuario($id, $data)
+	{
+		$this->db->where('id', $id);
+        $query = $this->db->update('usuarios', $data);
+        if($query) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+	}
 
-    function delete_user($id)
-    {
-        $this->db->where('id', $id);
-        $query = $this->db->delete('users');
-        return true;
-    }
-
-    function get_users()
-    {
-        $this->db->select('id, name, last_name, username');
-        $query = $this->db->get('users');
-        return $query->result();
-    }
-
-    function get_by_username($user)
-    {
-        $query = $this->db->get_where('users', array('username' => $user), 1);
-        return $query->row();
-    }
-
-    if ($this->form_validation->run() == FALSE)
-    {
-        //Muestra la página de registro con el título de error
-        $data = array('titulo' => 'Error de formulario');
-        $this->load->multiple_views(['head_view','menu_view','registro_view','footer_view'],$data);
-    }
-    //Pasa la validacion
-    else
-    {
-        //Envío array al método insert para registro de datos
-        $usuario = $this->Usuario_Model->add_user($data);
-        $data_user = $array = array('user'=> $usuario, 'logued_in' => TRUE,
-        'name'=>$data['name']);
-        //asigno los datos a la sesion
-        $this->session->set_userdata($data_user);
-        //Redirecciono a la página de perfil
-        redirect('perfil/'.$usuario);
-    }
-}
+	function delete_usuario($id)
+	{			
+		$this->db->where('id', $id);
+		$query = $this->db->delete('usuarios'); 
+		return true;	
+	}
+	
+	
+} 

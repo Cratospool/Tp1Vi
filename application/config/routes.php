@@ -56,6 +56,10 @@ $route['quienes_somos'] = 'Welcome/quienes_somos';
 $route['politicas_de_privacidad'] = 'Welcome/politicas_de_privacidad';
 $route['contactanos'] = 'Welcome/contactanos';
 $route['comercializacion'] = 'Welcome/comercializacion';
+$route['login'] = 'Welcome/login';
+$route['registro'] = 'Welcome/registro';
+$route['verifico_nuevoregistro'] = 'registro_controller';
+$route['verifico_usuario'] = 'loginController';
 
 $route['404_override'] = '';
 

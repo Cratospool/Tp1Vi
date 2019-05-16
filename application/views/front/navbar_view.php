@@ -48,7 +48,7 @@
         </div>
     </li>
     <li class="nav-item active">
-        <a class="nav-link" href="#">Pataformas<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Plataformas<span class="sr-only">(current)</span></a>
     </li>
     <li><a href="<?php echo base_url('principal');?>">
             <img id="icono-pc" src="assets/img/pc.png" class="img-responsive" alt="Logo" style="height: 50px;">
@@ -70,6 +70,10 @@
     <i class="fas fa-shopping-bag"></i>
     <span class="badge badge-light">6</span>
     <span class="sr-only">unread messages</span>
+
+</button>
+<button type="button" class="btn btn-success mr-2">
+    <a href="<?php echo base_url('registro');?>">registro</a>
 
 </button>
 <form class="form-inline my-2 my-lg-0">

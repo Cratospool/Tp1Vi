@@ -74,5 +74,27 @@ class Welcome extends CI_Controller {
 		$this->load->view('front/footer_view');
 
 	}
+	public function login()
+	{
+		//$this->load->view('principal.php');
+		$data = array('titulo' => 'login');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('login');
+		$this->load->view('front/footer_view');
+
+	}
+	public function registro()
+	{
+		//$this->load->view('principal.php');
+		$data = array('titulo' => 'registro');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('registro');
+		$this->load->view('front/footer_view');
+
+	}
 
 }
