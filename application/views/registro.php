@@ -7,8 +7,7 @@
 			<!-- Genero el formulario para crear una usuario -->
 
 			<div class="well bs-component form-horizontal">
-				<?php echo form_open('verifico_nuevoregistro',
-									['class' => 'form-group', 'role' => 'form', 'id' => 'form_registro']); ?>
+				<?php echo form_open('verifico_nuevoregistro',['class' => 'form-group', 'role' => 'form', 'id' => 'form_registro']); ?>
 				<fieldset>
 					<div class="form-group">
 						<label class="col-lg-2 control-label">Nombre</label>

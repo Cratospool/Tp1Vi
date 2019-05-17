@@ -10,7 +10,7 @@ class LoginModel extends CI_Model{
 
 	function validarUsuario($usuario, $password)
 	{
-		$query = $this->db->get_where('usuarios', array('usuario'=>$usuario,'password'=>$password, 'estado'=>1), 1);
+		$query = $this->db->get_where('usuarios', array('usuario'=>$usuario,'password'=>$password), 1);
 
         if($query->num_rows() == 1)
         {

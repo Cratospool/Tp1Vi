@@ -25,10 +25,10 @@ class LoginController extends CI_Controller{
 		if ($this->form_validation->run() == FALSE)
 		{	//En caso de que falle la validacion vuelve a cargar la pagina de Login
 			$data = array('titulo' => 'Error de datos');
-			$this->load->view('front/head',$data);
-			$this->load->view('front/navbar');
+			$this->load->view('front/head_view',$data);
+			$this->load->view('front/navbar_view');
 			$this->load->view('login');
-			$this->load->view('front/footer');
+			$this->load->view('front/footer_view');
 		}
 		else{
 			//Pagina que carga despues de loguearse
@@ -41,7 +41,7 @@ class LoginController extends CI_Controller{
 	function _valid_login($password)
 	{
 		//Se validaron los campos exitosamente. Se valida con la base de datos
-		$usuario = $this->input->post('usuario');
+		$usuario = $this->input->post('Usuario');
 
         //Consulta a la base
 		$result = $this->loginModel->validarUsuario($usuario, $password);
