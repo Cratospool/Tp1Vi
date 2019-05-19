@@ -58,8 +58,15 @@ $route['contactanos'] = 'Welcome/contactanos';
 $route['comercializacion'] = 'Welcome/comercializacion';
 $route['login'] = 'Welcome/login';
 $route['registro'] = 'Welcome/registro';
+$route['agregaproducto'] = 'Welcome/agregaproducto';
+$route['modificaproducto'] = 'Welcome/modificaproducto';
+$route['muestraelectrodomesticos'] = 'Welcome/muestraelectrodomesticos';
+$route['muestraeliminados'] = 'Welcome/muestraeliminados';
+$route['muestraproductos'] = 'Welcome/muestraproductos';
 $route['verifico_nuevoregistro'] = 'registro_controller';
 $route['verifico_usuario'] = 'loginController';
+$route['cerrar_sesion'] = 'loginController/cerrar_sesion';
+$route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
 
 $route['404_override'] = '';
 

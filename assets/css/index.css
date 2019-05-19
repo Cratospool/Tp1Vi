@@ -26,6 +26,14 @@
 	padding: 20px;
 }
 
+#dropdown-menu{
+	background-color: #323232;
+
+}
+
+#dropdown-menu a:hover{
+	background-color: black;
+}
 .card-body {
 	background: #323232;
 	color: white;

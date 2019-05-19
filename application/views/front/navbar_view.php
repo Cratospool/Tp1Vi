@@ -33,7 +33,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Categorias
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background: #323232;">
+                <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown" >
                     <a class="dropdown-item" href="#"><i class="fas fa-dragon"></i>  Acción</a>
                     <a class="dropdown-item" href="#"><i class="fab fa-fort-awesome"></i>  Aventura</a>
                     <a class="dropdown-item" href="#"><i class="fas fa-car-crash"></i>  Conducción</a>
@@ -68,6 +68,25 @@
         {
             ?>
             <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Juegos
+                  </a>
+                  <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="<?php echo base_url('agregaproducto');?>">
+                      Agrega producto</a>
+                    <a class="dropdown-item" href="<?php echo base_url('modificaproducto');?>">
+                      Modificar producto</a>
+                    <a class="dropdown-item" href="<?php echo base_url('muestraelectrodomesticos');?>">
+                      Muestra Electrodomesticos</a>
+                    <a class="dropdown-item" href="<?php echo base_url('muestraeliminados');?>">
+                      Muestra Eliminados</a>
+                    <a class="dropdown-item" href="<?php echo base_url('muestraproductos');?>">
+                      Muestra productos</a>
+                  </div>
+                </li>
+
             <li class="nav-item">
               <a class="nav-link" href="<?php echo base_url('productosAdmin');?>">
                 Productos
@@ -124,7 +143,7 @@
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
               <button class="btn btn-dark my-2 my-sm-0" type="submit">
-                <i class="fa fa-search"> Buscar</i>
+                <i class="fa fa-search"></i>
               </button>
             </form>
             <?php
@@ -133,32 +152,14 @@
         {
             ?>
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Productos
-                </a>
-                <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Bicicletas</a>
-                  <a class="dropdown-item" href="#">Scooter</a>
-                  <!-- <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Something else here</a> -->
-                </div>
-              </li>
-              <li class="nav-item" data-toggle="modal" data-target="#modalLogin">
-                <a class="nav-link" href="#">
-                  <i class="fa fa-user"></i> Login
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="fa fa-shopping-cart"></i> Mi Carrito
-                </a>
+              <li class="nav-item mr-2" data-toggle="modal" data-target="#modalLogin">
+                  <a href="<?php echo base_url('login');?>">Login</a>
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
               <button class="btn btn-dark my-2 my-sm-0" type="submit">
-                <i class="fa fa-search"> Buscar</i>
+                <i class="fa fa-search"></i>
               </button>
             </form>
             <?php

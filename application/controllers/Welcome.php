@@ -96,5 +96,60 @@ class Welcome extends CI_Controller {
 		$this->load->view('front/footer_view');
 
 	}
+	public function muestraproductos()
+	{
+		//$this->load->view('principal.php');
+		$data = array('titulo' => 'Mostrar productos');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('muestraproductos');
+		$this->load->view('front/footer_view');
+
+	}
+	public function muestraeliminados()
+	{
+		//$this->load->view('principal.php');
+		$data = array('titulo' => 'mostrar eliminados');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('muestraeliminados');
+		$this->load->view('front/footer_view');
+
+	}
+	public function muestraelectrodomesticos()
+	{
+		//$this->load->view('principal.php');
+		$data = array('titulo' => 'mostrar electrodomesticos');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('muestraelectrodomesticos');
+		$this->load->view('front/footer_view');
+
+	}
+	public function modificaproducto()
+	{
+		//$this->load->view('principal.php');
+		$data = array('titulo' => 'Modificar producto');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('modificaproducto');
+		$this->load->view('front/footer_view');
+
+	}
+	public function agregaproducto()
+	{
+		//$this->load->view('principal.php');
+		$data = array('titulo' => 'Agregar Producto');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('agregaproducto');
+		$this->load->view('front/footer_view');
+
+	}
 
 }

@@ -92,7 +92,7 @@ class LoginController extends CI_Controller{
 			//destruyo la variable de sesión
 			$this->session->sess_destroy();
 			//direcciono a la página principal
-			redirect(base_url('home'));
+			redirect(base_url('principal'));
 		}
 
 }
