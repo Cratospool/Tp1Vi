@@ -30,8 +30,8 @@
             <br>
 
 				<?php echo form_input(['type' => 'password',
-										'name' => 'contrasena',
-										'id' => 'contrasena',
+										'name' => 'password',
+										'id' => 'password',
 										'class' => 'form-control',
 										'placeholder' => 'Contraseña',
 										'required'=>'required']); ?> <br>

@@ -11,8 +11,8 @@ class LoginController extends CI_Controller{
 
 	function index()
 	{   //Reglas de validación
-		$this->form_validation->set_rules('usuario', 'Usuario', 'trim|required');
-		$this->form_validation->set_rules('password', 'Contraseña','trim|required|callback__valid_login');
+		$this->form_validation->set_rules('usuario', 'usuario', 'trim|required');
+		$this->form_validation->set_rules('password', 'password','trim|required|callback__valid_login');
 
 		//Mensajes en caso de error
 		$this->form_validation->set_message('required', 'el campo %s es requerido');
@@ -41,7 +41,7 @@ class LoginController extends CI_Controller{
 	function _valid_login($password)
 	{
 		//Se validaron los campos exitosamente. Se valida con la base de datos
-		$usuario = $this->input->post('Usuario');
+		$usuario = $this->input->post('usuario');
 
         //Consulta a la base
 		$result = $this->loginModel->validarUsuario($usuario, $password);

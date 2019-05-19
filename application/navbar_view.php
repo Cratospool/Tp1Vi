@@ -1,0 +1,127 @@
+<!-- Header -->
+<?php $session_data = $this->session->userdata('logged_in'); ?>
+
+<header id="header">
+  <nav id="navBar" class="navbar navbar-expand-lg navbar-light navbar-static-top fixed-top" style="background: rgba(0,61,155,.85);">
+    <div class="container">
+      <a class="navbar-brand">
+        <span class="navbar-logo">
+          <a href="<?php echo base_url('principal');?>">
+            <img id="logo" src="assets/img/logo.png" alt="Bici4all" title="" style="height: 2.8rem;">
+          </a>
+        </span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <!--            MENU PARA ADMINISTRADOR-->
+      <?php if( ($this->session->userdata('logged_in')) and ($session_data['id_perfil'] == '1')){?>
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo base_url('productosAdmin');?>">
+            Productos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo base_url('usuarios_todos');?>">
+            Usuarios
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Reportes
+          </a>
+          <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<?php echo base_url('ventas');?>">
+              Ventas</a>
+            <a class="dropdown-item" href="<?php echo base_url('consultas');?>">
+              Consultas</a>
+          </div> 
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
+          </a>
+          <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
+          </div> 
+        </li>
+      </ul>
+                          
+     <!--            MENU PARA CLIENTES-->
+      <?php } else if( ($this->session->userdata('logged_in')) and ($session_data['id_perfil'] == '2')){?>           
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Productos
+          </a>
+          <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Bicicletas</a>
+            <a class="dropdown-item" href="#">Scooters</a>
+          </div> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-shopping-cart"></i> Mi Carrito
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
+          </a>
+          <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<?php echo base_url('comprar');?>">Mis Compras</a>
+            <a class="dropdown-item" href="<?php echo base_url('misdatos');?>">Mis datos</a>
+            <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
+          </div> 
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+        <button class="btn btn-dark my-2 my-sm-0" type="submit">
+          <i class="fa fa-search"> Buscar</i>
+        </button>
+      </form>
+            
+     <!--            MENU PARA PUBLICO EN GENERAL-->
+      <?php } else {?> 
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Productos
+          </a>
+          <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Bicicletas</a>
+            <a class="dropdown-item" href="#">Scooter</a>
+            <!-- <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a> -->
+          </div> 
+        </li>
+        <li class="nav-item" data-toggle="modal" data-target="#modalLogin">
+          <a class="nav-link" href="#">
+            <i class="fa fa-user"></i> Login
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-shopping-cart"></i> Mi Carrito
+          </a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+        <button class="btn btn-dark my-2 my-sm-0" type="submit">
+          <i class="fa fa-search"> Buscar</i>
+        </button>
+      </form>               
+    <?php }?> 
+
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- /header -->
