@@ -30,7 +30,7 @@
 				<tr>
 					<td><?php echo $row->id;  ?></td>
 					<td><?php echo $row->descripcion;  ?></td>
-					<td><?php echo $row->categoria_id;  ?></td>
+					<td><?php echo $row->id_categoria;  ?></td>
 					<td><?php echo $row->precio_venta;  ?></td>
 					<td><?php echo $row->stock;  ?></td>
 					<td><?php echo $row->eliminado;  ?></td>

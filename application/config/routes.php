@@ -50,25 +50,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'Welcome';
-
+// Pagina
 $route['principal'] = 'Welcome/index';
 $route['quienes_somos'] = 'Welcome/quienes_somos';
 $route['politicas_de_privacidad'] = 'Welcome/politicas_de_privacidad';
 $route['contactanos'] = 'Welcome/contactanos';
 $route['comercializacion'] = 'Welcome/comercializacion';
+//usuarios
 $route['login'] = 'Welcome/login';
 $route['registro'] = 'Welcome/registro';
-$route['agregaproducto'] = 'Welcome/agregaproducto';
-$route['modificaproducto'] = 'Welcome/modificaproducto';
-$route['muestraelectrodomesticos'] = 'Welcome/muestraelectrodomesticos';
-$route['muestraeliminados'] = 'Welcome/muestraeliminados';
-$route['muestraproductos'] = 'Welcome/muestraproductos';
 $route['verifico_nuevoregistro'] = 'registro_controller';
 $route['verifico_usuario'] = 'loginController';
 $route['cerrar_sesion'] = 'loginController/cerrar_sesion';
+//Productos
+$route['agregaproducto'] = 'Welcome/agregaproducto';
+$route['modificaproducto'] = 'Welcome/modificaproducto';
+$route['productos_eliminados'] = 'producto_controller/muestra_eliminados';
+$route['muestraproductos'] = 'Welcome/muestraproductos';
 $route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
 $route['productos_todos'] = 'producto_controller';
-$route['productos_modifica'] = 'producto_controller/modificar_producto';
+$route['productos_modifica'] = 'producto_controller/';
+$route['productos_elimina/(:num)'] = 'producto_controller/eliminar_producto/$1';
+
 
 
 $route['404_override'] = '';

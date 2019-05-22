@@ -29,11 +29,11 @@
 					<div class="form-group">
 						<label class="col-lg-2 control-label">Categoría</label>
 						<div class="col-lg-10">
-							<?php echo form_input(['name' => 'categoria_id',
-													'id' => 'categoria_id',
+							<?php echo form_input(['name' => 'id_categoria',
+													'id' => 'id_categoria',
 													'class' => 'form-control',
 													'placeholder' => '1- Electrodomesticos - 2-Muebles',
-													'value'=>set_value('categoria_id')]); ?>
+													'value'=>set_value('id_categoria')]); ?>
 						</div>
 					</div>
 					<div class="form-group">

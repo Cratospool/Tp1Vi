@@ -112,7 +112,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		{
 			//Genero las reglas de validacion
 			$this->form_validation->set_rules('descripcion', 'Descripcion', 'required|is_unique[productos.descripcion]');
-			$this->form_validation->set_rules('categoria_id', 'Categoria', 'required');
+			$this->form_validation->set_rules('id_categoria', 'Categoria', 'required');
 			$this->form_validation->set_rules('precio_costo', 'Precio Costo', 'required|numeric');
 			$this->form_validation->set_rules('precio_venta', 'Precio Venta', 'required|numeric');
 			$this->form_validation->set_rules('stock', 'Stock', 'required|numeric');
@@ -185,7 +185,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
                     // Array de datos para insertar en productos
                     $data = array(
 						'descripcion'=>$this->input->post('descripcion',true),
-						'categoria_id'=>$this->input->post('categoria_id',true),
+						'id_categoria'=>$this->input->post('id_categoria',true),
 						'imagen'=>$url,
 						'precio_costo'=>$this->input->post('precio_costo',true),
 						'precio_venta'=>$this->input->post('precio_venta',true),
@@ -229,7 +229,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				foreach ($datos_producto->result() as $row)
 				{
 					$descripcion = $row->descripcion;
-					$categoria_id = $row->categoria_id;
+					$id_categoria = $row->id_categoria;
 					$imagen = $row->imagen;
 					$precio_costo = $row->precio_costo;
 					$precio_venta = $row->precio_venta;
@@ -240,7 +240,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				$dat = array('producto' =>$datos_producto,
 					'id'=>$id,
 					'descripcion'=>$descripcion,
-					'categoria_id'=>$categoria_id,
+					'id_categoria'=>$id_categoria,
 					'imagen'=>$imagen,
 					'precio_costo'=>$precio_costo,
 					'precio_venta'=>$precio_venta,
@@ -273,7 +273,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		{
 			//Validación del formulario
 			$this->form_validation->set_rules('descripcion', 'Descripcion', 'required');
-			$this->form_validation->set_rules('categoria_id', 'Categoria', 'required');
+			$this->form_validation->set_rules('id_categoria', 'Categoria', 'required');
 			$this->form_validation->set_rules('precio_costo', 'Precio Costo', 'required|numeric');
 			$this->form_validation->set_rules('precio_venta', 'Precio Venta', 'required|numeric');
 			$this->form_validation->set_rules('stock', 'Stock', 'required|numeric');
@@ -296,7 +296,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			$dat = array(
 				'id'=>$id,
 				'descripcion'=>$this->input->post('descripcion',true),
-				'categoria_id'=>$this->input->post('categoria_id',true),
+				'id_categoria'=>$this->input->post('id_categoria',true),
 				'imagen'=>$imagen,
 				'precio_costo'=>$this->input->post('precio_costo',true),
 				'precio_venta'=>$this->input->post('precio_venta',true),
@@ -343,7 +343,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    	$dat = array(
 				'id'=>$id,
 				'descripcion'=>$this->input->post('descripcion',true),
-				'categoria_id'=>$this->input->post('categoria_id',true),
+				'id_categoria'=>$this->input->post('id_categoria',true),
 				'precio_costo'=>$this->input->post('precio_costo',true),
 				'precio_venta'=>$this->input->post('precio_venta',true),
 				'stock'=>$this->input->post('stock',true),
@@ -438,7 +438,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			$this->load->view('front/head_view', $data);
 			$this->load->view('front/navbar_view');
-			$this->load->view('back/productos/muestraeliminados_view', $dat);
+			$this->load->view('muestraeliminados', $dat);
 			$this->load->view('front/footer_view');
 			}else{
 			redirect('login', 'refresh');}

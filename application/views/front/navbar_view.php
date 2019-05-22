@@ -91,13 +91,13 @@
                   </a>
                   <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?php echo base_url('agregaproducto');?>">
-                      Agregar Socio</a>
+                      Agregar Usuario</a>
                     <a class="dropdown-item" href="<?php echo base_url('modificaproducto');?>">
-                      Modificar Socio</a>
+                      Modificar Usuario</a>
                     <a class="dropdown-item" href="<?php echo base_url('usuarios_todos');?>">
-                      Ver todos los Socios</a>
+                      Ver todos los Usuarios</a>
                     <a class="dropdown-item" href="<?php echo base_url('muestraeliminados');?>">
-                      Ver socios eliminados</a>
+                      Ver Usuarios eliminados</a>
                   </div>
                 </li>
             <li class="nav-item dropdown">
