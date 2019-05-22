@@ -31,7 +31,7 @@
         <ul class="navbar-nav mr-auto">
              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Categorias
+                    Generos
                 </a>
                 <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown" >
                     <a class="dropdown-item" href="#"><i class="fas fa-dragon"></i>  Acción</a>
@@ -75,28 +75,31 @@
                   </a>
                   <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?php echo base_url('agregaproducto');?>">
-                      Agrega producto</a>
+                      Agregar juego</a>
                     <a class="dropdown-item" href="<?php echo base_url('modificaproducto');?>">
-                      Modificar producto</a>
+                      Modificar juego</a>
                     <a class="dropdown-item" href="<?php echo base_url('muestraelectrodomesticos');?>">
-                      Muestra Electrodomesticos</a>
+                      Ver todos los Juegos</a>
                     <a class="dropdown-item" href="<?php echo base_url('muestraeliminados');?>">
-                      Muestra Eliminados</a>
-                    <a class="dropdown-item" href="<?php echo base_url('muestraproductos');?>">
-                      Muestra productos</a>
+                      Ver juegos eliminados</a>
                   </div>
                 </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('productosAdmin');?>">
-                Productos
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo base_url('usuarios_todos');?>">
-                Usuarios
-              </a>
-            </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Usuarios
+                  </a>
+                  <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="<?php echo base_url('agregaproducto');?>">
+                      Agregar Socio</a>
+                    <a class="dropdown-item" href="<?php echo base_url('modificaproducto');?>">
+                      Modificar Socio</a>
+                    <a class="dropdown-item" href="<?php echo base_url('usuarios_todos');?>">
+                      Ver todos los Socios</a>
+                    <a class="dropdown-item" href="<?php echo base_url('muestraeliminados');?>">
+                      Ver socios eliminados</a>
+                  </div>
+                </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Reportes

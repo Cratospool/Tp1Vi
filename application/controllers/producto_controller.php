@@ -33,10 +33,10 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			$dat = array('productos' => $this->producto_model->get_productos() );
 
-			$this->load->view('frond/head_view', $data);
-			$this->load->view('frond/navbar_view');
+			$this->load->view('front/head_view', $data);
+			$this->load->view('front/navbar_view');
 			$this->load->view('muestraproductos', $dat);
-			$this->load->view('frond/footer_view');
+			$this->load->view('front/footer_view');
 			}else{
 			redirect('login', 'refresh'); }
 		}
@@ -116,7 +116,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			$this->form_validation->set_rules('precio_costo', 'Precio Costo', 'required|numeric');
 			$this->form_validation->set_rules('precio_venta', 'Precio Venta', 'required|numeric');
 			$this->form_validation->set_rules('stock', 'Stock', 'required|numeric');
-			$this->form_validation->set_rules('stock_minimo', 'Stock Minimo', 'required|numeric');
+			$this->form_validation->set_rules('stock_minimoimo', 'Stock Minimo', 'required|numeric');
 			$this->form_validation->set_rules('filename', 'Imagen', 'required|callback__image_upload');
 
 			//Mensaje de error si no pasan las reglas
@@ -164,7 +164,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
             if (!empty($_FILES['filename']['name']))
             {
                 // Especifica la configuración para el archivo
-                $config['upload_path'] = 'img/productos/';
+                $config['upload_path'] = 'assets/img/productos/';
                 $config['allowed_types'] = 'gif|jpg|JPEG|png';
 
                 $config['max_size'] = '2048';
@@ -173,7 +173,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
                 // Inicializa la configuración para el archivo
                 $this->upload->initialize($config);
-
+				//
                 if ($this->upload->do_upload('filename'))
                 {
                 	// Mueve archivo a la carpeta indicada en la variable $data
@@ -190,7 +190,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 						'precio_costo'=>$this->input->post('precio_costo',true),
 						'precio_venta'=>$this->input->post('precio_venta',true),
 						'stock'=>$this->input->post('stock',true),
-						'stock_min'=>$this->input->post('stock_min',true),
+						'stock_minimo'=>$this->input->post('stock_minimoimo',true),
 						'eliminado'=>'NO',
 					);
 
@@ -234,7 +234,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 					$precio_costo = $row->precio_costo;
 					$precio_venta = $row->precio_venta;
 					$stock = $row->stock;
-					$stock_min = $row->stock_min;
+					$stock_minimo = $row->stock_minimo;
 				}
 
 				$dat = array('producto' =>$datos_producto,
@@ -245,7 +245,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 					'precio_costo'=>$precio_costo,
 					'precio_venta'=>$precio_venta,
 					'stock'=>$stock,
-					'stock_min'=>$stock_min
+					'stock_minimo'=>$stock_minimo
 				);
 			}
 			else
@@ -277,7 +277,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			$this->form_validation->set_rules('precio_costo', 'Precio Costo', 'required|numeric');
 			$this->form_validation->set_rules('precio_venta', 'Precio Venta', 'required|numeric');
 			$this->form_validation->set_rules('stock', 'Stock', 'required|numeric');
-			$this->form_validation->set_rules('stock_min', 'Stock Minimo', 'required|numeric');
+			$this->form_validation->set_rules('stock_minimo', 'Stock Minimo', 'required|numeric');
 
 
 			//Mensaje del form_validation
@@ -301,7 +301,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				'precio_costo'=>$this->input->post('precio_costo',true),
 				'precio_venta'=>$this->input->post('precio_venta',true),
 				'stock'=>$this->input->post('stock',true),
-				'stock_min'=>$this->input->post('stock_min',true)
+				'stock_minimo'=>$this->input->post('stock_minimo',true)
 			);
 
 			if ($this->form_validation->run()==FALSE)
@@ -347,7 +347,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				'precio_costo'=>$this->input->post('precio_costo',true),
 				'precio_venta'=>$this->input->post('precio_venta',true),
 				'stock'=>$this->input->post('stock',true),
-				'stock_min'=>$this->input->post('stock_min',true)
+				'stock_minimo'=>$this->input->post('stock_minimo',true)
 			);
 
 			// Si la iamgen esta vacia se asume que no se modifica

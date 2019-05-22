@@ -5,7 +5,7 @@
 			<h1>No hay Productos</h1>
 		</div>
 		<?php if( ($this->session->userdata('logged_in')) and ($perfil_id == '1') ) { ?>
-			<a type="button" class="btn btn-success" href="<?php echo base_url('productos_agrega'); ?>">Agregar</a>
+			<a type="button" class="btn btn-success" href="<?php echo base_url('agregaproducto'); ?>">Agregar</a>
 			<a type="button" class="btn btn-danger" href="<?php echo base_url('productos_eliminados'); ?>">ELIMINADOS</a>
 			<br> <br>
 		<?php } ?>	
@@ -17,7 +17,7 @@
 		<div class="well">
 			<h1>Todos los Productos</h1>
 		</div>	
-		<a type="button" class="btn btn-success" href="<?php echo base_url('productos_agrega'); ?>">Agregar</a>
+		<a type="button" class="btn btn-success" href="<?php echo base_url('agregaproducto'); ?>">Agregar</a>
 		<a type="button" class="btn btn-danger" href="<?php echo base_url('productos_eliminados'); ?>">ELIMINADOS</a>
 		<br> <br>
 		<table class="table table-bordered">

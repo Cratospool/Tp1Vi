@@ -67,6 +67,9 @@ $route['verifico_nuevoregistro'] = 'registro_controller';
 $route['verifico_usuario'] = 'loginController';
 $route['cerrar_sesion'] = 'loginController/cerrar_sesion';
 $route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
+$route['productos_todos'] = 'producto_controller';
+$route['productos_modifica'] = 'producto_controller/modificar_producto';
+
 
 $route['404_override'] = '';
 

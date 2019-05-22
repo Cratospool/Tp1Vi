@@ -6,7 +6,7 @@
 		</div>
 
 		<?php if( ($this->session->userdata('logged_in')) and ($perfil_id == '1') ) { ?>
-			<a type="button" class="btn btn-success" href="<?php echo base_url('productos_agrega'); ?>">Agregar</a>
+			<a type="button" class="btn btn-success" href="<?php echo base_url('agregaproducto'); ?>">Agregar</a>
 			<br> <br>
 		<?php } ?>
 
@@ -18,7 +18,7 @@
 		<div class="well">
 			<h1>Todos los Electrodomésticos</h1>
 		</div>	
-		<a type="button" class="btn btn-success" href="<?php echo base_url('productos_agrega'); ?>">Agregar</a>
+		<a type="button" class="btn btn-success" href="<?php echo base_url('agregaproducto'); ?>">Agregar</a>
 		<table class="table table-bordered">
 			<thead>
 				<tr>
