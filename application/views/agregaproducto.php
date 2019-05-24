@@ -32,7 +32,7 @@
 							<?php echo form_input(['name' => 'id_categoria',
 													'id' => 'id_categoria',
 													'class' => 'form-control',
-													'placeholder' => '1- Electrodomesticos - 2-Muebles',
+													'placeholder' => '1-PC - 2-Xbox - 3-Playstation',
 													'value'=>set_value('id_categoria')]); ?>
 						</div>
 					</div>

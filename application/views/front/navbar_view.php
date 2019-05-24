@@ -8,7 +8,7 @@
             <div class="col-3"></div>
             <div  class="col-md-6">
                 <a href="<?php echo base_url('principal');?>">
-                    <img id="logo" src="assets/img/logo.png" class="img-responsive center-block" alt="Logo">
+                    <img id="logo" src="<?php echo base_url('assets/img/logo.png'); ?>" class="img-responsive center-block" alt="Logo">
                 </a>
             </div>
             <div class="col-3"></div>
@@ -20,7 +20,7 @@
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark sticky-top" >
     <a class="navbar-brand ">
         <span class="navbar-logo">
-            <a href="<?php echo base_url('principal');?>"><img  src="assets/img/logo.png" class="img-responsive" alt="Logo" style="height: 55px;"></a>
+            <a href="<?php echo base_url('principal');?>"><img  src="<?php echo base_url('assets/img/logo.png'); ?>" class="img-responsive" alt="Logo" style="height: 55px;"></a>
         </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@
         <ul class="navbar-nav mr-auto">
              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Generos
+                    Categoria
                 </a>
                 <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown" >
                     <a class="dropdown-item" href="#"><i class="fas fa-dragon"></i>  Acción</a>
@@ -49,17 +49,17 @@
             </li>
 
             <li><a href="<?php echo base_url('principal');?>">
-                    <img id="icono-pc" src="assets/img/pc.png" class="img-responsive" alt="Logo" style="height: 50px;">
+                    <img id="icono-pc" src="<?php echo base_url('assets/img/pc.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
                 </a>
             </li>
             <li>
                 <a id="icono-ps" href="<?php echo base_url('principal');?>">
-                    <img  src="assets/img/ps.png" class="img-responsive" alt="Logo" style="height: 55px;">
+                    <img  src="<?php echo base_url('assets/img/ps.png'); ?>" class="img-responsive" alt="Logo" style="height: 55px;">
                 </a>
             </li>
             <li>
                 <a href="<?php echo base_url('principal');?>">
-                    <img id="icono-xbox" src="assets/img/xbox.png" class="img-responsive" alt="Logo" style="height: 50px;">
+                    <img id="icono-xbox" src="<?php echo base_url('assets/img/xbox.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
                 </a>
             </li>
         </ul>
@@ -76,12 +76,11 @@
                   <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?php echo base_url('agregaproducto');?>">
                       Agregar juego</a>
-                    <a class="dropdown-item" href="<?php echo base_url('modificaproducto');?>">
-                      Modificar juego</a>
-                    <a class="dropdown-item" href="<?php echo base_url('muestraelectrodomesticos');?>">
+                      <a class="dropdown-item" href="<?php echo base_url('muestraeliminados');?>">
+                        Ver juegos eliminados</a>
+                    <a class="dropdown-item" href="<?php echo base_url('muestraproductos');?>">
                       Ver todos los Juegos</a>
-                    <a class="dropdown-item" href="<?php echo base_url('muestraeliminados');?>">
-                      Ver juegos eliminados</a>
+
                   </div>
                 </li>
 

@@ -57,7 +57,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			$this->load->view('front/head_view', $data);
 			$this->load->view('front/navbar_view', $data);
-			$this->load->view('back/productos/muestraelectrodomesticos_view', $dat);
+			$this->load->view('muestraelectrodomesticos', $dat);
 			$this->load->view('front/footer_view');
 			}else{
 			redirect('login', 'refresh'); }
@@ -260,7 +260,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			$this->load->view('front/head_view', $data);
 			$this->load->view('front/navbar_view');
-			$this->load->view('back/productos/modificaproducto_view', $dat);
+			$this->load->view('modificaproducto', $dat);
 			$this->load->view('front/footer_view');
 			}else{
 			redirect('login', 'refresh');}
@@ -313,7 +313,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 				$this->load->view('front/head_view', $data);
 				$this->load->view('front/navbar_view');
-				$this->load->view('back/productos/modificaproducto_view', $dat);
+				$this->load->view('modificaproducto', $dat);
 				$this->load->view('front/footer_view');
 			}
 			else
