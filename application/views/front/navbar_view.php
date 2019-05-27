@@ -91,8 +91,6 @@
                   <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?php echo base_url('agregaproducto');?>">
                       Agregar Usuario</a>
-                    <a class="dropdown-item" href="<?php echo base_url('modificaproducto');?>">
-                      Modificar Usuario</a>
                     <a class="dropdown-item" href="<?php echo base_url('usuarios_todos');?>">
                       Ver todos los Usuarios</a>
                     <a class="dropdown-item" href="<?php echo base_url('muestraeliminados');?>">
@@ -142,12 +140,6 @@
                 </div>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-              <button class="btn btn-dark my-2 my-sm-0" type="submit">
-                <i class="fa fa-search"></i>
-              </button>
-            </form>
             <?php
             // MENU PARA PUBLICO EN GENERAL
         }else
@@ -158,13 +150,13 @@
                   <a href="<?php echo base_url('login');?>">Login</a>
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-              <button class="btn btn-dark my-2 my-sm-0" type="submit">
-                <i class="fa fa-search"></i>
-              </button>
-            </form>
             <?php
         }?>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+          <button class="btn btn-dark my-2 my-sm-0" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
     </div>
 </nav>

@@ -72,6 +72,7 @@ $route['productos_modifica/(:num)'] = 'producto_controller/modificar_producto/$1
 $route['productos_elimina/(:num)'] = 'producto_controller/eliminar_producto/$1';
 $route['productos_modifica/(:num)'] = 'producto_controller/muestra_modificar/$1';
 $route['verifico_modificaproducto/(:num)'] = 'producto_controller/modificar_producto/$1';
+$route['productos_activa/(:num)'] = 'producto_controller/activar_producto/$1';
 
 
 

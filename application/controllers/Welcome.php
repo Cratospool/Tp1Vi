@@ -140,16 +140,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('front/footer_view');
 
 	}
-	public function agregaproducto()
-	{
-		//$this->load->view('principal.php');
-		$data = array('titulo' => 'Agregar Producto');
-
-		$this->load->view('front/head_view',$data);
-		$this->load->view('front/navbar_view');
-		$this->load->view('agregaproducto');
-		$this->load->view('front/footer_view');
-
-	}
+	
 
 }

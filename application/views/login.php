@@ -36,7 +36,10 @@
 										'placeholder' => 'Contraseña',
 										'required'=>'required']); ?> <br>
 
-				<?php echo form_submit('submit', 'Iniciar sesión',"class='btn btn-form btn-primary display-4'"); ?> <br>
+				<?php echo form_submit('submit', 'Iniciar sesión',"class='btn btn-form btn-primary display-4'"); ?> <br><br>
+                <button class=" btn btn-dark my-2 my-sm-0" type="submit">
+                  <a href="<?php echo base_url('registro');?>">Registrarse</a>
+                </button>
 
 				<?php echo form_close(); ?>
 				<br>
