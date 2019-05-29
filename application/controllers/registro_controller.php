@@ -52,9 +52,9 @@
 			if ($this->form_validation->run() == FALSE)
 			{
 				//Muestra la página de registro con el título de error
-				$data = array('titulo' => 'Error de formulario');
+				$data = array('titulo' => 'Formulario registro');
 				$this->load->view('front/head_view', $data);
-				$this->load->view('front/menu_view');
+				$this->load->view('front/navbar_view');
 				$this->load->view('registro');
 				$this->load->view('front/footer_view');
 			}

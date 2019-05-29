@@ -57,8 +57,8 @@ $route['politicas_de_privacidad'] = 'Welcome/politicas_de_privacidad';
 $route['contactanos'] = 'Welcome/contactanos';
 $route['comercializacion'] = 'Welcome/comercializacion';
 //usuarios
-$route['login'] = 'Welcome/login';
-$route['registro'] = 'Welcome/registro';
+$route['login'] = 'loginController/login';
+$route['registro'] = 'registro_controller/index';
 $route['verifico_nuevoregistro'] = 'registro_controller';
 $route['verifico_usuario'] = 'loginController';
 $route['cerrar_sesion'] = 'loginController/cerrar_sesion';
@@ -68,11 +68,14 @@ $route['muestraeliminados'] = 'producto_controller/muestra_eliminados';
 $route['muestraproductos'] = 'producto_controller';
 $route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
 $route['productos_todos'] = 'producto_controller';
-$route['productos_modifica/(:num)'] = 'producto_controller/modificar_producto/$1';
 $route['productos_elimina/(:num)'] = 'producto_controller/eliminar_producto/$1';
 $route['productos_modifica/(:num)'] = 'producto_controller/muestra_modificar/$1';
 $route['verifico_modificaproducto/(:num)'] = 'producto_controller/modificar_producto/$1';
 $route['productos_activa/(:num)'] = 'producto_controller/activar_producto/$1';
+//carrito
+$route['carrito'] = 'carrito_controller/electrodomesticos';
+$route['carrito_agrega'] = 'carrito_controller/electrodomesticos';
+
 
 
 

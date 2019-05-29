@@ -125,8 +125,8 @@
             <ul class="navbar-nav ml-auto">
 
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="fa fa-shopping-cart"></i> Mi Carrito
+                <a class="nav-link" href="<?php echo base_url('carrito');?>"><i class="fa fa-shopping-cart"></i> Carro</a>">
+
                 </a>
               </li>
               <li class="nav-item dropdown">

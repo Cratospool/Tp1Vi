@@ -180,7 +180,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
                     $data = $this->upload->data();
 
                     // Path donde guarda el archivo..
-                    $url ="img/productos/".$_FILES['filename']['name'];
+                    $url ="assets/img/productos/".$_FILES['filename']['name'];
 
                     // Array de datos para insertar en productos
                     $data = array(
@@ -230,22 +230,22 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				{
 					$descripcion = $row->descripcion;
 					$id_categoria = $row->id_categoria;
-					$imagen = $row->imagen;
 					$precio_costo = $row->precio_costo;
 					$precio_venta = $row->precio_venta;
 					$stock = $row->stock;
 					$stock_minimo = $row->stock_minimo;
+					$imagen = $row->imagen;
 				}
 
 				$dat = array('producto' =>$datos_producto,
 					'id'=>$id,
 					'descripcion'=>$descripcion,
 					'id_categoria'=>$id_categoria,
-					'imagen'=>$imagen,
 					'precio_costo'=>$precio_costo,
 					'precio_venta'=>$precio_venta,
 					'stock'=>$stock,
-					'stock_minimo'=>$stock_minimo
+					'stock_minimo'=>$stock_minimo,
+					'imagen'=>$imagen
 				);
 			}
 			else
@@ -297,11 +297,11 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				'id'=>$id,
 				'descripcion'=>$this->input->post('descripcion',true),
 				'id_categoria'=>$this->input->post('id_categoria',true),
-				'imagen'=>$imagen,
 				'precio_costo'=>$this->input->post('precio_costo',true),
 				'precio_venta'=>$this->input->post('precio_venta',true),
 				'stock'=>$this->input->post('stock',true),
-				'stock_minimo'=>$this->input->post('stock_minimo',true)
+				'stock_minimo'=>$this->input->post('stock_minimo',true),
+				'imagen'=>$imagen
 			);
 
 			if ($this->form_validation->run()==FALSE)
@@ -354,7 +354,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    	if (!empty($_FILES['filename']['name']))
 	    	{
 	            // Especifica la configuración para el archivo
-	    		$config['upload_path'] = 'img/productos/';
+	    		$config['upload_path'] = 'assets/img/productos/';
 	    		$config['allowed_types'] = 'gif|jpg|jpeg|png';
 
 	    		$config['max_size'] = '2048';
@@ -370,7 +370,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    			$data = $this->upload->data();
 
 	                    // Path donde guarda el archivo..
-	    			$url ="img/productos/".$_FILES['filename']['name'];
+	    			$url ="assets/img/productos/".$_FILES['filename']['name'];
 
 	                 	// Agrego la imagen si se modifico.
 	    			$dat['imagen']=$url;
