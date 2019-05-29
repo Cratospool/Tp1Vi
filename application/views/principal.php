@@ -91,22 +91,22 @@
 
             		                        echo form_submit($btn);
             		                        echo form_close();
-                                            echo "<a href='#' class='btn btn-secondary'>Más Datos</a>";
+                                            // echo "<a href='#' class='btn btn-secondary'>Más Datos</a>";
             		               	?>
             		                    	</div>
             		               	<?php
 
 
             							}else{
-            								echo "<a href='#' class='btn btn-secondary'>Mas Datos</a>";
+            								// echo "<a href='#' class='btn btn-secondary'>Mas Datos</a>";
             							}
             						?>
             						</p>
-                                    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#<?php echo $row->id ?>" aria-expanded="false" aria-controls="collapseExample">
+                                    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#dark" aria-expanded="false" aria-controls="collapseExample">
                                         Ver detalles
                                     </button>
                                 </p>
-                                <div class="collapse" id="<?php echo $row->id ?>">
+                                <div class="collapse" id="dark">
                                     <div class="card card-body">
                                         <h3>---US$ 30---</h3> <br>
                                         Requisitos Mínimos:

@@ -4,22 +4,22 @@
         <div class = "heading">
             <h2 id="h2" align="center">Productos en tu Carrito</h2>
         </div>
-        
-        <div class="text" align="center"> 
+
+        <div class="text" align="center">
 
             <?php  $cart_check = $this->cart->contents();
             // Si el carrito está vacio, mostrar el siguiente mensaje
-            if (empty($cart_check)) 
+            if (empty($cart_check))
             {
                 echo 'Para agregar productos al carrito, click en "Comprar"';
-            }  
-            ?>    
+            }
+            ?>
         </div>
-        
+
         <table class="table" border="0" cellpadding="5px" cellspacing="1px">
 
-            <?php // Todos los items de carrito en "$cart". 
-            if ($cart = $this->cart->contents()):  
+            <?php // Todos los items de carrito en "$cart".
+            if ($cart = $this->cart->contents()):
             ?>
                 <tr id= "main_heading">
                     <td>ID</td>
@@ -53,32 +53,32 @@
                             $ <?php echo number_format($item['price'], 2); ?>
                         </td>
                         <td>
-                            <?php echo form_input('cart[' . $item['id'] . '][qty]', $item['qty'], 
+                            <?php echo form_input('cart[' . $item['id'] . '][qty]', $item['qty'],
                                                     'maxlength="3" size="1" style="text-align: right"'); ?>
                         </td>
                             <?php $gran_total = $gran_total + $item['subtotal']; ?>
                         <td>
                             $ <?php echo number_format($item['subtotal'], 2) ?>
                         </td>
-                        <td> 
+                        <td>
                             <?php // Imagen
-                                $path = '<img src= '. base_url('assets/img/cart_cross.jpg') . ' width="25px" height="20px">';
-                                echo anchor('carrito_elimina/' . $item['rowid'], $path); 
+                                $path = '<img src= '. base_url('assets/img/remove_carro.png') . ' width="25px" height="20px">';
+                                echo anchor('carrito_elimina/' . $item['rowid'], $path);
                             ?>
                         </td>
                     </tr>
-                <?php 
-                endforeach; 
+                <?php
+                endforeach;
                 ?>
-                    
+
                 <tr>
                     <td>
                         <b>Total: $
                             <?php //Gran Total
-                            echo number_format($gran_total, 2); 
+                            echo number_format($gran_total, 2);
                             ?>
                         </b>
-                    </td> 
+                    </td>
                     <td colspan="5" align="right">
                         <!-- Borrar carrito usa mensaje de confirmacion javascript implementado en front/head_view -->
                         <input type="button" class ='btn btn-primary btn-lg' value="Borrar Carrito" onclick="borra_carrito()">

@@ -16,6 +16,19 @@
         <!-- Bootstrap CDN -->
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <title><?php echo ($titulo); ?></title>
+        <!--Script que pregunta si esta seguro de eliminar todo el carrito. Usado en partes/carritoparte_view -->
+
+        <script type="text/javascript">
+            function borra_carrito() {
+                var result = confirm('Esta seguro de eliminar todo el carrito?');
+
+                if (result) {
+                    window.location = 'carrito_elimina/all';
+                } else {
+                    return false; // Boton Cancela
+                }
+            }
+        </script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>

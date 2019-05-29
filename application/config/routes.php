@@ -74,7 +74,11 @@ $route['verifico_modificaproducto/(:num)'] = 'producto_controller/modificar_prod
 $route['productos_activa/(:num)'] = 'producto_controller/activar_producto/$1';
 //carrito
 $route['carrito'] = 'carrito_controller/electrodomesticos';
-$route['carrito_agrega'] = 'carrito_controller/electrodomesticos';
+$route['carrito_agrega'] = 'carrito_controller/add';
+$route['comprar'] = 'carrito_controller/muestra_compra';
+$route['confirma_compra'] = 'carrito_controller/guarda_compra';
+$route['carrito_actualiza'] = 'carrito_controller/actualiza_carrito';
+$route['carrito_elimina/(:any)'] = 'carrito_controller/remove/$1';
 
 
 
