@@ -22,7 +22,7 @@ class LoginController extends CI_Controller{
 		//Forma en que muestra los mensajes de error
 		$this->form_validation->set_error_delimiters('<ul><li>', '</li></ul>');
 
-		if ($this->form_validation->run() == FALSE)
+		if ($this->form_validation->run() == FALSE  )
 		{	//En caso de que falle la validacion vuelve a cargar la pagina de Login
 			$data = array('titulo' => 'Error de datos');
 			$this->load->view('front/head_view',$data);

@@ -69,8 +69,8 @@
 					<div class="form-group">
 						<label class="col-lg-2 control-label">Stock Minimo</label>
 						<div class="col-lg-10">
-							<?php echo form_input(['name' => 'stock_minimoimo',
-													'id' => 'stock_minimoimo',
+							<?php echo form_input(['name' => 'stock_minimo',
+													'id' => 'stock_minimo',
 													'class' => 'form-control',
 													'placeholder' => 'Stock Minimo',
 													'value'=>set_value('stock_minimo')]); ?>

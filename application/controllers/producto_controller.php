@@ -116,7 +116,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			$this->form_validation->set_rules('precio_costo', 'Precio Costo', 'required|numeric');
 			$this->form_validation->set_rules('precio_venta', 'Precio Venta', 'required|numeric');
 			$this->form_validation->set_rules('stock', 'Stock', 'required|numeric');
-			$this->form_validation->set_rules('stock_minimoimo', 'Stock Minimo', 'required|numeric');
+			$this->form_validation->set_rules('stock_minimo', 'Stock Minimo', 'required|numeric');
 			$this->form_validation->set_rules('filename', 'Imagen', 'required|callback__image_upload');
 
 			//Mensaje de error si no pasan las reglas
