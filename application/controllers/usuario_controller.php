@@ -192,11 +192,55 @@ function modificar_usuario()
 
 }
 
+/**
+* Obtiene los datos del usuario a eliminar
+*/
+function eliminar_usuario(){
+    $id = $this->uri->segment(2);
+    $data = array(
+        'baja'=>'SI'
+    );
+
+    $this->usuario_model->estado_usuario($id, $data);
+    redirect('usuarios_todos', 'refresh');
+}
+
+/**
+* Obtiene los datos del usuario a activar
+*/
+function activar_usuario(){
+    $id = $this->uri->segment(2);
+    $data = array(
+        'baja'=>'NO'
+    );
+
+    $this->usuario_model->estado_usuario($id, $data);
+    redirect('usuarios_todos', 'refresh');
+}
 
 
+/**
+* Usuario eliminados logicamente
+*/
+function muestra_eliminados()
+{
+    if($this->_veri_log()){
+    $data = array('titulo' => 'Usuarios eliminados');
+    $session_data = $this->session->userdata('logged_in');
+    $data['perfil_id'] = $session_data['perfil_id'];
+    $data['nombre'] = $session_data['nombre'];
 
+    $dat = array(
+        'usuario' => $this->usuario_model->not_active_usuarios()
+    );
 
-
+    $this->load->view('front/head_view', $data);
+    $this->load->view('front/navbar_view');
+    $this->load->view('muestrausuarioseliminados', $dat);
+    $this->load->view('front/footer_view');
+    }else{
+    redirect('login', 'refresh');}
+}
 
 
 
