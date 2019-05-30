@@ -24,7 +24,7 @@ class Usuario_model extends CI_Model{
 	}
 
 
-	function add_user($data)
+	function add_usuario($data)
 	{
 		$this->db->insert('usuarios', $data);
 		$insert_id = $this->db->insert_id();
@@ -54,6 +54,19 @@ class Usuario_model extends CI_Model{
         }
 	}
 
+    /**
+    * Eliminación y activación logica de un producto
+    */
+    function estado_usuario($id, $data){
+        $this->db->where('id', $id);
+        $query = $this->db->update('usuarios', $data);
+        if($query) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+
 	function delete_usuario($id)
 	{
 		$this->db->where('id', $id);
@@ -66,7 +79,7 @@ class Usuario_model extends CI_Model{
     */
     function not_active_usuarios()
     {
-        $query = $this->db->get_where('usuario', array('baja' => 'SI'));
+        $query = $this->db->get_where('usuarios', array('baja' => 'SI'));
         if($query->num_rows()>0) {
             return $query;
         } else {

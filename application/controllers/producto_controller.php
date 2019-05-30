@@ -190,7 +190,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 						'precio_costo'=>$this->input->post('precio_costo',true),
 						'precio_venta'=>$this->input->post('precio_venta',true),
 						'stock'=>$this->input->post('stock',true),
-						'stock_minimo'=>$this->input->post('stock_minimoimo',true),
+						'stock_minimo'=>$this->input->post('stock_minimo',true),
 						'eliminado'=>'NO',
 					);
 

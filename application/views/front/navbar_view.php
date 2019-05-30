@@ -89,34 +89,36 @@
                     Usuarios
                   </a>
                   <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?php echo base_url('agregaproducto');?>">
+                    <a class="dropdown-item" href="<?php echo base_url('agregausuario');?>">
                       Agregar Usuario</a>
                     <a class="dropdown-item" href="<?php echo base_url('usuarios_todos');?>">
                       Ver todos los Usuarios</a>
-                    <a class="dropdown-item" href="<?php echo base_url('muestraeliminados');?>">
+                    <a class="dropdown-item" href="<?php echo base_url('muestrausuarioseliminados');?>">
                       Ver Usuarios eliminados</a>
                   </div>
                 </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Reportes
-              </a>
-              <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<?php echo base_url('ventas');?>">
-                  Ventas</a>
-                <a class="dropdown-item" href="<?php echo base_url('consultas');?>">
-                  Consultas</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
-              </a>
-              <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
-              </div>
-            </li>
-          </ul>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Reportes
+                  </a>
+                  <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="<?php echo base_url('ventas');?>">
+                      Ventas</a>
+                    <a class="dropdown-item" href="<?php echo base_url('consultas');?>">
+                      Consultas</a>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
+                  </a>
+                  <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
+                  </div>
+                </li>
+            </ul>
             <?php
             // MENU PARA CLIENTE
         } else if (($this->session->userdata('logged_in')) and ($session_data['perfil_id'] == '2'))

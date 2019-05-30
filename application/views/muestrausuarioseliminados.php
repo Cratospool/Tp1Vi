@@ -1,9 +1,9 @@
-<?php if (!$productos) { ?>
+<?php if (!$usuarios) { ?>
 
 	<div class="container">
 		<div class="well">
 			<h1>No hay Eliminados</h1>
-		</div>	
+		</div>
 	</div>
 
 <?php } else { ?>
@@ -11,7 +11,7 @@
 	<div class="container">
 		<div class="well">
 			<h1>Todos los Eliminados</h1>
-		</div>	
+		</div>
 
 		<table class="table table-bordered">
 			<thead>
@@ -26,7 +26,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($productos->result() as $row){ ?>
+				<?php foreach($usuarios->result() as $row){ ?>
 				<tr>
 					<td><?php echo $row->id;  ?></td>
 					<td><?php echo $row->descripcion;  ?></td>
@@ -38,7 +38,7 @@
 				</tr>
 				<?php } ?>
 			</tbody>
-		</table>	            
+		</table>
 	</div>
 
 <?php } ?>
