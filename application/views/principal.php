@@ -69,42 +69,63 @@
 
         						<p>Precio: $ <?php echo $row->precio_venta; ?> </p>
 
-        						<p>
                                 <p>
                                     <p>
-            						<?php
-            							if (($row->stock > 0) && ($session_data = $this->session->userdata('logged_in'))) {
+                						<?php
+                                        if($row->stock <= 0){
+    											$btn = array(
+    												'class' => 'btn btn-danger',
+    												'value' => 'Comprar',
+    												'disabled' => '',
+    												'name' => 'action'
+    												);
 
-            								// Envia los datos en forma de formulario para agregar al carrito
-            		                        echo form_open('carrito_agrega');
-            		                        echo form_hidden('id', $row->id);
-            		                        echo form_hidden('descripcion', $row->descripcion);
-            		                        echo form_hidden('precio_venta', $row->precio_venta);
-            		                        echo form_hidden('stock', $row->stock);
-            		            	?>
-            		                    	<div>
-            		                <?php
-            		                        $btn = array(
-            		                            'class' => 'btn btn-success',
-            		                            'value' => 'Comprar',
-            		                            'name' => 'action'
-            		                        	);
+    											echo form_submit($btn);
+    											echo form_close();
+    									?>
 
-            		                        echo form_submit($btn);
-            		                        echo form_close();
-                                            // echo "<a href='#' class='btn btn-secondary'>Más Datos</a>";
-            		               	?>
-                                    <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#a<?php echo $row->id ?>" aria-expanded="false" aria-controls="collapseExample">
-                                        Ver detalles
-                                    </button>
-            		                    	</div>
-            		               	<?php
+    									<?php
+    										} else if ($session_data = $this->session->userdata('logged_in')){
+    											// Envia los datos en forma de formulario para agregar al carrito
+    											echo form_open('carrito_agrega');
+    											echo form_hidden('id', $row->id);
+    											echo form_hidden('descripcion', $row->descripcion);
+    											echo form_hidden('precio_venta', $row->precio_venta);
+    											echo form_hidden('stock', $row->stock);
+    									?>
+
+    									<?php
+    											$btn = array(
+    												'class' => 'btn btn-primary',
+    												'value' => 'Comprar',
+    												'name' => 'action'
+    												);
+
+    											echo form_submit($btn);
+    											echo form_close();
+
+    									?>
 
 
-            							}else{
-            								// echo "<a href='#' class='btn btn-secondary'>Mas Datos</a>";
-            							}
-            						?>
+    									<?php
+
+    									} else {
+    											$btn = array(
+    												'class' => 'btn btn-primary',
+    												'value' => 'Comprar',
+    												'data-target' => '#modalLogin',
+    												'data-toggle' => 'modal',
+    												'name' => 'action'
+    												);
+
+    											echo form_submit($btn);
+    											echo form_close();
+    										}
+
+                						?>
+                                        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#a<?php echo $row->id ?>" aria-expanded="false" aria-controls="collapseExample">
+                                            Ver detalles
+                                        </button>
             						</p>
 
                                     <div class="collapse" id="a<?php echo $row->id ?>">
@@ -118,9 +139,8 @@
                                             DirectX: Versión 11
                                             Almacenamiento: 36 Gigas de espacio disponible
                                         </div>
+                                    </div>
                                 </p>
-
-                                </div>
                             </div>
                         </div>
                     </div>
