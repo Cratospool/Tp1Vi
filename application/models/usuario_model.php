@@ -1,6 +1,6 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-	
+
 class Usuario_model extends CI_Model{
 
 	/**
@@ -10,7 +10,7 @@ class Usuario_model extends CI_Model{
         parent::__construct();
     }
 
-		
+
 	function get_usuarios()
 	{
 		//$this->db->select('id, nombre, apellido, username');
@@ -22,7 +22,7 @@ class Usuario_model extends CI_Model{
             return FALSE;
         }
 	}
-	
+
 
 	function add_user($data)
 	{
@@ -30,19 +30,19 @@ class Usuario_model extends CI_Model{
 		$insert_id = $this->db->insert_id();
 		return $insert_id;
 	}
-	
+
 
 	function edit_usuario($id)
 	{
 		$query = $this->db->get_where('usuarios', array('id' => $id),1);
-                
+
         if($query->num_rows() == 1) {
             return $query;
         } else {
             return FALSE;
         }
 	}
-	
+
 	function update_usuario($id, $data)
 	{
 		$this->db->where('id', $id);
@@ -55,11 +55,24 @@ class Usuario_model extends CI_Model{
 	}
 
 	function delete_usuario($id)
-	{			
+	{
 		$this->db->where('id', $id);
-		$query = $this->db->delete('usuarios'); 
-		return true;	
+		$query = $this->db->delete('usuarios');
+		return true;
 	}
-	
-	
-} 
+
+	/**
+    * Retorna todos los productos inactivos
+    */
+    function not_active_usuarios()
+    {
+        $query = $this->db->get_where('usuario', array('baja' => 'SI'));
+        if($query->num_rows()>0) {
+            return $query;
+        } else {
+            return FALSE;
+        }
+    }
+
+
+}
