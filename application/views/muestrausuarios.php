@@ -24,12 +24,12 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Usuario</th>
-					<th>Apellido</th>
 					<th>Nombre</th>
-					<th>Perfil</th>
+					<th>Apellido</th>
+					<th>Usuario</th>
 					<th>Email</th>
 					<th>Password</th>
+					<th>Perfil</th>
 					<th>Baja</th>
 					<th>imagen</th>
 				</tr>

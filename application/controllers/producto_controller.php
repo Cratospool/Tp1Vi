@@ -196,7 +196,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 					$productos = $this->producto_model->add_producto($data);
 
-					redirect('productos_todos', 'refresh');
+					redirect('muestraproductos', 'refresh');
 
 					return TRUE;
                 }
@@ -377,7 +377,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 						// Actualiza datos del libro
 	    			$this->producto_model->update_producto($id, $dat);
-	    			redirect('productos_todos', 'refresh');
+	    			redirect('muestraproductos', 'refresh');
 	    		}
 	    		else
 	    		{
@@ -390,7 +390,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    	else
 	    	{
 	    		$this->producto_model->update_producto($id, $dat);
-	    		redirect('productos_todos', 'refresh');
+	    		redirect('muestraproductos', 'refresh');
 	    	}
 	    }
 
@@ -405,7 +405,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    	);
 
 	    	$this->producto_model->estado_producto($id, $data);
-	    	redirect('productos_todos', 'refresh');
+	    	redirect('muestraproductos', 'refresh');
 	    }
 
 	    /**
@@ -418,7 +418,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	    	);
 
 	    	$this->producto_model->estado_producto($id, $data);
-	    	redirect('productos_todos', 'refresh');
+	    	redirect('muestraproductos', 'refresh');
 	    }
 
 	    /**

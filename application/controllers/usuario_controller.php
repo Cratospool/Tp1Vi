@@ -27,7 +27,7 @@ function index()
     $data['perfil_id'] = $session_data['perfil_id'];
     $data['nombre'] = $session_data['nombre'];
 
-    $dat = array('usuarios' => $this->usuario_model->get_usuarios() );
+    $dat = array('usuarios' => $this->usuario_model->active_usuarios() );
 
     $this->load->view('front/head_view', $data);
     $this->load->view('front/navbar_view');

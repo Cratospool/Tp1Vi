@@ -17,24 +17,28 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Descripcion</th>
-					<th>Categoria</th>
-					<th>Precio Venta</th>
-					<th>Stock</th>
-					<th>Eliminado</th>
-					<th>Modificar</th>
+					<th>Nombre</th>
+					<th>Apellido</th>
+					<th>Usuario</th>
+					<th>Email</th>
+					<th>Password</th>
+					<th>Perfil</th>
+					<th>Baja</th>
+					<th>imagen</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php foreach($usuarios->result() as $row){ ?>
 				<tr>
 					<td><?php echo $row->id;  ?></td>
-					<td><?php echo $row->descripcion;  ?></td>
-					<td><?php echo $row->id_categoria;  ?></td>
-					<td><?php echo $row->precio_venta;  ?></td>
-					<td><?php echo $row->stock;  ?></td>
-					<td><?php echo $row->eliminado;  ?></td>
-					<td><a href="<?php echo base_url("productos_modifica/$row->id");?>">Modificar</a>|<a href="<?php echo base_url("productos_activa/$row->id");?>">Activar</a></td>
+					<td><?php echo $row->nombre;  ?></td>
+					<td><?php echo $row->apellido;  ?></td>
+					<td><?php echo $row->usuario;  ?></td>
+					<td><?php echo $row->email;  ?></td>
+					<td><?php echo $row->password;  ?></td>
+					<td><?php echo $row->perfil_id;  ?></td>
+					<td><?php echo $row->baja;  ?></td>
+					<td><a href="<?php echo base_url("usuarios_modifica/$row->id");?>">Modificar</a>|<a href="<?php echo base_url("usuarios_activa/$row->id");?>">Activar</a></td>
 				</tr>
 				<?php } ?>
 			</tbody>
