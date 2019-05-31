@@ -27,7 +27,7 @@ function index()
     $data['perfil_id'] = $session_data['perfil_id'];
     $data['nombre'] = $session_data['nombre'];
 
-    $dat = array('usuarios' => $this->usuario_model->active_usuarios() );
+    $dat = array('usuarios' => $this->usuario_model->get_usuarios() );
 
     $this->load->view('front/head_view', $data);
     $this->load->view('front/navbar_view');
@@ -341,8 +341,8 @@ function _image_modif()
     }
     else
     {
-        $this->producto_model->update_usuario($id, $dat);
-        redirect('productos_todos', 'refresh');
+        $this->usuario_model->update_usuario($id, $dat);
+        redirect('usuarios_todos', 'refresh');
     }
 }
 

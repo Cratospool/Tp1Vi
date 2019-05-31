@@ -1,3 +1,5 @@
+<body id=body-Principal>
+    <main id="main">
 <?php if (!$productos) { ?>
 
 	<div class="container">
@@ -13,7 +15,7 @@
 
 <?php } else { ?>
 
-	<div class="container">
+	<div id="mestradmin" class="container">
 		<div class="well">
 			<h1>Todos los Productos</h1>
 		</div>
@@ -29,6 +31,7 @@
 					<th>Precio Venta</th>
 					<th>Stock</th>
 					<th>Eliminado</th>
+					<th>Imagen</th>
 					<th>Modificar</th>
 				</tr>
 			</thead>
@@ -41,6 +44,7 @@
 					<td><?php echo $row->precio_venta;  ?></td>
 					<td><?php echo $row->stock;  ?></td>
 					<td><?php echo $row->eliminado;  ?></td>
+					<td><img  id="imagen_view" name="imagen_view" class="img-thumbnail" width="100" height="100" src="<?php  echo base_url($row->imagen); ?>" ></td>
 					<td><a href="<?php echo base_url("productos_modifica/$row->id");?>">Modificar</a>|<a href="<?php echo base_url("productos_elimina/$row->id");?>">Eliminar</a></td>
 				</tr>
 				<?php } ?>
@@ -49,3 +53,5 @@
 	</div>
 
 <?php } ?>
+
+</main>

@@ -14,7 +14,7 @@ class Usuario_model extends CI_Model{
 	function get_usuarios()
 	{
 		//$this->db->select('id, nombre, apellido, username');
-		$query = $this->db->get('usuarios');
+		$query = $this->db->get_where('usuarios', array('baja' => 'NO'));
 
 		if($query->num_rows()>0) {
             return $query;
@@ -86,15 +86,7 @@ class Usuario_model extends CI_Model{
             return FALSE;
         }
     }
-    function active_usuarios()
-    {
-        $query = $this->db->get_where('usuarios', array('baja' => 'NO'));
-        if($query->num_rows()>0) {
-            return $query;
-        } else {
-            return FALSE;
-        }
-    }
+
 
 
 }
