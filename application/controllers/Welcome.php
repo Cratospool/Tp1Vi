@@ -101,7 +101,7 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('front/head_view',$data);
 		$this->load->view('front/navbar_view');
-		$this->load->view('muestraproductos');
+		$this->load->view('producto/muestraproductos');
 		$this->load->view('front/footer_view');
 
 	}
@@ -112,7 +112,7 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('front/head_view',$data);
 		$this->load->view('front/navbar_view');
-		$this->load->view('muestraeliminados');
+		$this->load->view('producto/muestraeliminados');
 		$this->load->view('front/footer_view');
 
 	}
@@ -134,7 +134,7 @@ class Welcome extends CI_Controller {
 
 		$this->load->view('front/head_view',$data);
 		$this->load->view('front/navbar_view');
-		$this->load->view('modificaproducto');
+		$this->load->view('producto/modificaproducto');
 		$this->load->view('front/footer_view');
 
 	}

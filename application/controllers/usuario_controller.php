@@ -31,7 +31,7 @@ function index()
 
     $this->load->view('front/head_view', $data);
     $this->load->view('front/navbar_view');
-    $this->load->view('muestrausuarios', $dat);
+    $this->load->view('usuario/muestrausuarios', $dat);
     $this->load->view('front/footer_view');
     }else{
     redirect('login', 'refresh'); }
@@ -52,7 +52,7 @@ function form_agrega_usuario()  	//Si se modifica, modificar (agrega_usuario) ta
 
     $this->load->view('front/head_view', $data);
     $this->load->view('front/navbar_view');
-    $this->load->view('agregausuario');
+    $this->load->view('usuario/agregausuario');
     $this->load->view('front/footer_view');
     }else{
     redirect('login', 'refresh'); }
@@ -213,7 +213,7 @@ function muestra_modificar()
 
     $this->load->view('front/head_view', $data);
     $this->load->view('front/navbar_view');
-    $this->load->view('modificausuario', $dat);
+    $this->load->view('usuario/modificausuario', $dat);
     $this->load->view('front/footer_view');
     }else{
     redirect('login', 'refresh');}
@@ -390,7 +390,7 @@ function muestra_eliminados()
 
     $this->load->view('front/head_view', $data);
     $this->load->view('front/navbar_view');
-    $this->load->view('muestrausuarioseliminados', $dat);
+    $this->load->view('usuario/muestrausuarioseliminados', $dat);
     $this->load->view('front/footer_view');
     }else{
     redirect('login', 'refresh');}

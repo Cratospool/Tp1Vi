@@ -30,7 +30,7 @@ class Carrito_controller extends CI_Controller {
 		$this->load->view('front/navbar_view', $data);
 		if ($session_data)
 		{
-			$this->load->view('carritoparte_view' );
+			$this->load->view('carrito/carritoparte_view' );
 		}
 		$this->load->view('front/footer_view');
 	}
@@ -119,7 +119,7 @@ class Carrito_controller extends CI_Controller {
 
 		$this->load->view('front/head_view', $data);
 		$this->load->view('front/navbar_view', $data);
-		$this->load->view('compra_view', $data);
+		$this->load->view('carrito/compra_view', $data);
 		$this->load->view('front/footer_view');
     }
 
@@ -179,7 +179,7 @@ class Carrito_controller extends CI_Controller {
 
         $this->load->view('front/head_view', $data);
 		$this->load->view('front/navbar_view', $data);
-		$this->load->view('compralista_view');
+		$this->load->view('carrito/compralista_view');
 		$this->load->view('front/footer_view');
 
 		$final = $this->cart->destroy();

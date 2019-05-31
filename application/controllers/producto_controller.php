@@ -35,7 +35,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			$this->load->view('front/head_view', $data);
 			$this->load->view('front/navbar_view');
-			$this->load->view('muestraproductos', $dat);
+			$this->load->view('producto/muestraproductos', $dat);
 			$this->load->view('front/footer_view');
 			}else{
 			redirect('login', 'refresh'); }
@@ -99,7 +99,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			$this->load->view('front/head_view', $data);
 			$this->load->view('front/navbar_view');
-			$this->load->view('agregaproducto');
+			$this->load->view('producto/agregaproducto');
 			$this->load->view('front/footer_view');
 			}else{
 			redirect('login', 'refresh'); }
@@ -141,7 +141,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 				$this->load->view('front/head_view', $data);
 				$this->load->view('front/navbar_view');
-				$this->load->view('agregaproducto');
+				$this->load->view('producto/agregaproducto');
 				$this->load->view('front/footer_view');
 			}
 			else
@@ -260,7 +260,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			$this->load->view('front/head_view', $data);
 			$this->load->view('front/navbar_view');
-			$this->load->view('modificaproducto', $dat);
+			$this->load->view('producto/modificaproducto', $dat);
 			$this->load->view('front/footer_view');
 			}else{
 			redirect('login', 'refresh');}
@@ -313,7 +313,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 				$this->load->view('front/head_view', $data);
 				$this->load->view('front/navbar_view');
-				$this->load->view('modificaproducto', $dat);
+				$this->load->view('producto/modificaproducto', $dat);
 				$this->load->view('front/footer_view');
 			}
 			else
@@ -438,7 +438,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			$this->load->view('front/head_view', $data);
 			$this->load->view('front/navbar_view');
-			$this->load->view('muestraeliminados', $dat);
+			$this->load->view('producto/muestraeliminados', $dat);
 			$this->load->view('front/footer_view');
 			}else{
 			redirect('login', 'refresh');}
