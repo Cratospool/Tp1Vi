@@ -70,7 +70,6 @@ $route['verifico_nuevoproducto'] = 'producto_controller/agrega_producto';
 $route['productos_activa/(:num)'] = 'producto_controller/activar_producto/$1';
 $route['productos_modifica/(:num)'] = 'producto_controller/muestra_modificar/$1';
 $route['verifico_modificaproducto/(:num)'] = 'producto_controller/modificar_producto/$1';
-
 $route['productos_elimina/(:num)'] = 'producto_controller/eliminar_producto/$1';
 //usuarios
 $route['agregausuario'] = 'usuario_controller/form_agrega_usuario';
@@ -80,7 +79,6 @@ $route['verifico_nuevousuario'] = 'usuario_controller/agrega_usuario';
 $route['usuarios_activa/(:num)'] = 'usuario_controller/activar_usuario/$1';
 $route['usuarios_modifica/(:num)'] = 'usuario_controller/muestra_modificar/$1';
 $route['verifico_modificausuario/(:num)'] = 'usuario_controller/modificar_usuario/$1';
-
 $route['usuarios_elimina/(:num)'] = 'usuario_controller/eliminar_usuario/$1';
 //carrito
 $route['carrito'] = 'carrito_controller/electrodomesticos';

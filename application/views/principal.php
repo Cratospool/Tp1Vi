@@ -54,7 +54,6 @@
                         <div class="card col-fluid">
                             <img src="<?php echo base_url($row->imagen); ?>" alt="" class="card-img-top img-responsive img-thumbnail">
                             <div class="card-body">
-                                <h4><?php echo trim($row->descripcion); ?></h4>
                                 <p>
         							<?php
         								if ($row->stock < $row->stock_minimo && $row->stock > 0) {
@@ -73,6 +72,7 @@
                                     <p>
                 						<?php
                                         if($row->stock <= 0){
+                                            echo "<a href='#' class='btn btn-secondary'>Mas Datos</a>";
     											$btn = array(
     												'class' => 'btn btn-danger',
     												'value' => 'Comprar',
@@ -81,6 +81,7 @@
     												);
     											echo form_submit($btn);
     											echo form_close();
+
     									?>
     									<?php
     										} else if ($session_data = $this->session->userdata('logged_in')){
@@ -91,6 +92,7 @@
                                                 echo form_hidden('precio_venta', $row->precio_venta);
                                                 echo form_hidden('stock', $row->stock);
 
+
                                                 $btn = array(
         												'class' => 'btn btn-primary',
         												'value' => 'Comprar',
@@ -99,10 +101,13 @@
         											echo form_submit($btn);
         											echo form_close();
 
+                                                    echo "<a href='#' class='btn btn-secondary'>Mas Datos</a>";
     									?>
+
                                         <br>
     									<?php
     									} else {
+                                            echo "<a href='#' class='btn btn-secondary'>Mas Datos</a>";
     											$btn = array(
     												'class' => 'btn btn-primary',
     												'value' => 'Comprar',
@@ -113,11 +118,10 @@
 
     											echo form_submit($btn);
     											echo form_close();
+
     										}
                 						?>
-                                        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#a<?php echo $row->id ?>" aria-expanded="false" aria-controls="collapseExample">
-                                            Ver detalles
-                                        </button>
+
             						</p>
 
                                     <div class="collapse" id="a<?php echo $row->id ?>">
@@ -138,7 +142,7 @@
                     </div>
         		<?php } ?>
         	</div>
-        	
+
         </div>
         <?php } ?>
     </main>
