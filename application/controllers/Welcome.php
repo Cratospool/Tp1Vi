@@ -25,6 +25,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('front/footer_view');
 
 	}
+	
 
 	public function quienes_somos()
 	{

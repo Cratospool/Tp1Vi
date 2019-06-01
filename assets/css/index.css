@@ -42,7 +42,7 @@
 .collapse .card-body {
 	background: #323232;
 	color: white;
-	text-align: justify;
+	text-align: center;
 }
 
 #main {
@@ -100,4 +100,16 @@
 
 #mestradmin {
 	background: white;
+}
+
+#ver_detalle{
+	color: white;
+	text-align: justify;
+	background: black;
+}
+
+#ver_detalle h1{
+	text-align: center;
+	line-height: 2;
+
 }

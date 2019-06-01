@@ -41,6 +41,20 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			redirect('login', 'refresh'); }
 		}
 
+
+		public function ver_detalle($id)
+		{
+			//$this->load->view('principal.php');
+			$dat = array('producto' => $this->producto_model->edit_producto($id));
+			$data = array('titulo' => 'Principal');
+
+			$this->load->view('front/head_view',$data);
+			$this->load->view('front/navbar_view');
+			$this->load->view('producto/verproducto_view', $dat);
+			$this->load->view('front/footer_view');
+
+		}
+
 		/**
 	    * Muestra todos los electrodomesticos en tabla
 	    */
@@ -112,7 +126,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		{
 			//Genero las reglas de validacion
 			$this->form_validation->set_rules('descripcion', 'Descripcion', 'required|is_unique[productos.descripcion]');
-			$this->form_validation->set_rules('id_categoria', 'Categoria', 'required');
+			$this->form_validation->set_rules('id_categoria', 'Categoria', 'required|numeric');
 			$this->form_validation->set_rules('precio_costo', 'Precio Costo', 'required|numeric');
 			$this->form_validation->set_rules('precio_venta', 'Precio Venta', 'required|numeric');
 			$this->form_validation->set_rules('stock', 'Stock', 'required|numeric');
@@ -192,6 +206,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 						'stock'=>$this->input->post('stock',true),
 						'stock_minimo'=>$this->input->post('stock_minimo',true),
 						'eliminado'=>'NO',
+						'nombre'=>$this->input->post('nombre',true),
+						'multimedia'=>$this->input->post('multimedia',true),
 					);
 
 					$productos = $this->producto_model->add_producto($data);
@@ -235,6 +251,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 					$stock = $row->stock;
 					$stock_minimo = $row->stock_minimo;
 					$imagen = $row->imagen;
+					$nombre = $row->nombre;
+					$multimedia = $row->multimedia;
 				}
 
 				$dat = array('producto' =>$datos_producto,
@@ -245,7 +263,9 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 					'precio_venta'=>$precio_venta,
 					'stock'=>$stock,
 					'stock_minimo'=>$stock_minimo,
-					'imagen'=>$imagen
+					'imagen'=>$imagen,
+					'nombre'=>$nombre,
+					'multimedia'=>$multimedia,
 				);
 			}
 			else
@@ -278,6 +298,8 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			$this->form_validation->set_rules('precio_venta', 'Precio Venta', 'required|numeric');
 			$this->form_validation->set_rules('stock', 'Stock', 'required|numeric');
 			$this->form_validation->set_rules('stock_minimo', 'Stock Minimo', 'required|numeric');
+			$this->form_validation->set_rules('nombre', 'Nombre', 'required');
+			$this->form_validation->set_rules('multimedia', 'Multimedia', 'required');
 
 
 			//Mensaje del form_validation
@@ -301,7 +323,9 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				'precio_venta'=>$this->input->post('precio_venta',true),
 				'stock'=>$this->input->post('stock',true),
 				'stock_minimo'=>$this->input->post('stock_minimo',true),
-				'imagen'=>$imagen
+				'imagen'=>$imagen,
+				'nombre'=>$this->input->post('nombre',true),
+				'multimedia'=>$this->input->post('multimedia',true),
 			);
 
 			if ($this->form_validation->run()==FALSE)
@@ -347,7 +371,9 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				'precio_costo'=>$this->input->post('precio_costo',true),
 				'precio_venta'=>$this->input->post('precio_venta',true),
 				'stock'=>$this->input->post('stock',true),
-				'stock_minimo'=>$this->input->post('stock_minimo',true)
+				'stock_minimo'=>$this->input->post('stock_minimo',true),
+				'nombre'=>$this->input->post('nombre',true),
+				'multimedia'=>$this->input->post('multimedia',true),
 			);
 
 			// Si la iamgen esta vacia se asume que no se modifica
