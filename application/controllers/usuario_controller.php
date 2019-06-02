@@ -198,7 +198,7 @@ function muestra_modificar()
             'usuario'=>$usuario,
             'password'=>$password,
             'perfil_id'=>$perfil_id,
-            'imagen'=>$imagen
+            'imagen'=>$imagen,
         );
     }
     else
@@ -230,7 +230,7 @@ function modificar_usuario()
     $this->form_validation->set_rules('nombre', 'Nombre', 'required');
     $this->form_validation->set_rules('apellido', 'Apellido', 'required');
     $this->form_validation->set_rules('email', 'Email', 'required');
-    $this->form_validation->set_rules('password', 'Password', 'required|numeric');
+    $this->form_validation->set_rules('password', 'Password', 'required');
 
 
     //Mensaje del form_validation

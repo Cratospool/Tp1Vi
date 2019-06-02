@@ -43,7 +43,7 @@ class Carrito_controller extends CI_Controller {
         // Genera array para insertar en el carrito
 		$insert_data = array(
 			'id' => $this->input->post('id'),
-			'name' => $this->input->post('descripcion'),
+			'name' => $this->input->post('nombre'),
 			'price' => $this->input->post('precio_venta'),
 			'qty' => 1
 			);
