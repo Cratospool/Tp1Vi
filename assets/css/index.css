@@ -1,11 +1,4 @@
-#footer {
-	background: #323232;
-	padding: 20px 0px;
-}
 
-#footer a {
-	color: white;
-}
 
 #header {
 	padding: 20px;
@@ -47,6 +40,15 @@
 
 #main {
 	background: black;
+	color:white;
+}
+#main label {
+
+	color:white;
+}
+#main td {
+
+	color:white;
 }
 #main-politicas {
 	background: black;
@@ -112,4 +114,32 @@
 	text-align: center;
 	line-height: 2;
 
+}
+
+#footer {
+	background: #323232;
+	padding: 20px 0px;
+}
+
+#footer a {
+	color: white;
+}
+
+.video_youtuve{
+	border: 3px solid white;
+	height: 0;
+	padding-bottom: 56.25%;
+	position: relative;
+}
+
+.video_youtuve iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#cuadro {
+	border: 3px solid white;
 }

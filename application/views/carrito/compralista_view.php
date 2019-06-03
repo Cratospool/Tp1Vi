@@ -1,8 +1,11 @@
-<div class="container" align="center">
-    
-    <h1 id="h1" align='center'>Gracias! Tu compra ha sido realizada</h1>
+<body id=body-Principal>
+    <main id="main">
+    <div class="container" align="center">
 
-    <input type="button" class ='btn btn-primary btn-lg' value="Inicio" onclick="window.location = 'principal'">
+        <h1 id="h1" align='center'>Gracias! Tu compra ha sido realizada</h1>
 
-    <br> <br>
-</div>
+        <input type="button" class ='btn btn-primary btn-lg' value="Inicio" onclick="window.location = 'principal'">
+
+        <br> <br>
+    </div>
+</main>

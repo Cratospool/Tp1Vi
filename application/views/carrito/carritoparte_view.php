@@ -1,4 +1,5 @@
-
+<body id=body-Principal>
+    <main id="main">
 <div class="container-fluid" id="carrito">
     <div class="cart" >
         <div class = "heading">
@@ -85,7 +86,7 @@
                         <!-- Submit boton. Actualiza los datos en el carrito -->
                         <input type="submit" class ='btn btn-primary btn-lg' value="Actualizar">
                         <!-- " Confirmar orden envia a carrito_controller/muestra_compra  -->
-                        <input type="button" class ='btn btn-primary btn-lg' value="Confirmar Orden" onclick="window.location = 'comprar'">
+                        <input type="button" class ='btn btn-primary btn-lg m-1' value="Confirmar Orden" onclick="window.location = 'comprar'">
                     </td>
                 </tr>
                 <?php echo form_close();
@@ -94,3 +95,4 @@
     </div>
 </div>
 <br>
+</main>

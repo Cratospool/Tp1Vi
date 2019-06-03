@@ -1,17 +1,19 @@
+<body id=body-Principal>
+    <main id="main">
 <?php if (!$productos) { ?>
 
 	<div class="container">
 		<div class="well">
 			<h1>No hay Eliminados</h1>
-		</div>	
+		</div>
 	</div>
 
 <?php } else { ?>
 
-	<div class="container">
+	<div id="cuadro" class="container">
 		<div class="well">
 			<h1>Todos los Eliminados</h1>
-		</div>	
+		</div>
 
 		<table class="table table-bordered">
 			<thead>
@@ -38,7 +40,8 @@
 				</tr>
 				<?php } ?>
 			</tbody>
-		</table>	            
+		</table>
 	</div>
 
 <?php } ?>
+</main>

@@ -1,3 +1,5 @@
+<body id=body-Principal>
+    <main id="main">
 <?php if (!$usuarios) { ?>
 
 	<div class="container">
@@ -8,7 +10,7 @@
 
 <?php } else { ?>
 
-	<div class="container">
+	<div id="cuadro" class="container">
 		<div class="well">
 			<h1>Todos los Eliminados</h1>
 		</div>
@@ -46,3 +48,4 @@
 	</div>
 
 <?php } ?>
+</main>

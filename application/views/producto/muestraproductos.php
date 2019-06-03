@@ -15,7 +15,7 @@
 
 <?php } else { ?>
 
-	<div id="mestradmin" class="container">
+	<div id="cuadro" class="container">
 		<div class="well">
 			<h1>Todos los Productos</h1>
 		</div>

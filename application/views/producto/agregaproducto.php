@@ -1,3 +1,5 @@
+<body id=body-Principal>
+    <main id="main">
 <div class="container">
 	<div class="well col-lg-8">
 		<h2>Cargar nuevo producto</h2>
@@ -96,3 +98,4 @@
 		</div>
 	</div>
 </div>
+</main>

@@ -1,4 +1,5 @@
-
+<body id=body-Principal>
+    <main id="main">
 <div class="container">
 <div class="col-sm-10 col-md-10">
 	<div class="well">
@@ -23,7 +24,7 @@
 			</div>
 			<div class="col-md-6">
 				<div class="form-group">
-					<?php echo form_label('Categoria:', 'multimedia'); ?>
+					<?php echo form_label('Multimedia:', 'multimedia'); ?>
 					<?php echo form_input(['name' => 'multimedia',
 													'id' => 'multimedia',
 													'class' => 'form-control',
@@ -122,7 +123,7 @@
 													'class' => 'form-control']); ?>
 					<?php echo form_error('filename'); ?>
 					<br>
-					<?php echo form_submit('modificar', 'Modificar',"class='btn btn-lg btn-warning btn-block'"); ?>
+					<?php echo form_submit('modificar', 'Modificar',"class='btn btn-lg btn-success btn-block'"); ?>
 				</div>
 			</div>
 		</div>
@@ -133,3 +134,4 @@
 </div>
 </div>
 </div>
+</main>

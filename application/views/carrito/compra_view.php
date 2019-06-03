@@ -1,3 +1,5 @@
+<body id=body-Principal>
+    <main id="main">
 <?php
     $gran_total = 0;
 
@@ -8,11 +10,11 @@
         endforeach;
     endif;
 ?>
-        
+
     <div id="bill_info">
-        
+
         <?php // Crea formulario para guarda los datos de la venta
-            echo form_open("confirma_compra", ['class' => 'form-signin', 'role' => 'form']); 
+            echo form_open("confirma_compra", ['class' => 'form-signin', 'role' => 'form']);
         ?>
         <div align="center">
             <h2 id="h2" align="center">Info de Compra</h2>
@@ -30,32 +32,33 @@
                     <td>
                         Nombre:
                     </td>
-                    <td> 
-                        <?php echo($nombre) ?> 
+                    <td>
+                        <?php echo($nombre) ?>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         Apellido:
                     </td>
-                    <td> 
-                        <?php echo($apellido) ?> 
+                    <td>
+                        <?php echo($apellido) ?>
                     </td>
-                </tr>  
+                </tr>
                 <tr>
                     <td>
                         Email:
                     </td>
-                    <td> 
-                        <?php echo($email) ?> 
+                    <td>
+                        <?php echo($email) ?>
                     </td>
                 </tr>
                 <?php echo form_hidden('total_venta', $gran_total); ?>
             </table>
-            <br> 
-            <?php echo form_submit('confirmar', 'Confirmar',"class='btn btn-lg btn-primary'"); ?> 
+            <br>
+            <?php echo form_submit('confirmar', 'Confirmar',"class='btn btn-lg btn-primary'"); ?>
             <br> <br>
         </div>
         <?php echo form_close(); ?>
-       
+
     </div>
+</main>
