@@ -2,6 +2,38 @@
 
 <?php $session_data = $this->session->userdata('logged_in'); ?>
 
+<!-- <script> -->
+<script language="JavaScript" src="assets/js/jquery-3.3.1.min.js"></script>
+<!--<script language="JavaScript" src="jquery.watermarkinput.js"></script> -->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+    $(".busca").keyup(function(){ //se crea la funcioin keyup
+    var texto = $(this).val();//se recupera el valor de la caja de texto y se guarda en la variable texto
+    var dataString = 'palabra='+ texto;//se guarda en una variable nueva para posteriormente pasarla a busqueda.php
+
+    if(texto==''){//si no tiene ningun valor la caja de texto no realiza ninguna accion
+        //ninguna acción
+    }else{
+    //pero si tiene valor entonces
+    $.ajax({//metodo ajax
+    type: "POST",//aqui puede  ser get o post
+    url: "busqueda.php",//la url adonde se va a mandar la cadena a buscar
+    data: dataString,
+    cache: false,
+    success: function(html){//funcion que se activa al recibir un dato
+    $("#display").html(html).show();// funcion jquery que muestra el div con identificador display, como formato html, tambien puede ser .text
+    }
+    });
+
+    }
+    return false;
+    });
+    });
+</script>
+<!-- </script> -->
+
 <header id="header">
     <div id="navbar-superior" class="container">
         <div class="row">
@@ -155,10 +187,8 @@
             <?php
         }?>
         <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-          <button class="btn btn-dark my-2 my-sm-0" type="submit">
-            <i class="fa fa-search"></i>
-          </button>
+          <input type="search" class=" busca" id="caja_busqueda" name="clave" placeholder="¿Qué estás buscando?" aria-label="Search" style="position: relative;">
+         <div class="" id="display" style="position: initial;"></div>
         </form>
     </div>
 </nav>
