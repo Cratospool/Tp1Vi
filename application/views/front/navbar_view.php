@@ -61,36 +61,19 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Categoria
-                </a>
-                <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown" >
-                    <a class="dropdown-item" href="#"><i class="fas fa-dragon"></i>  Acción</a>
-                    <a class="dropdown-item" href="#"><i class="fab fa-fort-awesome"></i>  Aventura</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-car-crash"></i>  Conducción</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-futbol"></i>  Deportes</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-chess"></i>  Estrategia</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-fist-raised"></i>  Lucha</a>
-                    <a class="dropdown-item" href="#"><i class="fab fa-earlybirds"></i>  Simulacion</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-street-view"></i>  Rol</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-spider"></i>  Terror</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"><i class="fab fa-battle-net"></i>  Todos</a>
-                </div>
-            </li>
+             
 
-            <li><a href="<?php echo base_url('principal');?>">
+            <li><a href="<?php echo base_url("productosCAT/1"); ?>">
                     <img id="icono-pc" src="<?php echo base_url('assets/img/pc.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
                 </a>
             </li>
             <li>
-                <a id="icono-ps" href="<?php echo base_url('principal');?>">
+                <a id="icono-ps"href="<?php echo base_url("productosCAT/2"); ?>">
                     <img  src="<?php echo base_url('assets/img/ps.png'); ?>" class="img-responsive" alt="Logo" style="height: 55px;">
                 </a>
             </li>
             <li>
-                <a href="<?php echo base_url('principal');?>">
+                <a href="<?php echo base_url("productosCAT/3"); ?>">
                     <img id="icono-xbox" src="<?php echo base_url('assets/img/xbox.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
                 </a>
             </li>
@@ -186,7 +169,9 @@
             </ul>
             <?php
         }?>
-        <form class="form-inline my-2 my-lg-0">
+
+
+        <form class="form-inline my-2 my-md-0">
           <input type="search" class=" busca" id="caja_busqueda" name="clave" placeholder="¿Qué estás buscando?" aria-label="Search" style="position: relative;">
          <div class="" id="display" style="position: initial;"></div>
         </form>

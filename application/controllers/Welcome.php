@@ -25,7 +25,19 @@ class Welcome extends CI_Controller {
 		$this->load->view('front/footer_view');
 
 	}
-	
+	public function productosCAT($categoria)
+	{
+		//$this->load->view('principal.php');
+		$dat = array('productos' => $this->producto_model->get_electrodomesticos($categoria));
+		$data = array('titulo' => 'Principal');
+
+		$this->load->view('front/head_view',$data);
+		$this->load->view('front/navbar_view');
+		$this->load->view('Principal', $dat);
+		$this->load->view('front/footer_view');
+
+	}
+
 
 	public function quienes_somos()
 	{

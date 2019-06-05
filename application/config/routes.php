@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'Welcome';
 // Pagina
 $route['principal'] = 'Welcome/index';
+$route['productosCAT/(:num)'] = 'Welcome/productosCAT/$1';
 $route['quienes_somos'] = 'Welcome/quienes_somos';
 $route['politicas_de_privacidad'] = 'Welcome/politicas_de_privacidad';
 $route['contactanos'] = 'Welcome/contactanos';

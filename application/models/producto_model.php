@@ -1,8 +1,8 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-	
+
 class Producto_model extends CI_Model{
-		
+
 	/**
     * Constructor de la clase
     */
@@ -16,12 +16,12 @@ class Producto_model extends CI_Model{
     function get_productos()
     {
         $query = $this->db->get_where('productos', array('eliminado' => 'NO'));
-        
+
         if($query->num_rows()>0) {
             return $query;
         } else {
             return FALSE;
-        }        
+        }
     }
 
     /**
@@ -29,13 +29,23 @@ class Producto_model extends CI_Model{
     */
     function get_electrodomesticos()
     {
-        $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'id_categoria' => '1'));
-        
+        $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'id_categoria' => '2'));
+
         if($query->num_rows()>0) {
             return $query;
         } else {
             return FALSE;
-        }        
+        }
+    }
+    function get_electrodomesticos2($categoria)
+    {
+        $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'id_categoria' => $categoria));
+
+        if($query->num_rows()>0) {
+            return $query;
+        } else {
+            return FALSE;
+        }
     }
 
     /**
@@ -44,12 +54,12 @@ class Producto_model extends CI_Model{
     function get_muebles()
     {
         $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'id_categoria' => '2'));
-        
+
         if($query->num_rows()>0) {
             return $query;
         } else {
             return FALSE;
-        }        
+        }
     }
 
     /**
@@ -65,7 +75,18 @@ class Producto_model extends CI_Model{
     function edit_producto($id){
 
         $query = $this->db->get_where('productos', array('id' => $id),1);
-                
+
+        if($query->num_rows() == 1) {
+            return $query;
+        } else {
+            return FALSE;
+        }
+    }
+
+    function busqueda_producto($nombre){
+
+        $query = $this->db->get_where('productos', array('nombre' => $nombre),1);
+
         if($query->num_rows() == 1) {
             return $query;
         } else {
@@ -109,6 +130,8 @@ class Producto_model extends CI_Model{
             return $query;
         } else {
             return FALSE;
-        }        
+        }
     }
-} 
+
+
+}
