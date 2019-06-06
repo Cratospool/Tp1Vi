@@ -89,6 +89,9 @@ $route['comprar'] = 'carrito_controller/muestra_compra';
 $route['confirma_compra'] = 'carrito_controller/guarda_compra';
 $route['carrito_actualiza'] = 'carrito_controller/actualiza_carrito';
 $route['carrito_elimina/(:any)'] = 'carrito_controller/remove/$1';
+//consulta
+$route['muestraventas'] = 'producto_controller/listar_ventas';
+$route['muestra_detalle/(:num)'] = 'producto_controller/muestra_detalle/$1';
 
 
 

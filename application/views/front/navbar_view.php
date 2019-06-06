@@ -61,7 +61,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-             
+
 
             <li><a href="<?php echo base_url("productosCAT/1"); ?>">
                     <img id="icono-pc" src="<?php echo base_url('assets/img/pc.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
@@ -118,7 +118,7 @@
                     Reportes
                   </a>
                   <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?php echo base_url('ventas');?>">
+                    <a class="dropdown-item" href="<?php echo base_url('muestraventas');?>">
                       Ventas</a>
                     <a class="dropdown-item" href="<?php echo base_url('consultas');?>">
                       Consultas</a>

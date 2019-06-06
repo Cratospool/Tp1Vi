@@ -138,13 +138,13 @@ class Carrito_controller extends CI_Controller {
 			'usuario_id' 	=> $data['id'],
 			'total_venta'	=> $total
 		);
-		$venta_id = $this->carrito_model->insert_venta($venta);
+		$ventas_id = $this->carrito_model->insert_venta($venta);
 
 
 		if ($cart = $this->cart->contents()):
 			foreach ($cart as $item):
 				$venta_detalle = array(
-					'venta_id' 		=> $venta_id,
+					'ventas_id' 		=> $ventas_id,
 					'producto_id' 	=> $item['id'],
 					'cantidad' 		=> $item['qty'],
 					'precio' 		=> $item['price'],

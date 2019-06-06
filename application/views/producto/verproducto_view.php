@@ -54,16 +54,12 @@
                                             ?>
                                             <?php
                                         } else {
-                                            $btn = array(
-                                                'class' => 'btn btn-success',
-                                                'value' => 'Comprar',
-                                                'data-target' => '#modalLogin',
-                                                'data-toggle' => 'modal',
-                                                'name' => 'action'
-                                            );
+                                            ?>
+                                            <button class=" btn btn-success my-2 my-sm-0" type="submit">
+                                             <a href="<?php echo base_url('login');?>">Comprar</a>
+                                            </button>
 
-                                            echo form_submit($btn);
-                                            echo form_close();
+                                            <?php
 
                                         }
                                         ?>

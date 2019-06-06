@@ -470,7 +470,47 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 			redirect('login', 'refresh');}
 		}
 
+		function listar_ventas()
+		    {
+	             if($this->_veri_log()){
+				$data = array('titulo' => 'Ventas');
 
+				$session_data = $this->session->userdata('logged_in');
+				$data['perfil_id'] = $session_data['perfil_id'];
+				$data['nombre'] = $session_data['nombre'];
+
+
+				$dat = array('ventas_cabecera' => $this->producto_model->get_ventas_cabecera());
+
+				$this->load->view('front/head_view',$data);
+				$this->load->view('front/navbar_view',$data);
+				$this->load->view('consultas/muestraventas',$dat);
+				$this->load->view('front/footer_view');
+	            }else{
+				redirect('login', 'refresh');
+	            }
+	         }
+
+
+	        function muestra_detalle($id)
+			{
+	             if($this->_veri_log()){
+				$data = array('titulo' => 'Detalle');
+
+					$session_data = $this->session->userdata('logged_in');
+				$data['perfil_id'] = $session_data['perfil_id'];
+				$data['nombre'] = $session_data['nombre'];
+
+				$dat = array('ventas_detalle' => $this->producto_model->get_ventas_detalle($id));
+
+					$this->load->view('front/head_view', $data);
+				$this->load->view('front/navbar_view', $data);
+				$this->load->view('consultas/muestradetalle', $dat);
+				$this->load->view('front/footer_view');
+	            }else{
+				redirect('login', 'refresh');
+	            }
+	        }
 
 
 

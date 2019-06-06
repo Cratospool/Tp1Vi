@@ -133,5 +133,32 @@ class Producto_model extends CI_Model{
         }
     }
 
+    function get_ventas_cabecera()
+    {
+        $this->db->select('ventas_cabecera.id, usuarios.nombre, usuarios.apellido, ventas_cabecera.fecha, ventas_cabecera.total_venta');
+        $this->db->from('ventas_cabecera');
+        $this->db->join('usuarios','ventas_cabecera.usuario_id=usuarios.id');
+        $query = $this->db->get();
 
+        if($query->num_rows()>0) {
+            return $query;
+        } else {
+            return FALSE;
+        }
+    }
+
+        function get_ventas_detalle($id)
+    {
+        $this->db->join('productos','productos.id = ventas_detalle.producto_id');
+
+        //select * from ventas_detalle;
+        $query = $this->db->get_where('ventas_detalle', array('ventas_id' => $id));
+
+
+        if($query->num_rows()>0) {
+            return $query;
+        } else {
+            return FALSE;
+        }
+    }
 }
