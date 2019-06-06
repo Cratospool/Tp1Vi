@@ -54,7 +54,25 @@
                         <div class="card col-fluid">
                             <img src="<?php echo base_url($row->imagen); ?>" alt="" class="card-img-top img-responsive img-thumbnail">
                             <div class="card-body">
-        						<p>Precio: $ <?php echo $row->precio_venta; ?> </p>
+        						<p>
+                                    <?php switch ($row->id_categoria) {
+                                        case 1:
+                                            ?>
+                                            <img id="icono-pc" src="<?php echo base_url('assets/img/pc.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
+                                            <?php
+                                            break;
+                                        case 2:
+                                        ?>
+                                            <img id="icono-pc" src="<?php echo base_url('assets/img/ps.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
+                                            <?php
+                                            break;
+                                        case 3:
+                                        ?>
+                                        <img id="icono-pc" src="<?php echo base_url('assets/img/xbox.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
+                                        <?php
+                                            break;
+                                    } ?>
+                                    Precio: $ <?php echo $row->precio_venta; ?> </p>
                                 <p>
         							<?php
         								if ($row->stock < $row->stock_minimo && $row->stock > 0) {

@@ -26,7 +26,7 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Descripcion</th>
+					<th>Nombre</th>
 					<th>Categoria</th>
 					<th>Precio Venta</th>
 					<th>Stock</th>
@@ -39,8 +39,26 @@
 				<?php foreach($productos->result() as $row){ ?>
 				<tr>
 					<td><?php echo $row->id;  ?></td>
-					<td><?php echo $row->descripcion;  ?></td>
-					<td><?php echo $row->id_categoria;  ?></td>
+					<td><?php echo $row->nombre;  ?></td>
+					<td><?php echo $row->id_categoria;  ?>
+                        <?php switch ($row->id_categoria) {
+                            case 1:
+                                ?>
+                                <img id="icono-pc" src="<?php echo base_url('assets/img/pc.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
+                                <?php
+                                break;
+                            case 2:
+                            ?>
+                                <img id="icono-pc" src="<?php echo base_url('assets/img/ps.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
+                                <?php
+                                break;
+                            case 3:
+                            ?>
+                            <img id="icono-pc" src="<?php echo base_url('assets/img/xbox.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
+                            <?php
+                                break;
+                        } ?>
+                    </td>
 					<td><?php echo $row->precio_venta;  ?></td>
 					<td><?php echo $row->stock;  ?></td>
 					<td><?php echo $row->eliminado;  ?></td>
