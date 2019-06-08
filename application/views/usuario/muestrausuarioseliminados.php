@@ -9,12 +9,13 @@
 	</div>
 
 <?php } else { ?>
-
+    </div>
+    <br>
+    <br>
+    <br>
 	<div id="cuadro" class="container">
 		<div class="well">
 			<h1>Todos los Eliminados</h1>
-		</div>
-
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -46,6 +47,10 @@
 			</tbody>
 		</table>
 	</div>
-
 <?php } ?>
+<br>
+<br>
+<br>
+<br>
 </main>
+</body>

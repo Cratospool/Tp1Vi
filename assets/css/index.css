@@ -68,6 +68,15 @@
 	color: white;
 }
 
+#main-login {
+	padding: 20px;
+	background-image: url("../img/fondo-login.jpg");
+}
+
+#main-login h1{
+	color: white;
+}
+
 #main .carousel-inner img {
 	max-height: 80vh;
 	object-fit: contain;
@@ -148,9 +157,6 @@
 	width: 100%;
 }
 
-#cuadro {
-	border: 3px solid white;
-}
 
 .btn a{
 	color: white;

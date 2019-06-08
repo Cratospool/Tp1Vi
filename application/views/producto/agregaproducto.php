@@ -18,6 +18,17 @@
 									['class' => 'form-group', 'role' => 'form', 'id' => 'form_registro']); ?>
 				<fieldset>
 					<div class="form-group">
+						<label class="col-lg-2 control-label">Nombre</label>
+						<div class="col-lg-10">
+							<?php echo form_input(['name' => 'nombre',
+													'id' => 'nombre',
+													'class' => 'form-control',
+													'placeholder' => 'Nombre',
+													'autofocus'=>'autofocus',
+													'value'=>set_value('nombre')]); ?>
+						</div>
+					</div>
+					<div class="form-group">
 						<label class="col-lg-2 control-label">Descripción</label>
 						<div class="col-lg-10">
 							<?php echo form_input(['name' => 'descripcion',
@@ -79,6 +90,16 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label class="col-lg-2 control-label">Multimedia</label>
+						<div class="col-lg-10">
+							<?php echo form_input(['name' => 'multimedia',
+													'id' => 'multimedia',
+													'class' => 'form-control',
+													'placeholder' => 'Multimedia',
+													'value'=>set_value('multimedia')]); ?>
+						</div>
+					</div>
+					<div class="form-group">
 						<label class="col-lg-2 control-label">Imagen</label>
 						<div class="col-lg-10">
 							<?php echo form_input(['type' => 'file',
@@ -99,3 +120,4 @@
 	</div>
 </div>
 </main>
+</body>

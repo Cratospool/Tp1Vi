@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row text-justify" id=row-politicas>
               <p>
-                  <h1> 
+                  <h1>
                   GameStore solo vende jugos en su formato digital y estarán disponibles en su biblioteca al momento de abonarlo!!! <br><br><br> Medios de Pago:
                   </h1>
               </p>
@@ -328,3 +328,4 @@
             <!-- /acordeon -->
         </div>
     </main>
+</body>

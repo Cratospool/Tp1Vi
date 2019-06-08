@@ -86,3 +86,4 @@
         	</div>
         <?php } ?>
     </main>
+</body>

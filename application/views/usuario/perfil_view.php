@@ -33,9 +33,12 @@
 
                     </div>
                     <div class="row">
-                        <button type="button" class="btn btn-warning btn-lg btn-block m-5">Modificar</button>
+                        <button type="button" class="btn btn-success btn-lg btn-block m-5">
+                            <a href="<?php echo base_url("modifica_perfil/$row->id"); ?>">Modificar</a>
+                        </button>
                     </div>
                 </div>
             <?php } ?>
         <?php } ?>
     </main>
+</body>

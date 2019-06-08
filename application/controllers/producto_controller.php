@@ -125,13 +125,15 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		function agrega_producto()
 		{
 			//Genero las reglas de validacion
-			$this->form_validation->set_rules('descripcion', 'Descripcion', 'required|is_unique[productos.descripcion]');
+			$this->form_validation->set_rules('nombre', 'Nombre', 'required|is_unique[productos.nombre]');
+			$this->form_validation->set_rules('descripcion', 'Descripcion', 'required|');
 			$this->form_validation->set_rules('id_categoria', 'Categoria', 'required|numeric');
 			$this->form_validation->set_rules('precio_costo', 'Precio Costo', 'required|numeric');
 			$this->form_validation->set_rules('precio_venta', 'Precio Venta', 'required|numeric');
 			$this->form_validation->set_rules('stock', 'Stock', 'required|numeric');
 			$this->form_validation->set_rules('stock_minimo', 'Stock Minimo', 'required|numeric');
 			$this->form_validation->set_rules('filename', 'Imagen', 'required|callback__image_upload');
+			$this->form_validation->set_rules('multimedia', 'Multimedia', 'required|');
 
 			//Mensaje de error si no pasan las reglas
 			$this->form_validation->set_message('required',
