@@ -93,6 +93,13 @@ $route['carrito_elimina/(:any)'] = 'carrito_controller/remove/$1';
 //consulta
 $route['muestraventas'] = 'producto_controller/listar_ventas';
 $route['muestra_detalle/(:num)'] = 'producto_controller/muestra_detalle/$1';
+//reclamos
+$route['consultas'] = 'consultaController';
+$route['verifico_nuevaconsulta'] = 'consultaController/agrega_reclamo';
+$route['consulta_elimina/(:num)'] = 'consultaController/eliminar_consulta/$1';
+$route['consulta_activa/(:num)'] = 'consultaController/activar_consulta/$1';
+$route['muestra_eliminadosConsulta'] = 'consultaController/muestra_eliminados';
+
 
 
 

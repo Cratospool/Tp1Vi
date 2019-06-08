@@ -27,7 +27,7 @@
 					<th>Password</th>
 					<th>Perfil</th>
 					<th>Baja</th>
-					<th>imagen</th>
+					<th>Modificar</th>
 				</tr>
 			</thead>
 			<tbody>
