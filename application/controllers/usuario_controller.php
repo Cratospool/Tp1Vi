@@ -36,6 +36,24 @@ function index()
     }else{
     redirect('login', 'refresh'); }
 }
+function ver_perfil($id)
+{
+    if($this->_veri_log()){
+    $data = array('titulo' => 'Usuarios');
+
+    $session_data = $this->session->userdata('logged_in');
+    $data['perfil_id'] = $session_data['perfil_id'];
+    $data['nombre'] = $session_data['nombre'];
+
+    $dat = array('usuarios' => $this->usuario_model->edit_usuario($id) );
+
+    $this->load->view('front/head_view', $data);
+    $this->load->view('front/navbar_view');
+    $this->load->view('usuario/perfil_view', $dat);
+    $this->load->view('front/footer_view');
+    }else{
+    redirect('login', 'refresh'); }
+}
 
 
 /**

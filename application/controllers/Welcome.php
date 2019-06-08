@@ -18,9 +18,11 @@ class Welcome extends CI_Controller {
 		//$this->load->view('principal.php');
 		$dat = array('productos' => $this->producto_model->get_productos());
 		$data = array('titulo' => 'Principal');
+		$session_data = $this->session->userdata('logged_in');
+		$user['perfil_id'] = $session_data['perfil_id'];
 
 		$this->load->view('front/head_view',$data);
-		$this->load->view('front/navbar_view');
+		$this->load->view('front/navbar_view', $user);
 		$this->load->view('Principal', $dat);
 		$this->load->view('front/footer_view');
 
@@ -88,6 +90,7 @@ class Welcome extends CI_Controller {
 		$data = array('titulo' => 'login');
 		$session_data = $this->session->userdata('logged_in');
 		$data['perfil_id'] = $session_data['perfil_id'];
+		$data['id'] = $session_data['id'];
 		$data['nombre'] = $session_data['nombre'];
 
 		$this->load->view('front/head_view',$data);

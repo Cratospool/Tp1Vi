@@ -1,6 +1,7 @@
 <!-- Header -->
 
 <?php $session_data = $this->session->userdata('logged_in'); ?>
+<?php $id_usuario = $session_data['id'] ?>
 
 <!-- <script> -->
 <script language="JavaScript" src="assets/js/jquery-3.3.1.min.js"></script>
@@ -151,8 +152,7 @@
                 <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
                 </a>
                 <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="<?php echo base_url('comprar');?>">Mis Compras</a>
-                  <a class="dropdown-item" href="<?php echo base_url('misdatos');?>">Mis datos</a>
+                  <a class="dropdown-item" href="<?php echo base_url("mi_perfil/$id_usuario"); ?>">Mi perfil</a>
                   <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
                 </div>
               </li>

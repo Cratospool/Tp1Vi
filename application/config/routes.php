@@ -82,6 +82,7 @@ $route['usuarios_activa/(:num)'] = 'usuario_controller/activar_usuario/$1';
 $route['usuarios_modifica/(:num)'] = 'usuario_controller/muestra_modificar/$1';
 $route['verifico_modificausuario/(:num)'] = 'usuario_controller/modificar_usuario/$1';
 $route['usuarios_elimina/(:num)'] = 'usuario_controller/eliminar_usuario/$1';
+$route['mi_perfil/(:num)'] = 'usuario_controller/ver_perfil/$1';
 //carrito
 $route['carrito'] = 'carrito_controller/electrodomesticos';
 $route['carrito_agrega'] = 'carrito_controller/add';
