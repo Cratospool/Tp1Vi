@@ -43,9 +43,11 @@
 				'nombre'=>$this->input->post('nombre',true),
 				'apellido'=>$this->input->post('apellido',true),
 				'email'=>$this->input->post('email',true),
-				'perfil_id'=>'2',
 				'usuario'=>$this->input->post('usuario',true),
-				'password'=>($pass)
+				'password'=>($pass),
+				'perfil_id'=>'2',
+				'baja'=>'NO',
+				'imagen'=>'assets/img/usuarios/usuario.png',
 			);
 
 			//Si no pasa la validacion de datos
