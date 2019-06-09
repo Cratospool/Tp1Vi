@@ -117,7 +117,7 @@ function agrega_usuario()
     }
     else
     {
-        $this->_image_upload();
+        $this->_image_uploadU();
     }
 }
 
@@ -127,66 +127,7 @@ function agrega_usuario()
 * Verifica si los datos son correcto en conjunto con la imagen y lo inserta en la tabla correspondiente
 * En la tabla guarda la URL de donde se encuentra la imagen.
 */
-function _image_upload()
-{
-    $this->load->library('upload');
 
-    //Comprueba si hay un archivo cargado
-    if (!empty($_FILES['filename']['name']))
-    {
-        // Especifica la configuración para el archivo
-        $config['upload_path'] = 'assets/img/usuarios/';
-        $config['allowed_types'] = 'gif|jpg|JPEG|png';
-
-        $config['max_size'] = '2048';
-        $config['max_width']  = '1024';
-        $config['max_height']  = '768';
-
-        // Inicializa la configuración para el archivo
-        $this->upload->initialize($config);
-        //
-        if ($this->upload->do_upload('filename'))
-        {
-            // Mueve archivo a la carpeta indicada en la variable $data
-            $data = $this->upload->data();
-
-            // Path donde guarda el archivo..
-            $url ="assets/img/usuarios/".$_FILES['filename']['name'];
-
-            // Array de datos para insertar en productos
-            $data = array(
-                'nombre'=>$this->input->post('nombre',true),
-                'apellido'=>$this->input->post('apellido',true),
-                'email'=>$this->input->post('email',true),
-                'usuario'=>$this->input->post('usuario',true),
-                'password'=>$this->input->post('password',true),
-                'perfil_id'=>$this->input->post('perfil_id',true),
-                'baja'=>'NO',
-                'imagen'=>$url,
-            );
-
-            $usuarios = $this->usuario_model->add_usuario($data);
-
-            redirect('usuarios_todos', 'refresh');
-
-            return TRUE;
-        }
-        else
-        {
-            //Mensaje de error si no existe imagen correcta
-            $imageerrors = '<div class="alert alert-danger">El campo %s es incorrecta, extensión incorrecto o excede el tamaño permitido que es de: 2MB </div>';//$this->upload->display_errors();
-            $this->form_validation->set_message('_image_upload',$imageerrors );
-
-            return false;
-        }
-
-    }
-    else
-    {
-        //redirect('verifico_nuevoproducto');
-
-    }
-}
 
 /**
 * Muestra para modificar un usuario
@@ -347,7 +288,11 @@ function _image_modif()
 
                 // Actualiza datos del libro
             $this->usuario_model->update_usuario($id, $dat);
-            redirect('usuarios_todos', 'refresh');
+            if('perfil_id'==1){
+                redirect('usuarios_todos', 'refresh');
+            }else {
+                redirect('principal', 'refresh');
+            }
         }
         else
         {
@@ -424,18 +369,76 @@ function nuevo_usuario()
     $this->form_validation->set_rules('email', 'Usuario','required|trim|valid_email|is_unique[users.username]');
     $this->form_validation->set_rules('reg_password', 'Contraseña','required|xss_clean');
     $this->form_validation->set_rules('re_password', 'Repetir contraseña','required|matches[reg_password]');
+    $this->form_validation->set_rules('filename', 'Imagen', 'required|callback__image_upload');
     //Mensaje de error si no pasan las reglas
     $this->form_validation->set_message('required','<div class="alert alert-danger">El campo %s es obligatorio</div>');
     $this->form_validation->set_message('matches','<div class="alert alert-danger">La contraseña ingresada no coincide</div>');
     $pass = $this->input->post('re_password',true);
-    //Preparo los datos para guardar en la base, en caso de que pase la validación
-    //Los datos corresponden a los nombres de mi campos de la base de datos
-    $data = array(
-        'name'=>$this->input->post('nombre',true),
-        'last_name'=>$this->input->post('apellido',true),
-        'username'=>$this->input->post('email',true),
-        'password'=>md5($pass)
-    );
+    if ($this->form_validation->run())
+    {
+        $this->_image_upload();
+    }
+}
+
+function _image_upload()
+{
+    $this->load->library('upload');
+
+    //Comprueba si hay un archivo cargado
+    if (!empty($_FILES['filename']['name']))
+    {
+        // Especifica la configuración para el archivo
+        $config['upload_path'] = 'assets/img/usuarios/';
+        $config['allowed_types'] = 'gif|jpg|JPEG|png';
+
+        $config['max_size'] = '2048';
+        $config['max_width']  = '1024';
+        $config['max_height']  = '768';
+
+        // Inicializa la configuración para el archivo
+        $this->upload->initialize($config);
+        //
+        if ($this->upload->do_upload('filename'))
+        {
+            // Mueve archivo a la carpeta indicada en la variable $data
+            $data = $this->upload->data();
+
+            // Path donde guarda el archivo..
+            $url ="assets/img/usuarios/".$_FILES['filename']['name'];
+
+            // Array de datos para insertar en productos
+            $data = array(
+                'nombre'=>$this->input->post('nombre',true),
+                'apellido'=>$this->input->post('apellido',true),
+                'email'=>$this->input->post('email',true),
+                'usuario'=>$this->input->post('usuario',true),
+                'password'=>$this->input->post('password',true),
+                'perfil_id'=>$this->input->post('perfil_id',true),
+                'baja'=>'NO',
+                'imagen'=>$url,
+            );
+
+            $productos = $this->usuario_model->add_usuario($data);
+
+            redirect('usuarios_todos', 'refresh');
+
+            return TRUE;
+        }
+        else
+        {
+            //Mensaje de error si no existe imagen correcta
+            $imageerrors = '<div class="alert alert-danger">El campo %s es incorrecta, extensión incorrecto o excede el tamaño permitido que es de: 2MB </div>';//$this->upload->display_errors();
+            $this->form_validation->set_message('_image_upload',$imageerrors );
+
+            return false;
+        }
+
+    }
+    else
+    {
+        //redirect('verifico_nuevoproducto');
+
+    }
 }
 
 function muestra_modifica_perfil()
@@ -454,6 +457,7 @@ function muestra_modifica_perfil()
             $usuario = $row->usuario;
             $password = $row->password;
             $id_perfil = $row->perfil_id;
+            $imagen = $row->imagen;
         }
 
         $dat = array('usuario' =>$datos_usuario,
@@ -463,7 +467,8 @@ function muestra_modifica_perfil()
             'email'=>$email,
             'usuario'=>$usuario,
             'password'=>$password,
-            'id_perfil'=>$id_perfil
+            'id_perfil'=>$id_perfil,
+            'imagen'=>$imagen,
         );
     }
     else
@@ -485,49 +490,52 @@ function muestra_modifica_perfil()
 function modificar_perfil()
 {
     //Validación del formulario
+
     $this->form_validation->set_rules('nombre', 'Nombre', 'required');
     $this->form_validation->set_rules('apellido', 'Apellido', 'required');
     $this->form_validation->set_rules('email', 'Email', 'required');
     $this->form_validation->set_rules('password', 'Password', 'required');
-    $this->form_validation->set_rules('re_password', 'Repetir contraseña', 'required|matches[password]');
+
 
     //Mensaje del form_validation
     $this->form_validation->set_message('required','<div class="alert alert-danger">El campo %s es obligatorio, al intentar modificar estaba vacio</div>');
-    $this->form_validation->set_message('matches',
-                                '<div class="alert alert-danger">Los contraseña ingresada no coincide</div>');
+
+    $this->form_validation->set_message('numeric','<div class="alert alert-danger">El campo %s debe contener un valor numérico, al intentar modificar estaba vacio</div>');
 
     $id = $this->uri->segment(2);
-    $session_data = $this->session->userdata('logged_in');
-    $usuario = $session_data['usuario'];
+    $datos_usuario = $this->usuario_model->edit_usuario($id);
+
+    foreach ($datos_usuario->result() as $row)
+    {
+        $imagen = $row->imagen;
+    }
 
     $dat = array(
         'id'=>$id,
         'nombre'=>$this->input->post('nombre',true),
         'apellido'=>$this->input->post('apellido',true),
         'email'=>$this->input->post('email',true),
-        'usuario'=>$usuario,
         'password'=>$this->input->post('password',true),
-        'perfil_id'=>'2',
     );
 
     if ($this->form_validation->run()==FALSE)
     {
         $data = array('titulo' => 'Error de formulario');
         $session_data = $this->session->userdata('logged_in');
-        $data['id_perfil'] = $session_data['id_perfil'];
+        $data['perfil_id'] = $session_data['perfil_id'];
         $data['nombre'] = $session_data['nombre'];
 
         $this->load->view('front/head_view', $data);
         $this->load->view('front/navbar_view');
-        $this->load->view('usuario/modifico_perfil_view', $dat);
+        $this->load->view('usuario/modificausuario', $dat);
         $this->load->view('front/footer_view');
     }
     else
     {
-        $this->usuario_model->update_usuario($id, $dat);
-        redirect("mi_perfil/$id", 'refresh');
+        $this->_image_modif();
     }
 
 }
+
 
 }

@@ -70,6 +70,25 @@
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<?php echo form_label('Imagen actual:', 'img_ac'); ?>
+								<img  id="imagen_view" name="imagen_view" class="img-thumbnail" src="<?php  echo base_url($imagen); ?>" >
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<?php echo form_label('Imagen:', 'imagen'); ?>
+								<?php echo form_input(['type' => 'file',
+																'name' => 'filename',
+																'id' => 'filename',
+																'class' => 'form-control']); ?>
+								<?php echo form_error('filename'); ?>
+
+							</div>
+						</div>
+					</div>
                     <div class="col">
 
 								<br>

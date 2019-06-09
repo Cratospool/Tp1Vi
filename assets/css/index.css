@@ -60,7 +60,7 @@
 }
 
 #main-contactanos {
-	padding: 20px;
+
 	background-image: url("../img/fondo-contactanos.jpg");
 }
 
@@ -69,8 +69,12 @@
 }
 
 #main-login {
-	padding: 20px;
+
 	background-image: url("../img/fondo-login.jpg");
+}
+#main-registro {
+color: white;
+	background-image: url("../img/registro.png");
 }
 
 #main-login h1{

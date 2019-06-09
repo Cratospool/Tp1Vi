@@ -1,3 +1,5 @@
+<main id="main-registro">
+
 <div class="container">
 	<h2>Registrarse como cliente</h2>
 	<div class="row">
@@ -76,8 +78,8 @@
 						</div>
 					</div>
 					<div class="col-lg-3 col-lg-offset-4">
-						<?php echo form_submit('submit', 'Registrarse',"class='btn btn-primary' "); ?> <br><br>
-						<?php echo form_reset ('reset', 'Editar', "class='btn btn-primary'"); ?><br>
+						<?php echo form_submit('submit', 'Registrarse',"class='btn btn-success' "); ?> <br><br>
+						<?php echo form_reset ('reset', 'Editar', "class='btn btn-danger'"); ?><br>
 						<?php echo form_close(); ?>
 					</div>
 				</fieldset>
@@ -85,3 +87,4 @@
 		</div>
 	</div>
 </div>
+</main>
