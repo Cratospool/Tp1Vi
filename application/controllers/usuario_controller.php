@@ -283,7 +283,7 @@ function modificar_usuario()
 
         $this->load->view('front/head_view', $data);
         $this->load->view('front/navbar_view');
-        $this->load->view('modificausuario', $dat);
+        $this->load->view('usuario/modificausuario', $dat);
         $this->load->view('front/footer_view');
     }
     else
@@ -414,21 +414,6 @@ function muestra_eliminados()
     redirect('login', 'refresh');}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function nuevo_usuario()
 {
      //Genero las reglas de validación
@@ -452,4 +437,97 @@ function nuevo_usuario()
         'password'=>md5($pass)
     );
 }
+
+function muestra_modifica_perfil()
+{
+    $data = array('titulo' => 'Mi perfil');
+
+    $id = $this->uri->segment(2);
+    $datos_usuario = $this->usuario_model->edit_usuario($id);
+
+    if ($datos_usuario != FALSE) {
+        foreach ($datos_usuario->result() as $row)
+        {
+            $nombre = $row->nombre;
+            $apellido = $row->apellido;
+            $email = $row->email;
+            $usuario = $row->usuario;
+            $password = $row->password;
+            $id_perfil = $row->perfil_id;
+        }
+
+        $dat = array('usuario' =>$datos_usuario,
+            'id'=>$id,
+            'nombre'=>$nombre,
+            'apellido'=>$apellido,
+            'email'=>$email,
+            'usuario'=>$usuario,
+            'password'=>$password,
+            'id_perfil'=>$id_perfil
+        );
+    }
+    else
+    {
+        return FALSE;
+    }
+
+    if($this->_veri_log()){
+
+        $this->load->view('front/head_view', $data);
+        $this->load->view('front/navbar_view');
+        $this->load->view('usuario/modifico_perfil_view', $dat);
+        $this->load->view('front/footer_view');
+        }else{
+        redirect('login', 'refresh');
+    }
+}
+
+function modificar_perfil()
+{
+    //Validación del formulario
+    $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+    $this->form_validation->set_rules('apellido', 'Apellido', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'required');
+    $this->form_validation->set_rules('password', 'Password', 'required');
+    $this->form_validation->set_rules('re_password', 'Repetir contraseña', 'required|matches[password]');
+
+    //Mensaje del form_validation
+    $this->form_validation->set_message('required','<div class="alert alert-danger">El campo %s es obligatorio, al intentar modificar estaba vacio</div>');
+    $this->form_validation->set_message('matches',
+                                '<div class="alert alert-danger">Los contraseña ingresada no coincide</div>');
+
+    $id = $this->uri->segment(2);
+    $session_data = $this->session->userdata('logged_in');
+    $usuario = $session_data['usuario'];
+
+    $dat = array(
+        'id'=>$id,
+        'nombre'=>$this->input->post('nombre',true),
+        'apellido'=>$this->input->post('apellido',true),
+        'email'=>$this->input->post('email',true),
+        'usuario'=>$usuario,
+        'password'=>$this->input->post('password',true),
+        'perfil_id'=>'2',
+    );
+
+    if ($this->form_validation->run()==FALSE)
+    {
+        $data = array('titulo' => 'Error de formulario');
+        $session_data = $this->session->userdata('logged_in');
+        $data['id_perfil'] = $session_data['id_perfil'];
+        $data['nombre'] = $session_data['nombre'];
+
+        $this->load->view('front/head_view', $data);
+        $this->load->view('front/navbar_view');
+        $this->load->view('usuario/modifico_perfil_view', $dat);
+        $this->load->view('front/footer_view');
+    }
+    else
+    {
+        $this->usuario_model->update_usuario($id, $dat);
+        redirect("mi_perfil/$id", 'refresh');
+    }
+
+}
+
 }
