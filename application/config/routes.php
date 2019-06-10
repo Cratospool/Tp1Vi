@@ -25,6 +25,8 @@ $route['productos_modifica/(:num)'] = 'producto_controller/muestra_modificar/$1'
 $route['verifico_modificaproducto/(:num)'] = 'producto_controller/modificar_producto/$1';
 $route['verDetalle/(:num)'] = 'producto_controller/ver_detalle/$1';
 $route['productos_elimina/(:num)'] = 'producto_controller/eliminar_producto/$1';
+$route['busqueda'] = 'producto_controller/busqueda';
+
 //usuarios
 $route['agregausuario'] = 'usuario_controller/form_agrega_usuario';
 $route['muestrausuarioseliminados'] = 'usuario_controller/muestra_eliminados';

@@ -514,6 +514,30 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 	            }
 	        }
 
+			function busqueda()
+		    {
+		        //Genero las reglas de validacion
+		        $this->form_validation->set_rules('busqueda', 'Busqueda');
+
+
+
+		        //Preparo los datos para guardar en la base, en caso de que pase la validacion
+		        $data = $this->input->post('busqueda',true);
+
+
+		        //Si pasa la validacion de datos
+
+		            $dat = array('productos' => $this->producto_model->busqueda_producto($data));
+		            //Muestra la página de registro con el título de error
+
+		            $this->load->view('front/head_view');
+		            $this->load->view('front/navbar_view');
+		            $this->load->view('Principal',$dat);
+		            $this->load->view('front/footer_view');
+
+
+		    }
+
 
 
 	}

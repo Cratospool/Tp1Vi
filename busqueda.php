@@ -13,13 +13,15 @@ $nombre=$row['nombre'];
 $foto=$row['imagen'];
 
 ?>
-<div>
-    <a href="verDetalle/<?php echo $id; ?>" style="text-decoration:none;" > <!--Recuperamos el id para pasarlo a otra pagina -->
-    <div class="display_box" align="left">
-    <div style="float:left; margin-right:6px;"><img src="<?php echo $foto; ?>" width="60" height="60" /></div> <!--Colocamos la foto Recuperada de la bd -->
-    <div style="margin-center:6px;"><b><?php echo $nombre; ?></b></div> <!--Recuperamos el nombre recuperado de la bd -->
+<form class="display_box" action="index.html" method="post">
+
+    <div class=" dropdown-item" aria-labelledby="dropdownMenuButton" >
+    <a class="dropdown-item" href="verDetalle/<?php echo $id; ?>" style="text-decoration:none;" > <!--Recuperamos el id para pasarlo a otra pagina -->
+    <img src="<?php echo $foto; ?>" width="60" height="60" /><!--Colocamos la foto Recuperada de la bd -->
+    <b><?php echo $nombre; ?></b><!--Recuperamos el nombre recuperado de la bd -->
     </a>
-</div>
+    </div>
+</form>
 
 <?php
 }

@@ -37,9 +37,20 @@ class Producto_model extends CI_Model{
             return FALSE;
         }
     }
-    function get_electrodomesticos2($categoria)
+    function get_productosCAT($categoria)
     {
         $query = $this->db->get_where('productos', array('eliminado' => 'NO', 'id_categoria' => $categoria));
+
+        if($query->num_rows()>0) {
+            return $query;
+        } else {
+            return FALSE;
+        }
+    }
+
+    function get_productosBusqueda($busqueda)
+    {
+        $query = $this->db->get_where('productos', array('nombre' => $busqueda));
 
         if($query->num_rows()>0) {
             return $query;
@@ -83,11 +94,13 @@ class Producto_model extends CI_Model{
         }
     }
 
-    function busqueda_producto($nombre){
+    function busqueda_producto($data){
 
-        $query = $this->db->get_where('productos', array('nombre' => $nombre),1);
+        $array = array('nombre' => $data);
 
-        if($query->num_rows() == 1) {
+        $query = $this->db->get_where('productos',$array);
+
+        if($query->num_rows() > 0) {
             return $query;
         } else {
             return FALSE;
@@ -161,4 +174,8 @@ class Producto_model extends CI_Model{
             return FALSE;
         }
     }
+
+
+
+
 }

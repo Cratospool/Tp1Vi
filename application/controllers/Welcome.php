@@ -30,7 +30,7 @@ class Welcome extends CI_Controller {
 	public function productosCAT($categoria)
 	{
 		//$this->load->view('principal.php');
-		$dat = array('productos' => $this->producto_model->get_electrodomesticos2($categoria));
+		$dat = array('productos' => $this->producto_model->get_productosCAT($categoria));
 		$data = array('titulo' => 'Principal');
 
 		$this->load->view('front/head_view',$data);
