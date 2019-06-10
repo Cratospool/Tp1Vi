@@ -1,3 +1,5 @@
+<body id=body-Principal>
+    <main id="main">
 <?php if (!$consultas) { ?>
 
 	<div class="container">
@@ -46,3 +48,4 @@
 	</div>
 
 <?php } ?>
+</main>

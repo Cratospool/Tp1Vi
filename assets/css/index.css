@@ -131,6 +131,15 @@ color: white;
 	background: black;
 }
 
+#botoncarrito{
+	height: 40px;
+	padding-bottom: 2px;
+}
+
+#link{
+	padding-bottom: 2px;
+}
+
 #ver_detalle h1{
 	text-align: center;
 	line-height: 2;

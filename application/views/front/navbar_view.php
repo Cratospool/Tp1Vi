@@ -58,10 +58,10 @@
             ?>
             <ul class="navbar-nav ml-auto">
 
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Juegos
-                  </a>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Juegos
+                    </button>
                   <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?php echo base_url('agregaproducto');?>">
                       Agregar juego</a>
@@ -71,43 +71,61 @@
                       Ver todos los Juegos</a>
 
                   </div>
-                </li>
+                </div>
 
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Usuarios
-                  </a>
-                  <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="<?php echo base_url('agregausuario');?>">
-                      Agregar Usuario</a>
-                    <a class="dropdown-item" href="<?php echo base_url('usuarios_todos');?>">
-                      Ver todos los Usuarios</a>
-                    <a class="dropdown-item" href="<?php echo base_url('muestrausuarioseliminados');?>">
-                      Ver Usuarios eliminados</a>
-                  </div>
-                </li>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Usuarios
+                    </button>
+                    <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                         <a class="dropdown-item" href="<?php echo base_url('agregausuario');?>">
+                          Agregar Usuario</a>
+                         <a class="dropdown-item" href="<?php echo base_url('usuarios_todos');?>">
+                          Ver todos los Usuarios</a>
+                         <a class="dropdown-item" href="<?php echo base_url('muestrausuarioseliminados');?>">
+                          Ver Usuarios eliminados</a>
+                    </div>
+                </div>
 
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Reportes
-                  </a>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Reportes
+                    </button>
                   <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?php echo base_url('muestraventas');?>">
                       Ventas</a>
                     <a class="dropdown-item" href="<?php echo base_url('consultas');?>">
                       Consultas</a>
                   </div>
-                </li>
+                </div>
 
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
-                  </a>
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-user"></i>  <?= $session_data['usuario'] ?>
+                    </button>
+
                   <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="<?php echo base_url("mi_perfil/$id_usuario"); ?>">Mi perfil</a>
                     <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
                   </div>
-                </li>
+                </div>
             </ul>
+                <div class="row">
+                    <?php echo form_open_multipart("busqueda", ['class' => 'form-signin', 'role' => 'form']); ?>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <?php echo form_label('', 'texto'); ?>
+                            <?php echo form_input(['name' => 'busqueda',
+                                                            'id' => 'busqueda',
+                                                            'class' => 'form-control',
+                                                            'placeholder' => 'Buscar',
+                                                            'autofocus'=>'autofocus',
+                                                            'value'=>set_value('busqueda')]); ?>
+                            <?php echo form_error('texto'); ?>
+                            <?php echo form_close(); ?>
+                        </div>
+                    </div>
+                    </div>
             <?php
             // MENU PARA CLIENTE
         } else if (($this->session->userdata('logged_in')) and ($session_data['perfil_id'] == '2'))
@@ -115,50 +133,51 @@
             ?>
             <ul class="navbar-nav ml-auto">
 
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url('carrito');?>"><i class="fa fa-shopping-cart"></i> Carro</a>">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('carrito');?>"><i class="fa fa-shopping-cart"></i> Carro</a>">
 
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <b><i class="fa fa-user"></i> Bienvenido <?= $session_data['nombre'] ?></b>
-                </a>
+                </li>
+
+
+              <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-user"></i>  <?= $session_data['usuario'] ?>
+                  </button>
+
                 <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="<?php echo base_url("mi_perfil/$id_usuario"); ?>">Mi perfil</a>
                   <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
                 </div>
-              </li>
+            </div>
             </ul>
+            <div class="row">
+
+                    <div class="col-12">
+                        <?php echo form_open_multipart("busqueda", ['class' => 'form-signin', 'role' => 'form']); ?>
+                        <div class="form-group">
+                            <?php echo form_label('', 'texto'); ?>
+                            <?php echo form_input(['name' => 'busqueda',
+                            'id' => 'busqueda',
+                            'class' => 'form-control',
+                            'placeholder' => 'Buscar',
+                            'autofocus'=>'autofocus',
+                            'value'=>set_value('busqueda')]); ?>
+                            <?php echo form_error('texto'); ?>
+                            <?php echo form_close(); ?>
+                        </div>
+
+                </div>
+            </div>
             <?php
             // MENU PARA PUBLICO EN GENERAL
         }else
         {
             ?>
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item mr-2" data-toggle="modal" data-target="#modalLogin">
-                  <a href="<?php echo base_url('login');?>">Login</a>
-              </li>
-            </ul>
+            <button type="button" class="btn btn-success">
+                <a href="<?php echo base_url('login');?>">Iniciar Sesión</a>
+            </button>
+
             <?php
         }?>
 
-
-        <?php echo form_open_multipart("busqueda", ['class' => 'form-signin', 'role' => 'form']); ?>
-    		<div class="row">
-    	   		<div class="col-md-6">
-    				<div class="form-group">
-    					<?php echo form_label('', 'texto'); ?>
-    					<?php echo form_input(['name' => 'busqueda',
-    													'id' => 'busqueda',
-    													'class' => 'form-control',
-    													'placeholder' => 'Buscar',
-    													'autofocus'=>'autofocus',
-    													'value'=>set_value('busqueda')]); ?>
-    					<?php echo form_error('texto'); ?>
-    				</div>
-    			</div>
-    					
-    				</div>
-    </div>
 </nav>
