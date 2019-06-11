@@ -25,13 +25,11 @@
 </header>
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark sticky-top" >
     <a class="navbar-brand ">
-        <span class="navbar-logo">
+        <span class="navbar-logo ">
             <a href="<?php echo base_url('principal');?>"><img  src="<?php echo base_url('assets/img/logo.png'); ?>" class="img-responsive" alt="Logo" style="height: 55px;"></a>
         </span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -57,8 +55,8 @@
         {
             ?>
             <ul class="navbar-nav ml-auto">
-
-                <div class="dropdown">
+                <li>
+                <div class="dropdown mt-3">
                     <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Juegos
                     </button>
@@ -72,8 +70,9 @@
 
                   </div>
                 </div>
-
-                <div class="dropdown">
+                </li>
+                <li>
+                <div class="dropdown mt-3">
                     <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Usuarios
                     </button>
@@ -86,8 +85,9 @@
                           Ver Usuarios eliminados</a>
                     </div>
                 </div>
-
-                <div class="dropdown">
+                </li>
+                <li>
+                <div class="dropdown mt-3">
                     <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Reportes
                     </button>
@@ -98,8 +98,10 @@
                       Consultas</a>
                   </div>
                 </div>
+                </li>
+                <li>
 
-                <div class="dropdown">
+                <div class="dropdown mt-3 mr-2">
                     <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-user"></i>  <?= $session_data['usuario'] ?>
                     </button>
@@ -109,23 +111,26 @@
                     <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
                   </div>
                 </div>
-            </ul>
-                <div class="row">
-                    <?php echo form_open_multipart("busqueda", ['class' => 'form-signin', 'role' => 'form']); ?>
-                    <div class="col-12">
-                        <div class="form-group">
-                            <?php echo form_label('', 'texto'); ?>
-                            <?php echo form_input(['name' => 'busqueda',
-                                                            'id' => 'busqueda',
-                                                            'class' => 'form-control',
-                                                            'placeholder' => 'Buscar',
-                                                            'autofocus'=>'autofocus',
-                                                            'value'=>set_value('busqueda')]); ?>
-                            <?php echo form_error('texto'); ?>
-                            <?php echo form_close(); ?>
+                </li>
+                <li>
+                    <div class="row">
+                        <?php echo form_open_multipart("busqueda", ['class' => 'form-signin', 'role' => 'form']); ?>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <?php echo form_label('', 'texto'); ?>
+                                <?php echo form_input(['name' => 'busqueda',
+                                                                'id' => 'busqueda',
+                                                                'class' => 'form-control',
+                                                                'placeholder' => 'Buscar',
+                                                                'autofocus'=>'autofocus',
+                                                                'value'=>set_value('busqueda')]); ?>
+                                <?php echo form_error('texto'); ?>
+                                <?php echo form_close(); ?>
+                            </div>
                         </div>
-                    </div>
-                    </div>
+                        </div>
+                    </ul>
+                </li>
             <?php
             // MENU PARA CLIENTE
         } else if (($this->session->userdata('logged_in')) and ($session_data['perfil_id'] == '2'))
@@ -134,40 +139,44 @@
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url('carrito');?>"><i class="fa fa-shopping-cart"></i> Carro</a>">
+                    <a class="nav-link mt-3" href="<?php echo base_url('carrito');?>"><i class="fa fa-shopping-cart"></i> Carro</a>
 
                 </li>
-
-
-              <div class="dropdown">
+                <li class="nav-item">
+                  <div class="dropdown mt-3">
                   <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fa fa-user"></i>  <?= $session_data['usuario'] ?>
                   </button>
 
-                <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="<?php echo base_url("mi_perfil/$id_usuario"); ?>">Mi perfil</a>
-                  <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
-                </div>
-            </div>
-            </ul>
-            <div class="row">
+                    <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="<?php echo base_url("mi_perfil/$id_usuario"); ?>">Mi perfil</a>
+                      <a class="dropdown-item" href="<?php echo base_url('muestraventasU');?>">
+                        Ventas</a>
+                      <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
+                    </div>
+                 </div>
+                </li>
+            <li class="nav-item">
+                <div class="row">
 
-                    <div class="col-12">
-                        <?php echo form_open_multipart("busqueda", ['class' => 'form-signin', 'role' => 'form']); ?>
-                        <div class="form-group">
-                            <?php echo form_label('', 'texto'); ?>
-                            <?php echo form_input(['name' => 'busqueda',
-                            'id' => 'busqueda',
-                            'class' => 'form-control',
-                            'placeholder' => 'Buscar',
-                            'autofocus'=>'autofocus',
-                            'value'=>set_value('busqueda')]); ?>
-                            <?php echo form_error('texto'); ?>
-                            <?php echo form_close(); ?>
-                        </div>
+                        <div class="col-12">
+                            <?php echo form_open_multipart("busqueda", ['class' => 'form-signin', 'role' => 'form']); ?>
+                            <div class="form-group">
+                                <?php echo form_label('', 'texto'); ?>
+                                <?php echo form_input(['name' => 'busqueda',
+                                'id' => 'busqueda',
+                                'class' => 'form-control',
+                                'placeholder' => 'Buscar',
+                                'autofocus'=>'autofocus',
+                                'value'=>set_value('busqueda')]); ?>
+                                <?php echo form_error('texto'); ?>
+                                <?php echo form_close(); ?>
+                            </div>
 
+                    </div>
                 </div>
-            </div>
+            </li>
+        </ul>
             <?php
             // MENU PARA PUBLICO EN GENERAL
         }else

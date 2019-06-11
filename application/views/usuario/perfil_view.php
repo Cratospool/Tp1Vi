@@ -11,7 +11,7 @@
         <?php } else { ?>
             <?php foreach($usuarios->result() as $row){ ?>
                 <div class="container">
-                    <div id="usuario" class="row" >
+                    <div id="usuariov" class="row" >
                         <div class="col">
                             <h1><?php echo ($row->usuario); ?></h1>
                         </div>

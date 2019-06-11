@@ -114,16 +114,14 @@ color: white;
 	text-align: justify;
 }
 
-#usuario{
+#usuariov{
 	text-align: center;
 }
 
 /* ADMINISTRADOR */
 
 
-#mestradmin {
-	background: white;
-}
+
 
 #ver_detalle{
 	color: white;
@@ -131,14 +129,8 @@ color: white;
 	background: black;
 }
 
-#botoncarrito{
-	height: 40px;
-	padding-bottom: 2px;
-}
 
-#link{
-	padding-bottom: 2px;
-}
+
 
 #ver_detalle h1{
 	text-align: center;
@@ -173,45 +165,4 @@ color: white;
 
 .btn a{
 	color: white;
-}
-
-/* busqueda */
-#caja_busqueda /*estilos para la caja principal de busqueda*/
-{
-width:300px;
-height:25px;
-border:solid 2px #979DAE;
-font-size:16px;
-}
-#display /*estilos para la caja principal en donde se puestran los resultados de la busqueda en forma de lista*/
-{
-width:300px;
-display:none;
-overflow:hidden;
-z-index:10;
-border: solid 1px #666;
-}
-.display_box /*estilos para cada caja unitaria de cada usuario que se muestra*/
-{
-padding:2px;
-padding-left:6px;
-font-size:18px;
-height:63px;
-text-decoration:none;
-color:#3b5999;
-}
-
-.display_box:hover /*estilos para cada caja unitaria de cada usuario que se muestra. cuando el mause se pocisiona sobre el area*/
-{
-background: #415AB5;
-color: #FFF;
-}
-.desc
-{
-color:#666;
-font-size:16;
-}
-.desc:hover
-{
-color:#FFF;
 }

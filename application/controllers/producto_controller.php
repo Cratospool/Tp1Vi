@@ -516,6 +516,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 			function busqueda()
 		    {
+				$dato = array('titulo' => 'Busqueda');
 		        //Genero las reglas de validacion
 		        $this->form_validation->set_rules('busqueda', 'Busqueda');
 
@@ -530,13 +531,36 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 		            $dat = array('productos' => $this->producto_model->busqueda_producto($data));
 		            //Muestra la página de registro con el título de error
 
-		            $this->load->view('front/head_view');
+		            $this->load->view('front/head_view',$dato);
 		            $this->load->view('front/navbar_view');
 		            $this->load->view('Principal',$dat);
 		            $this->load->view('front/footer_view');
 
 
 		    }
+
+			function indexUsuario()
+			{
+
+
+				if($this->_veri_log()){
+				$data = array('titulo' => 'Consultas');
+
+				$session_data = $this->session->userdata('logged_in');
+				$data['perfil_id'] = $session_data['perfil_id'];
+				$data['nombre'] = $session_data['nombre'];
+
+				$dat = array('ventas_cabecera' => $this->producto_model->get_ventas_cabecera() );
+				$dat['id2'] = $session_data['id'];
+
+				$this->load->view('front/head_view', $data);
+				$this->load->view('front/navbar_view');
+				$this->load->view('consultas/muestraventasUsuario', $dat);
+				$this->load->view('front/footer_view');
+	             }else{
+				redirect('login', 'refresh'); }
+
+			}
 
 
 

@@ -34,6 +34,7 @@
 
 			$dat = array('consultas' => $this->consulta_model->get_consultas() );
 
+
 			$this->load->view('front/head_view', $data);
 			$this->load->view('front/navbar_view');
 			$this->load->view('consultas-usuario/muestraConsulta', $dat);
@@ -42,6 +43,8 @@
 			redirect('login', 'refresh'); }
 
 		}
+
+
 
 
 

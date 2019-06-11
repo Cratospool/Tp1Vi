@@ -48,6 +48,7 @@ $route['carrito_actualiza'] = 'carrito_controller/actualiza_carrito';
 $route['carrito_elimina/(:any)'] = 'carrito_controller/remove/$1';
 //consulta
 $route['muestraventas'] = 'producto_controller/listar_ventas';
+$route['muestraventasU'] = 'producto_controller/indexUsuario';
 $route['muestra_detalle/(:num)'] = 'producto_controller/muestra_detalle/$1';
 //reclamos
 $route['consultas'] = 'consultaController';

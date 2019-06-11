@@ -96,9 +96,12 @@ class Producto_model extends CI_Model{
 
     function busqueda_producto($data){
 
-        $array = array('nombre' => $data);
+        $this->db->select('*');
+        $this->db->from('productos');
+        $this->db->like('nombre', "$data");
+        $this->db->like('eliminado', 'NO');
 
-        $query = $this->db->get_where('productos',$array);
+        $query = $this->db->get();
 
         if($query->num_rows() > 0) {
             return $query;
@@ -148,7 +151,7 @@ class Producto_model extends CI_Model{
 
     function get_ventas_cabecera()
     {
-        $this->db->select('ventas_cabecera.id, usuarios.nombre, usuarios.apellido, ventas_cabecera.fecha, ventas_cabecera.total_venta');
+        $this->db->select('ventas_cabecera.id, usuarios.nombre, usuarios.apellido, ventas_cabecera.fecha, ventas_cabecera.total_venta, ventas_cabecera.usuario_id');
         $this->db->from('ventas_cabecera');
         $this->db->join('usuarios','ventas_cabecera.usuario_id=usuarios.id');
         $query = $this->db->get();
@@ -159,6 +162,7 @@ class Producto_model extends CI_Model{
             return FALSE;
         }
     }
+    
 
         function get_ventas_detalle($id)
     {

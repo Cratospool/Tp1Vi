@@ -57,4 +57,3 @@
 	</div>
 <?php } ?>
 </main>
-</body>
