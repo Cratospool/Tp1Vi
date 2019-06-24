@@ -23,13 +23,16 @@
 
     </div>
 </header>
+
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark sticky-top" >
     <a class="navbar-brand ">
         <span class="navbar-logo ">
             <a href="<?php echo base_url('principal');?>"><img  src="<?php echo base_url('assets/img/logo.png'); ?>" class="img-responsive" alt="Logo" style="height: 55px;"></a>
         </span>
     </a>
-
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -112,25 +115,7 @@
                   </div>
                 </div>
                 </li>
-                <li>
-                    <div class="row">
-                        <?php echo form_open_multipart("busqueda", ['class' => 'form-signin', 'role' => 'form']); ?>
-                        <div class="col-12">
-                            <div class="form-group">
-                                <?php echo form_label('', 'texto'); ?>
-                                <?php echo form_input(['name' => 'busqueda',
-                                                                'id' => 'busqueda',
-                                                                'class' => 'form-control',
-                                                                'placeholder' => 'Buscar',
-                                                                'autofocus'=>'autofocus',
-                                                                'value'=>set_value('busqueda')]); ?>
-                                <?php echo form_error('texto'); ?>
-                                <?php echo form_close(); ?>
-                            </div>
-                        </div>
-                        </div>
-                    </ul>
-                </li>
+
             <?php
             // MENU PARA CLIENTE
         } else if (($this->session->userdata('logged_in')) and ($session_data['perfil_id'] == '2'))
@@ -143,8 +128,8 @@
 
                 </li>
                 <li class="nav-item">
-                  <div class="dropdown mt-3">
-                  <button class="btn btn-success dropdown-toggle m-2" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="dropdown mt-3 mr-2">
+                  <button class="btn btn-success dropdown-toggle mb-3" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="fa fa-user"></i>  <?= $session_data['usuario'] ?>
                   </button>
 
@@ -156,37 +141,35 @@
                     </div>
                  </div>
                 </li>
-            <li class="nav-item">
-                <div class="row">
-
-                        <div class="col-12">
-                            <?php echo form_open_multipart("busqueda", ['class' => 'form-signin', 'role' => 'form']); ?>
-                            <div class="form-group">
-                                <?php echo form_label('', 'texto'); ?>
-                                <?php echo form_input(['name' => 'busqueda',
-                                'id' => 'busqueda',
-                                'class' => 'form-control',
-                                'placeholder' => 'Buscar',
-                                'autofocus'=>'autofocus',
-                                'value'=>set_value('busqueda')]); ?>
-                                <?php echo form_error('texto'); ?>
-                                <?php echo form_close(); ?>
-                            </div>
-
-                    </div>
-                </div>
-            </li>
         </ul>
             <?php
             // MENU PARA PUBLICO EN GENERAL
         }else
         {
             ?>
-            <button type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success mr-2">
                 <a href="<?php echo base_url('login');?>">Iniciar Sesión</a>
             </button>
 
             <?php
         }?>
+        <div class="row mb-2">
 
+                <div class="col-12">
+                    <?php echo form_open_multipart("busqueda", ['class' => 'form-signin', 'role' => 'form']); ?>
+                    <div class="form-group">
+                        <?php echo form_label('', 'texto'); ?>
+                        <?php echo form_input(['name' => 'busqueda',
+                        'id' => 'busqueda',
+                        'class' => 'form-control',
+                        'placeholder' => 'Buscar',
+                        'autofocus'=>'autofocus',
+                        'value'=>set_value('busqueda')]); ?>
+                        <?php echo form_error('texto'); ?>
+                        <?php echo form_close(); ?>
+                    </div>
+
+            </div>
+        </div>
+        </div>
 </nav>

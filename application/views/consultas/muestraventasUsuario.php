@@ -16,7 +16,7 @@
 <?php } else { ?>
 <div class="container">
 	<div class="well">
-		<h1><b>Ventas Realizadas</b></h1>
+		<h1><b>Compras Realizadas</b></h1>
 	</div>
 	<br>
 	<table  class="table table-bordered" >
