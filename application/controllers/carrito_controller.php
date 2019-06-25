@@ -86,6 +86,7 @@ class Carrito_controller extends CI_Controller {
 
 		foreach( $cart_info as $id => $cart)
 		{
+			$id = $cart['id'];
 		    $rowid = $cart['rowid'];
 	    	$price = $cart['price'];
 	    	$amount = $price * $cart['qty'];
@@ -98,7 +99,18 @@ class Carrito_controller extends CI_Controller {
 					'qty'     => $qty
 					);
 
-			$this->cart->update($data);
+					$productos = $this->producto_model->edit_producto($id);
+			//$dat = array('productos' => $this->producto_model->get_productos());
+			foreach($productos->result() as $row){
+				$stock = $row->stock;
+				if(($stock < $qty) or ($qty< 0)){
+					header('Location: '. base_url('carrito'));
+					return;
+				} else {
+					$this->cart->update($data);
+					header('Location: '. base_url('carrito'));
+				}
+			}
 		}
 
 		// Redirige a la misma página que se encuentra

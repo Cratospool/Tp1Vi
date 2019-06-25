@@ -82,11 +82,11 @@
                     </td>
                     <td colspan="5" align="right">
                         <!-- Borrar carrito usa mensaje de confirmacion javascript implementado en front/head_view -->
-                        <input type="button" class ='btn btn-primary btn-lg' value="Borrar Carrito" onclick="borra_carrito()">
+                        <input type="button" class ='btn btn-success btn-lg' value="Borrar Carrito" onclick="borra_carrito()">
                         <!-- Submit boton. Actualiza los datos en el carrito -->
-                        <input type="submit" class ='btn btn-primary btn-lg' value="Actualizar">
+                        <input type="submit" class ='btn btn-success btn-lg' value="Actualizar">
                         <!-- " Confirmar orden envia a carrito_controller/muestra_compra  -->
-                        <input type="button" class ='btn btn-primary btn-lg m-1' value="Confirmar Orden" onclick="window.location = 'comprar'">
+                        <input type="button" class ='btn btn-success btn-lg m-1' value="Confirmar Orden" onclick="window.location = 'comprar'">
                     </td>
                 </tr>
                 <?php echo form_close();
