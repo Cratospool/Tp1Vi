@@ -1,24 +1,25 @@
 <body id=body-Principal>
-    <main id="main">
+    <main id="main-ver-eliminados">
 <?php if (!$productos) { ?>
-
 	<div class="container">
 		<div class="well">
-			<h1>No hay Eliminados</h1>
+			<h1>No hay Juegos Eliminados</h1>
 		</div>
 	</div>
-
 <?php } else { ?>
-
-	<div id="cuadro" class="container">
+    <br>
+    <br>
+    <br>
+	<div  class="container">
 		<div class="well">
-			<h1>Todos los Eliminados</h1>
+			<center><h1 style="background: rgba(0,0,0,0.7);">Juegos Eliminados</h1></center>
 		</div>
 
-		<table class="table table-bordered">
+		<table id="cuadro" class="table table-bordered">
 			<thead>
 				<tr>
 					<th>ID</th>
+                    <th>Imagen</th>
 					<th>Nombre</th>
 					<th>Descripcion</th>
 					<th>Categoria</th>
@@ -32,9 +33,28 @@
 				<?php foreach($productos->result() as $row){ ?>
 				<tr>
 					<td><?php echo $row->id;  ?></td>
+                    <td><img  id="imagen_view" name="imagen_view" class="img-thumbnail" width="1000"  src="<?php  echo base_url($row->imagen); ?>" ></td>
 					<td><?php echo $row->nombre;  ?></td>
 					<td><?php echo $row->descripcion;  ?></td>
-					<td><?php echo $row->id_categoria;  ?></td>
+					<td>
+                        <?php switch ($row->id_categoria) {
+                            case 1:
+                                ?>
+                                <img id="icono-pc" src="<?php echo base_url('assets/img/pc.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
+                                <?php
+                                break;
+                            case 2:
+                            ?>
+                                <img id="icono-pc" src="<?php echo base_url('assets/img/ps.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
+                                <?php
+                                break;
+                            case 3:
+                            ?>
+                            <img id="icono-pc" src="<?php echo base_url('assets/img/xbox.png'); ?>" class="img-responsive" alt="Logo" style="height: 50px;">
+                            <?php
+                                break;
+                        } ?>
+                    </td>
 					<td><?php echo $row->precio_venta;  ?></td>
 					<td><?php echo $row->stock;  ?></td>
 					<td><?php echo $row->eliminado;  ?></td>

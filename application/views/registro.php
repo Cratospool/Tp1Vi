@@ -79,7 +79,6 @@
 					</div>
 					<div class="col-lg-3 col-lg-offset-4">
 						<?php echo form_submit('submit', 'Registrarse',"class='btn btn-success' "); ?> <br><br>
-						<?php echo form_reset ('reset', 'Editar', "class='btn btn-danger'"); ?><br>
 						<?php echo form_close(); ?>
 					</div>
 				</fieldset>

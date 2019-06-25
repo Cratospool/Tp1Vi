@@ -20,7 +20,7 @@ class LoginController extends CI_Controller{
 		$this->form_validation->set_message('is_unique', 'El campo %s ya existe');
 
 		//Forma en que muestra los mensajes de error
-		$this->form_validation->set_error_delimiters('<ul><li>', '</li></ul>');
+		$this->form_validation->set_error_delimiters('<div style="color: red;"><ul><li>', '</li></ul></div>');
 
 		if ($this->form_validation->run() == FALSE  )
 		{	//En caso de que falle la validacion vuelve a cargar la pagina de Login

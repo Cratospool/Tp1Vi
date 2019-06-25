@@ -1,10 +1,10 @@
 <body id=body-Principal>
-    <main id="main">
+    <main id="main-ver-juegos">
 <?php if (!$productos) { ?>
 
 	<div class="container">
 		<div class="well">
-			<h1>No hay Productos</h1>
+			<center><h1>No hay Productos</h1></center>
 		</div>
 		<?php if( ($this->session->userdata('logged_in')) and ($perfil_id == '1') ) { ?>
 			<a type="button" class="btn btn-success" href="<?php echo base_url('agregaproducto'); ?>">Agregar</a>
@@ -15,14 +15,14 @@
 
 <?php } else { ?>
 
-	<div id="cuadro" class="container">
+	<div class="container">
 		<div class="well">
-			<h1>Todos los Productos</h1>
+			<center><h1>Todos los Productos</h1></center>
 		</div>
 		<a type="button" class="btn btn-success" href="<?php echo base_url('agregaproducto'); ?>">Agregar</a>
 		<a type="button" class="btn btn-danger" href="<?php echo base_url('muestraeliminados'); ?>">ELIMINADOS</a>
 		<br> <br>
-		<table class="table table-bordered">
+		<table id="cuadro" class="table table-bordered">
 			<thead>
 				<tr>
 					<th>ID</th>

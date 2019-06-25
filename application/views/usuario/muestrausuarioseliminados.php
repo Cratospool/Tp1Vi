@@ -1,5 +1,5 @@
 <body id=body-Principal>
-    <main id="main">
+    <main id="main-ver-eliminados">
 <?php if (!$usuarios) { ?>
 
 	<div class="container">
@@ -9,14 +9,13 @@
 	</div>
 
 <?php } else { ?>
-    </div>
     <br>
     <br>
     <br>
-	<div id="cuadro" class="container">
+	<div  class="container">
 		<div class="well">
-			<h1>Todos los Eliminados</h1>
-		<table class="table table-bordered">
+			<center><h1 style="background: rgba(0,0,0,0.7);">Usuarios Eliminados</h1></center>
+		<table id="cuadro" class="table table-bordered">
 			<thead>
 				<tr>
 					<th>ID</th>

@@ -1,19 +1,17 @@
 <body id=body-Principal>
-    <main id="main">
+    <main id="main-agregarU">
 <div class="container">
-	<div class="well col-lg-8">
-		<h2>Cargar nuevo Usuario</h2>
-		<h6> <b>Acepta imagenes gif, jpg, jpeg, png</b></h6>
-		<h6> <b>Tamaño maximo de la imagen 2MB</b></h6>
-	</div>
-
-	<div class="row">
-		<div class="col-lg-8">
-
+    <div  class="row">
+		<div id="formulario" class="col-lg-8">
+            <div class="well col-lg-8">
+                <h2>Cargar nuevo Usuario</h2>
+                <h6> <b>Acepta imagenes gif, jpg, jpeg, png</b></h6>
+                <h6> <b>Tamaño maximo de la imagen 2MB</b></h6>
+            </div>
 			<?php echo validation_errors(); ?>
 			<!-- Genero el formulario para cargar un usuario -->
 
-			<div class="well bs-component form-horizontal">
+			<div  class="well bs-component form-horizontal">
 				<?php echo form_open_multipart('verifico_nuevousuario',
 									['class' => 'form-group', 'role' => 'form', 'id' => 'form_registro']); ?>
 				<fieldset>
@@ -90,7 +88,7 @@
 					</div>
 
 					<div class="col-lg-3 col-lg-offset-5">
-						<?php echo form_submit('submit', 'Cargar',"class='btn btn-lg btn-primary btn-block'"); ?> <br>
+						<?php echo form_submit('submit', 'Cargar',"class='btn btn-lg btn-success btn-block'"); ?> <br>
 						<?php echo form_close(); ?>
 					</div>
 				</fieldset>

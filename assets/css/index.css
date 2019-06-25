@@ -41,19 +41,36 @@
 #main {
 	background: black;
 	color:white;
+	padding: 3px;
 }
 #main label {
-
 	color:white;
 }
 #main td {
-
 	color:white;
 }
 #main th {
-
 	color:white;
 }
+#main-ver-usuarios td {
+	color:white;
+}
+#main-ver-usuarios th {
+	color:white;
+}
+#main-ver-eliminados td {
+	color:white;
+}
+#main-ver-eliminados th {
+	color:white;
+}
+#main-ver-juegos td {
+	color:white;
+}
+#main-ver-juegos th {
+	color:white;
+}
+
 #main-politicas {
 	background: black;
 	color: white;
@@ -62,6 +79,7 @@
 #main-contactanos {
 
 	background-image: url("../img/fondo-contactanos.jpg");
+	padding: 30px;
 }
 
 #main-comercializacion button h3{
@@ -69,12 +87,38 @@
 }
 
 #main-login {
-
 	background-image: url("../img/fondo-login.jpg");
+	padding: 3px;
 }
 #main-registro {
-color: white;
+	color: white;
 	background-image: url("../img/registro.png");
+	padding: 3px;
+}
+#main-agregarJ {
+	color: white;
+	background-image: url("../img/fondo-agrergar.jpg");
+	padding: 3px;
+}
+#main-agregarU{
+	color: white;
+	background-image: url("../img/fondo-agregarU.jpg");
+	padding: 3px;
+}
+#main-ver-eliminados{
+	color: white;
+	background-image: url("../img/fondo-agregarU.jpg");
+	padding: 3px;
+}
+#main-ver-juegos{
+	color: white;
+	background-image: url("../img/fondo-ver-J.png");
+	padding: 3px;
+}
+#main-ver-usuarios{
+	color: white;
+	background-image: url("../img/fondo-ver.jpg");
+	padding: 2px;
 }
 
 #main-login h1{
@@ -89,6 +133,16 @@ color: white;
 #main-comercializacion {
 	padding: 20px;
 	background-image: url("../img/como_pagar.jpg");
+	padding: 3px;
+}
+
+#formulario{
+	background: black;
+	background: rgba(0,0,0,0.7);
+}
+#cuadro{
+	background: black;
+	background: rgba(0,0,0,0.8);
 }
 
 .center-block {

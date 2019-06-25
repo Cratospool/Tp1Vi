@@ -1,3 +1,5 @@
+<body id=body-Principal>
+    <main id="main">
 <section class="content">
 		<div class="container">
 			<div class="col-sm-10 col-md-10">
@@ -70,19 +72,38 @@
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<?php echo form_label('Imagen actual:', 'img_ac'); ?>
+								<img  id="imagen_view" name="imagen_view" class="img-thumbnail" src="<?php  echo base_url($imagen); ?>" >
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<?php echo form_label('Imagen:', 'imagen'); ?>
+								<?php echo form_input(['type' => 'file',
+																'name' => 'filename',
+																'id' => 'filename',
+																'class' => 'form-control']); ?>
+								<?php echo form_error('filename'); ?>
+								<br>
+
+							</div>
+						</div>
+					</div>
+
                     <div class="col">
 
 								<br>
-								<?php echo form_submit('modificar', 'Modificar',"class='btn btn-lg btn-warning btn-block mb-3'"); ?>
+								<?php echo form_submit('modificar', 'Modificar',"class='btn btn-lg btn-success btn-block mb-3'"); ?>
 
 
 					</div>
 				<?php echo form_close(); ?>
-			<div>
-
-		</div>
-
 
 
     </section>
     <!-- /.content -->
+</main>
+</body>

@@ -66,11 +66,12 @@
                   <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="<?php echo base_url('agregaproducto');?>">
                       Agregar juego</a>
-                      <a class="dropdown-item" href="<?php echo base_url('muestraeliminados');?>">
-                        Ver juegos eliminados</a>
                     <a class="dropdown-item" href="<?php echo base_url('muestraproductos');?>">
-                      Ver todos los Juegos</a>
-
+                      Ver todos los Juegos
+                    </a>
+                    <a class="dropdown-item" href="<?php echo base_url('muestraeliminados');?>">
+                      Ver juegos eliminados
+                    </a>
                   </div>
                 </div>
                 </li>
@@ -135,8 +136,7 @@
 
                     <div id="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item" href="<?php echo base_url("mi_perfil/$id_usuario"); ?>">Mi perfil</a>
-                      <a class="dropdown-item" href="<?php echo base_url('muestraventasU');?>">
-                        Ventas</a>
+                      <a class="dropdown-item" href="<?php echo base_url('muestraventasU');?>">Mis compras</a>
                       <a class="dropdown-item" href="<?php echo base_url('cerrar_sesion');?>">Cerrar sesión</a>
                     </div>
                  </div>

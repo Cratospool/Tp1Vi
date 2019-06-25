@@ -1,5 +1,5 @@
 <body id=body-Principal>
-    <main id="main">
+    <main id="main-ver-usuarios">
 <?php if (!$usuarios) { ?>
 
 	<div class="container">

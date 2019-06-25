@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <link rel="shorcut icon" type="image/x-icon"  href="assets/img/logo.png" whidth="100" height="100">
+    <link rel="shorcut icon" type="image/x-icon"  href="<?php echo base_url('assets/img/logo.png');?>" whidth="100" height="100">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">

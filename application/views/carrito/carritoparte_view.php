@@ -55,7 +55,7 @@
                         </td>
                         <td>
                             <?php echo form_input('cart[' . $item['id'] . '][qty]', $item['qty'],
-                                                    'maxlength="3" size="1" style="text-align: right"'); ?>
+                                                    'maxlength="4" size="1" style="text-align: right"'); ?>
                         </td>
                             <?php $gran_total = $gran_total + $item['subtotal']; ?>
                         <td>

@@ -1,11 +1,7 @@
 <body>
     <main id="main-contactanos">
-        <div id="usuario" class="row">
-            <div class="col-10">
-                <h4 style="color: black; background: white;margin: 2%; position: relative; left:5%;"> <U>PONETE EN CONTACTO CON NOSOTROS</U></h4>
-            </div>
-        </div>
-        <div class="container"  id="cuerpoCont">
+        <div class="container p-5"  id="formulario">
+            <center><h2 style="color:white;">Contactanos</h2></center>
         	<div style="margin: 2%;">
         	 	<?php echo validation_errors(); ?>
         	      <!-- Genero el formulario para crear una consulta -->
@@ -64,17 +60,13 @@
 
 
         	<div class="col-lg-3 col-lg-offset-4">
-        	        <?php echo form_submit('submit', 'Enviar',"class='btn btn-primary' "); ?> <br><br>
-        	        <?php echo form_reset ('reset', 'Editar', "class='btn btn-primary'"); ?><br>
+        	       <?php echo form_submit('submit', 'Enviar',"class='btn btn-success' "); ?>
         		    <?php echo form_close(); ?>
         	</div>
-
-
-
-
-        	  <br>
         	</form>
         	</div>
         </div>
+        <br>
+        <br>
     </main>
 </body>

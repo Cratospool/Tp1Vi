@@ -1,5 +1,5 @@
 <body id=body-Principal>
-    <main id="main">
+    <main id="main-agregarJ">
 <div class="container">
 	<div class="well col-lg-8">
 		<h2>Cargar nuevo producto</h2>
@@ -7,8 +7,8 @@
 		<h6> <b>Tamaño maximo de la imagen 2MB</b></h6>
 	</div>
 
-	<div class="row">
-		<div class="col-lg-8">
+	<div  class="row">
+		<div id="formulario" class="col-lg-8">
 
 			<?php echo validation_errors(); ?>
 			<!-- Genero el formulario para cargar un producto -->
@@ -110,7 +110,7 @@
 						</div>
 					</div>
 					<div class="col-lg-3 col-lg-offset-5">
-						<?php echo form_submit('submit', 'Cargar',"class='btn btn-lg btn-primary btn-block'"); ?> <br>
+						<?php echo form_submit('submit', 'Cargar',"class='btn btn-lg btn-success btn-block'"); ?> <br>
 						<?php echo form_close(); ?>
 					</div>
 				</fieldset>

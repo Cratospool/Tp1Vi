@@ -181,6 +181,61 @@ function muestra_modificar()
 /**
 * Verifica datos para modificar un usuario
 */
+
+function modificar_perfil()
+{
+    //Validación del formulario
+    $this->form_validation->set_rules('nombre', 'Nombre', 'required');
+    $this->form_validation->set_rules('apellido', 'Apellido', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'required');
+    $this->form_validation->set_rules('password', 'Password', 'required');
+    $this->form_validation->set_rules('re_password', 'Repetir contraseña', 'required|matches[password]');
+
+    //Mensaje del form_validation
+    $this->form_validation->set_message('required','<div class="alert alert-danger">El campo %s es obligatorio, al intentar modificar estaba vacio</div>');
+    $this->form_validation->set_message('matches',
+                                '<div class="alert alert-danger">Los contraseña ingresada no coincide</div>');
+
+    $id = $this->uri->segment(2);
+    $session_data = $this->session->userdata('logged_in');
+    $usuario = $session_data['usuario'];
+    $datos_usuario = $this->usuario_model->edit_usuario($id);
+
+    foreach ($datos_usuario->result() as $row)
+    {
+        $imagen = $row->imagen;
+    }
+
+    $dat = array(
+        'id'=>$id,
+        'nombre'=>$this->input->post('nombre',true),
+        'apellido'=>$this->input->post('apellido',true),
+        'email'=>$this->input->post('email',true),
+        'usuario'=>$usuario,
+        'password'=>$this->input->post('password',true),
+        'perfil_id'=>$session_data['perfil_id'],
+        'imagen'=>$imagen,
+    );
+
+    if ($this->form_validation->run()==FALSE)
+    {
+        $data = array('titulo' => 'Error de formulario');
+        $session_data = $this->session->userdata('logged_in');
+        $data['perfil_id'] = $session_data['perfil_id'];
+        $data['nombre'] = $session_data['nombre'];
+
+        $this->load->view('front/head_view', $data);
+        $this->load->view('front/navbar_view');
+        $this->load->view('usuario/modifico_perfil_view', $dat);
+        $this->load->view('front/footer_view');
+    }
+    else
+    {
+        $this->_image_modif_perfil();
+    }
+
+}
+
 function modificar_usuario()
 {
     //Validación del formulario
@@ -213,6 +268,7 @@ function modificar_usuario()
         'apellido'=>$this->input->post('apellido',true),
         'email'=>$this->input->post('email',true),
         'password'=>$this->input->post('password',true),
+        'imagen'=>$imagen,
     );
 
     if ($this->form_validation->run()==FALSE)
@@ -249,7 +305,6 @@ function _image_modif()
 
     // Obtengo el id del libro
     $id = $this->uri->segment(2);
-
     // Array de datos para obtener datos de libros sin la imagen
     $dat = array(
         'id'=>$id,
@@ -288,11 +343,9 @@ function _image_modif()
 
                 // Actualiza datos del libro
             $this->usuario_model->update_usuario($id, $dat);
-            if('perfil_id'==1){
+
                 redirect('usuarios_todos', 'refresh');
-            }else {
-                redirect('principal', 'refresh');
-            }
+
         }
         else
         {
@@ -305,11 +358,81 @@ function _image_modif()
     else
     {
         $this->usuario_model->update_usuario($id, $dat);
-        if('perfil_id'==1){
+
             redirect('usuarios_todos', 'refresh');
-        }else {
-            redirect('principal', 'refresh');
+
+    }
+}
+
+function _image_modif_perfil()
+{
+    //Cargo la libreria para subir archivos
+    $this->load->library('upload');
+
+    // Obtengo el id del libro
+    $id = $this->uri->segment(2);
+    $datos_usuario = $this->usuario_model->edit_usuario($id);
+    foreach ($datos_usuario->result() as $row)
+    {
+        $usuario = $row->usuario;
+        $perfil_id = $row->perfil_id;
+    }
+    // Array de datos para obtener datos de libros sin la imagen
+    $dat = array(
+        'id'=>$id,
+        'usuario'=>$usuario,
+        'perfil_id'=>$perfil_id,
+        'nombre'=>$this->input->post('nombre',true),
+        'apellido'=>$this->input->post('apellido',true),
+        'email'=>$this->input->post('email',true),
+        'password'=>$this->input->post('password',true),
+    );
+
+    // Si la iamgen esta vacia se asume que no se modifica
+    if (!empty($_FILES['filename']['name']))
+    {
+        // Especifica la configuración para el archivo
+        $config['upload_path'] = 'assets/img/usuarios/';
+        $config['allowed_types'] = 'gif|jpg|jpeg|png';
+
+        $config['max_size'] = '2048';
+        $config['max_width']  = '1024';
+        $config['max_height']  = '768';
+
+        // Inicializa la configuración para el archivo
+        $this->upload->initialize($config);
+
+        if ($this->upload->do_upload('filename'))
+        {
+                // Mueve archivo a la carpeta indicada en la variable $data
+            $data = $this->upload->data();
+
+                // Path donde guarda el archivo..
+            $url ="assets/img/usuarios/".$_FILES['filename']['name'];
+
+                // Agrego la imagen si se modifico.
+            $dat['imagen']=$url;
+
+                // Actualiza datos del libro
+            $this->usuario_model->update_usuario($id, $dat);
+
+                redirect("mi_perfil/$id", 'refresh');
+
         }
+        else
+        {
+                //Mensaje de error si no existe imagen correcta
+            $imageerrors = '<div class="alert alert-danger">El campo %s es incorrecta, extención incorrecto o excede el tamaño permitido que es de: 2MB </div>';
+            $this->form_validation->set_message('_image_modif',$imageerrors );
+            return false;
+        }
+    }
+    else
+    {
+        $this->usuario_model->update_usuario($id, $dat);
+
+            redirect("mi_perfil/$id", 'refresh');
+
     }
 }
 
@@ -460,7 +583,7 @@ function muestra_modifica_perfil()
             $email = $row->email;
             $usuario = $row->usuario;
             $password = $row->password;
-            $id_perfil = $row->perfil_id;
+            $perfil_id = $row->perfil_id;
             $imagen = $row->imagen;
         }
 
@@ -471,7 +594,7 @@ function muestra_modifica_perfil()
             'email'=>$email,
             'usuario'=>$usuario,
             'password'=>$password,
-            'id_perfil'=>$id_perfil,
+            'perfil_id'=>$perfil_id,
             'imagen'=>$imagen,
         );
     }
@@ -491,53 +614,7 @@ function muestra_modifica_perfil()
     }
 }
 
-function modificar_perfil()
-{
-    //Validación del formulario
-    $this->form_validation->set_rules('nombre', 'Nombre', 'required');
-    $this->form_validation->set_rules('apellido', 'Apellido', 'required');
-    $this->form_validation->set_rules('email', 'Email', 'required');
-    $this->form_validation->set_rules('password', 'Password', 'required');
-    $this->form_validation->set_rules('re_password', 'Repetir contraseña', 'required|matches[password]');
 
-    //Mensaje del form_validation
-    $this->form_validation->set_message('required','<div class="alert alert-danger">El campo %s es obligatorio, al intentar modificar estaba vacio</div>');
-    $this->form_validation->set_message('matches',
-                                '<div class="alert alert-danger">Los contraseña ingresada no coincide</div>');
-
-    $id = $this->uri->segment(2);
-    $session_data = $this->session->userdata('logged_in');
-    $usuario = $session_data['usuario'];
-
-    $dat = array(
-        'id'=>$id,
-        'nombre'=>$this->input->post('nombre',true),
-        'apellido'=>$this->input->post('apellido',true),
-        'email'=>$this->input->post('email',true),
-        'usuario'=>$usuario,
-        'password'=>$this->input->post('password',true),
-        'perfil_id'=>$session_data['perfil_id'],
-    );
-
-    if ($this->form_validation->run()==FALSE)
-    {
-        $data = array('titulo' => 'Error de formulario');
-        $session_data = $this->session->userdata('logged_in');
-        $data['id_perfil'] = $session_data['id_perfil'];
-        $data['nombre'] = $session_data['nombre'];
-
-        $this->load->view('front/head_view', $data);
-        $this->load->view('front/navbar_view');
-        $this->load->view('usuario/modifico_perfil_view', $dat);
-        $this->load->view('front/footer_view');
-    }
-    else
-    {
-        $this->usuario_model->update_usuario($id, $dat);
-        redirect("mi_perfil/$id", 'refresh');
-    }
-
-}
 
 
 }
